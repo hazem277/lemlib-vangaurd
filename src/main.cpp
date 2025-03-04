@@ -91,7 +91,7 @@ lemlib::ControllerSettings
 lemlib::ControllerSettings
     angularController(9,    // proportional gain (kP)
                       0,    // integral gain (kI)
-                      81, // derivative gain (kD)
+                      87, // derivative gain (kD)
                       0,    // anti windup
                       0.1,  // small error range, in degrees
                       0,    // small error range timeout, in milliseconds
@@ -140,7 +140,7 @@ lemlib::Chassis chassis(drivetrain, linearController, angularController,
 void initialize() {
   // pros::lcd::initialize(); // initialize brain screen
   chassis.calibrate(); // calibrate sensors
-  lv_example_btn_1();
+  autonSelector();
 
   // the default rate is 50. however, if you need to change the rate, you
   // can do the following.

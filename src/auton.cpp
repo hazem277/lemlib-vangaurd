@@ -1,6 +1,7 @@
 #include "auton.h"
 #include "drivercontrol.h"
 #include "lemlib-tarball/api.hpp" // IWYU pragma: keep
+#include "lemlib/chassis/chassis.hpp"
 #include "main.h"
 #include "pros/motors.h"
 #include "pros/rtos.hpp"
@@ -188,77 +189,30 @@ void runAuton() {
   }
 
   else if (autonType == SKILLS) {
-    chassis.setPose(-55, 0, 90);
+    chassis.setPose(-62, 0, 90);
     intake.move(127);
     pros::delay(300);
     intake.brake();
-    chassis.moveToPoint(-53, 0, 1000, {.minSpeed = 35});
-    chassis.turnToHeading(270, 1000);
-    chassis.follow(decoder["Mogo 1"], 7.8, 10000, false);
+    chassis.moveToPoint(-52, 0, 1000);
+    chassis.turnToHeading(180, 700);
+    chassis.moveToPoint(chassis.getPose().x, 25, 850, {.forwards = false, .maxSpeed = 90});
     chassis.waitUntilDone();
-    clampSet(true);
+    clampSet(true); // Mogo 1
     chassis.turnToHeading(90, 700);
     chassis.waitUntilDone();
     intake.move(127);
-    chassis.follow(decoder["Ring 1"], 8.2, 10000);
-    chassis.follow(decoder["Align 0"], 8.2, 10000, false);
-    chassis.turnToHeading(0, 1000);
-    chassis.waitUntilDone();
+    chassis.moveToPoint(-23, 24, 1500, {.maxSpeed = 100}); // Ring 1
+    chassis.turnToHeading(45, 700);
+    chassis.moveToPose(27, 42, 90, 2500);
+    chassis.turnToPoint(-1, 38, 700, {.forwards = false});
+    chassis.moveToPoint(-1, 38, 1000, {.forwards = false});
+    chassis.turnToPoint(0, 52, 700);
     setWallStakePos(ACTIVE);
-    chassis.follow(decoder["Wall 1"], 8, 1000);
+    chassis.moveToPoint(0, 52, 1000, {.maxSpeed = 50});
     chassis.waitUntilDone();
     pros::delay(2000);
     intake.brake();
-    chassis.turnToHeading(0, 300);
-    chassis.moveToPoint(-3, 61, 500);
-    chassis.waitUntilDone();
+    chassis.moveToPoint(0, 59, 700); // "I hope this becomes a niche reference"
     setWallStakePos(SCORING);
-    pros::delay(1000);
-    setWallStakePos(PASSIVE);
-    // clampSet(true); // TEMPORARY
-    chassis.setPose(-2, 52, 0);
-    chassis.moveToPoint(-2, 47, 1000);
-    chassis.turnToHeading(195, 1000);
-    intake.move(127);
-    chassis.follow(decoder["Ring 2"], 12, 10000);
-    chassis.waitUntilDone();
-    pros::delay(1000);
-    chassis.follow(decoder["Align 1"], 12, 10000, false);
-    chassis.turnToHeading(300, 700);
-    chassis.follow(decoder["Ring 3"], 12, 10000);
-    chassis.turnToHeading(110, 700);
-    chassis.waitUntilDone();
-    pros::delay(1000);
-    intake.brake();
-    chassis.follow(decoder["Corner 1"], 12, 10000, false);
-    chassis.waitUntilDone();
-    clampSet(false);
-    chassis.turnToHeading(165, 700);
-    chassis.follow(decoder["Align 2"], 8, 10000);
-    chassis.turnToHeading(0, 700);
-    chassis.follow(decoder["Mogo 2"], 8, 10000, false);
-    chassis.waitUntilDone();
-    clampSet(true);
-    chassis.turnToHeading(90, 700);
-    chassis.follow(decoder["Ring 4"], 8, 10000);
-    chassis.follow(decoder["Align 3"], 8, 10000, false);
-    chassis.turnToHeading(255, 700);
-    chassis.follow(decoder["Ring 5"], 8, 10000, false);
-    chassis.turnToHeading(80, 700);
-    chassis.waitUntilDone();
-    clampSet(false);
-    chassis.follow(decoder["Corner 2"], 8, 10000, false);
-    chassis.follow(decoder["Ring 6"], 8, 10000, false);
-    chassis.turnToHeading(225, 700);
-    chassis.follow(decoder["Mogo 3"], 8, 10000, false);
-    chassis.waitUntilDone();
-    clampSet(true);
-    chassis.turnToHeading(225, 700);
-    chassis.follow(decoder["Ring 7"], 8, 10000, false);    
-    chassis.turnToHeading(0, 700);
-    chassis.follow(decoder["Corner 3"], 8, 10000, false); 
-    chassis.waitUntilDone();
-    clampSet(false);
-    chassis.moveToPoint(50, -66, 1000);   
   }
 }
