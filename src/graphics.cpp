@@ -78,18 +78,6 @@ void lv_example_chart_5(void) {
 }
 
 lv_obj_t *screenDebug = lv_obj_create(NULL);
-void lv_example_img_1(void)
-{
-    LV_IMG_DECLARE(img_cogwheel_argb);
-    lv_obj_t * img1 = lv_img_create(screenDebug);
-    lv_img_set_src(img1, &img_cogwheel_argb);
-    lv_obj_align(img1, LV_ALIGN_CENTER, 0, -20);
-    lv_obj_set_size(img1, 200, 200);
-
-    lv_obj_t * img2 = lv_img_create(screenDebug);
-    lv_obj_align_to(img2, img1, LV_ALIGN_OUT_BOTTOM_MID, 0, 20);
-}
-
 lv_obj_t *buttonRedPos = lv_btn_create(lv_scr_act());
 lv_obj_t *buttonRedNeg = lv_btn_create(lv_scr_act());
 lv_obj_t *buttonBluePos = lv_btn_create(lv_scr_act());
@@ -103,8 +91,16 @@ int height = 70;
 int xPos = -160;
 int yPos = -70;
 
+// lv_obj_t *imgVanguardLogo;
+// LV_IMG_DECLARE(vanguard272px);
+
 void autonSelector(void) {
   lv_obj_t *label;
+
+  // imgVanguardLogo = lv_img_create(screenDebug);
+  // lv_img_set_src(imgVanguardLogo, &vanguard272px);
+  // lv_obj_set_size(imgVanguardLogo, 272, 272);
+  // lv_obj_align(imgVanguardLogo, LV_ALIGN_CENTER, 0, 0);
 
   /*
   Red Positive
@@ -208,9 +204,7 @@ void autonSelector(void) {
 
   lv_obj_add_event_cb(
       buttonScoreAlliance,
-      [](lv_event_t *e) {
-        scoreAllianceStake = !scoreAllianceStake;
-      },
+      [](lv_event_t *e) { scoreAllianceStake = !scoreAllianceStake; },
       LV_EVENT_ALL, NULL);
   lv_obj_align(buttonScoreAlliance, LV_ALIGN_CENTER, xPos + 290, yPos + 40);
   lv_obj_set_size(buttonScoreAlliance, width + 60, (height * 2) + 10);
@@ -255,66 +249,68 @@ void autonSelector(void) {
   Skills
   */
   lv_obj_add_event_cb(
-    buttonConfirm,
-    [](lv_event_t *e) {
-      if(autonType != NONE) {
-        autonConfirmed = true;
-        // lv_example_img_1();
-        debugTabs();
-        lv_scr_load_anim(screenDebug, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000, false);
-      }
-    },
-    LV_EVENT_PRESSED, NULL);
-lv_obj_align(buttonConfirm, LV_ALIGN_CENTER, xPos + 290, yPos + 155);
-lv_obj_set_size(buttonConfirm, width + 60, 60);
+      buttonConfirm,
+      [](lv_event_t *e) {
+        if (autonType != NONE) {
+          autonConfirmed = true;
+          // lv_example_img_1();
+          // debugTabs();
+          lv_scr_load_anim(screenDebug, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000,
+                           false);
+        }
+      },
+      LV_EVENT_PRESSED, NULL);
+  lv_obj_align(buttonConfirm, LV_ALIGN_CENTER, xPos + 290, yPos + 155);
+  lv_obj_set_size(buttonConfirm, width + 60, 60);
 
-lv_obj_set_style_radius(buttonConfirm, 2, 0);
-lv_obj_set_style_bg_color(buttonConfirm, lv_palette_main(LV_PALETTE_LIGHT_GREEN),
-                          LV_STATE_DEFAULT);
+  lv_obj_set_style_radius(buttonConfirm, 2, 0);
+  lv_obj_set_style_bg_color(
+      buttonConfirm, lv_palette_main(LV_PALETTE_LIGHT_GREEN), LV_STATE_DEFAULT);
 
-label = lv_label_create(buttonConfirm);
-lv_label_set_text(label, "Confirm");
-lv_obj_center(label);
+  label = lv_label_create(buttonConfirm);
+  lv_label_set_text(label, "Confirm");
+  lv_obj_center(label);
 }
 
-void debugTabs(void)
-{
-    /*Create a Tab view object*/
-    lv_obj_t * tabview;
-    tabview = lv_tabview_create(screenDebug, LV_DIR_LEFT, 80);
+void debugTabs(void) {
+  /*Create a Tab view object*/
+  lv_obj_t *tabview;
+  tabview = lv_tabview_create(screenDebug, LV_DIR_LEFT, 80);
 
-    lv_obj_set_style_bg_color(tabview, lv_palette_lighten(LV_PALETTE_RED, 2), 0);
+  lv_obj_set_style_bg_color(tabview, lv_palette_lighten(LV_PALETTE_RED, 2), 0);
 
-    lv_obj_t * tab_btns = lv_tabview_get_tab_btns(tabview);
-    lv_obj_set_style_bg_color(tab_btns, lv_palette_darken(LV_PALETTE_GREY, 3), 0);
-    lv_obj_set_style_text_color(tab_btns, lv_palette_lighten(LV_PALETTE_GREY, 5), 0);
-    lv_obj_set_style_border_side(tab_btns, LV_BORDER_SIDE_RIGHT, LV_STATE_CHECKED);
+  lv_obj_t *tab_btns = lv_tabview_get_tab_btns(tabview);
+  lv_obj_set_style_bg_color(tab_btns, lv_palette_darken(LV_PALETTE_GREY, 3), 0);
+  lv_obj_set_style_text_color(tab_btns, lv_palette_lighten(LV_PALETTE_GREY, 5),
+                              0);
+  lv_obj_set_style_border_side(tab_btns, LV_BORDER_SIDE_RIGHT,
+                               LV_STATE_CHECKED);
 
-    /*Add 3 tabs (the tabs are page (lv_page) and can be scrolled*/
-    lv_obj_t * tab1 = lv_tabview_add_tab(tabview, "Tab 1");
-    lv_obj_t * tab2 = lv_tabview_add_tab(tabview, "Tab 2");
-    lv_obj_t * tab3 = lv_tabview_add_tab(tabview, "Tab 3");
-    lv_obj_t * tab4 = lv_tabview_add_tab(tabview, "Tab 4");
-    lv_obj_t * tab5 = lv_tabview_add_tab(tabview, "Tab 5");
+  /*Add 3 tabs (the tabs are page (lv_page) and can be scrolled*/
+  lv_obj_t *tab1 = lv_tabview_add_tab(tabview, "Tab 1");
+  lv_obj_t *tab2 = lv_tabview_add_tab(tabview, "Tab 2");
+  lv_obj_t *tab3 = lv_tabview_add_tab(tabview, "Tab 3");
+  lv_obj_t *tab4 = lv_tabview_add_tab(tabview, "Tab 4");
+  lv_obj_t *tab5 = lv_tabview_add_tab(tabview, "Tab 5");
 
-    lv_obj_set_style_bg_color(tab2, lv_palette_lighten(LV_PALETTE_AMBER, 3), 0);
-    lv_obj_set_style_bg_opa(tab2, LV_OPA_COVER, 0);
+  lv_obj_set_style_bg_color(tab2, lv_palette_lighten(LV_PALETTE_AMBER, 3), 0);
+  lv_obj_set_style_bg_opa(tab2, LV_OPA_COVER, 0);
 
-    /*Add content to the tabs*/
-    lv_obj_t * label = lv_label_create(tab1);
-    lv_label_set_text(label, "First tab");
+  /*Add content to the tabs*/
+  lv_obj_t *label = lv_label_create(tab1);
+  lv_label_set_text(label, "First tab");
 
-    label = lv_label_create(tab2);
-    lv_label_set_text(label, "Second tab");
+  label = lv_label_create(tab2);
+  lv_label_set_text(label, "Second tab");
 
-    label = lv_label_create(tab3);
-    lv_label_set_text(label, "Third tab");
+  label = lv_label_create(tab3);
+  lv_label_set_text(label, "Third tab");
 
-    label = lv_label_create(tab4);
-    lv_label_set_text(label, "Forth tab");
+  label = lv_label_create(tab4);
+  lv_label_set_text(label, "Forth tab");
 
-    label = lv_label_create(tab5);
-    lv_label_set_text(label, "Fifth tab");
+  label = lv_label_create(tab5);
+  lv_label_set_text(label, "Fifth tab");
 
-    lv_obj_clear_flag(lv_tabview_get_content(tabview), LV_OBJ_FLAG_SCROLLABLE);
+  lv_obj_clear_flag(lv_tabview_get_content(tabview), LV_OBJ_FLAG_SCROLLABLE);
 }

@@ -1,5 +1,6 @@
 #include "auton.h"
 #include "drivercontrol.h"
+#include "fmt/format.h"
 #include "lemlib-tarball/api.hpp" // IWYU pragma: keep
 #include "lemlib/chassis/chassis.hpp"
 #include "main.h"
@@ -193,9 +194,9 @@ void runAuton() {
     intake.move(127);
     pros::delay(300);
     intake.brake();
-    chassis.moveToPoint(-52, 0, 1000);
+    chassis.moveToPoint(-51, 0, 1000);
     chassis.turnToHeading(180, 700);
-    chassis.moveToPoint(chassis.getPose().x, 25, 850, {.forwards = false, .maxSpeed = 90});
+    chassis.moveToPoint(chassis.getPose().x, 23, 850, {.forwards = false, .maxSpeed = 80});
     chassis.waitUntilDone();
     clampSet(true); // Mogo 1
     chassis.turnToHeading(90, 700);
@@ -203,16 +204,34 @@ void runAuton() {
     intake.move(127);
     chassis.moveToPoint(-23, 24, 1500, {.maxSpeed = 100}); // Ring 1
     chassis.turnToHeading(45, 700);
-    chassis.moveToPose(27, 42, 90, 2500);
-    chassis.turnToPoint(-1, 38, 700, {.forwards = false});
-    chassis.moveToPoint(-1, 38, 1000, {.forwards = false});
-    chassis.turnToPoint(0, 52, 700);
+    chassis.moveToPose(27, 42, 90, 2500); // Ring 2
+    chassis.turnToPoint(4, 35, 1000, {.forwards = false});
+    chassis.moveToPoint(4, 35, 1000, {.forwards = false});
+    chassis.turnToHeading(0, 700);
+    chassis.waitUntilDone();
     setWallStakePos(ACTIVE);
-    chassis.moveToPoint(0, 52, 1000, {.maxSpeed = 50});
+    chassis.moveToPoint(chassis.getPose().x, 50, 1000, {.maxSpeed = 50});
     chassis.waitUntilDone();
     pros::delay(2000);
     intake.brake();
-    chassis.moveToPoint(0, 59, 700); // "I hope this becomes a niche reference"
+    chassis.moveToPoint(chassis.getPose().x, 53, 700);
     setWallStakePos(SCORING);
+    pros::delay(1250);
+    setWallStakePos(PASSIVE);
+    pros::delay(1250);
+    chassis.moveToPoint(chassis.getPose().x, 41, 1000, {.forwards = false});
+    chassis.turnToHeading(270, 700);
+    chassis.waitUntilDone();
+    intake.move(127);
+    chassis.moveToPoint(-56, 42, 3000, {.maxSpeed = 50});
+    chassis.moveToPoint(-44, 42, 3000, {.forwards = false, .maxSpeed = 50});
+    chassis.turnToHeading(0, 700);
+    chassis.moveToPoint(-44, 50, 3000);
+    chassis.moveToPoint(-44, 42, 3000);
+    chassis.turnToHeading(135, 700);
+    chassis .waitUntilDone();
+    intake.brake();
+    clampSet(false);
+    chassis.moveToPoint(-60, 60, 700, {.forwards = false});
   }
 }
