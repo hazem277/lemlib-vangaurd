@@ -1,6 +1,6 @@
 #include "auton.h"
 #include "drivercontrol.h"
-#include "fmt/format.h"
+#include "fmt/format.h" // IWYU pragma: keep
 #include "lemlib-tarball/api.hpp" // IWYU pragma: keep
 #include "lemlib/chassis/chassis.hpp"
 #include "main.h"
