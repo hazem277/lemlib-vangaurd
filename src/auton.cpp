@@ -8,9 +8,9 @@
 #include "pros/rtos.hpp"
 #include <cmath>
 
-auton_type autonType = SKILLS;
+auton_type autonType = NONE;
 bool scoreAllianceStake = true;
-bool autonConfirmed = true;
+bool autonConfirmed = false;
 
 ASSET(skills_path_txt);
 

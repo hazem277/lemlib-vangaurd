@@ -77,7 +77,6 @@ void lv_example_chart_5(void) {
   lv_obj_align_to(slider, chart, LV_ALIGN_OUT_RIGHT_MID, 20, 0);
 }
 
-lv_obj_t *screenDebug = lv_obj_create(NULL);
 lv_obj_t *buttonRedPos = lv_btn_create(lv_scr_act());
 lv_obj_t *buttonRedNeg = lv_btn_create(lv_scr_act());
 lv_obj_t *buttonBluePos = lv_btn_create(lv_scr_act());
@@ -91,15 +90,16 @@ int height = 70;
 int xPos = -160;
 int yPos = -70;
 
+lv_obj_t *screenDebug = lv_obj_create(NULL);
 lv_obj_t *imgVanguardLogo;
-LV_IMG_DECLARE(vangaurd272px);
+LV_IMG_DECLARE(vangaurd480x240px);
 
 void autonSelector(void) {
   lv_obj_t *label;
 
   imgVanguardLogo = lv_img_create(screenDebug);
-  lv_img_set_src(imgVanguardLogo, &vangaurd272px);
-  lv_obj_set_size(imgVanguardLogo, 272, 272);
+  lv_img_set_src(imgVanguardLogo, &vangaurd480x240px);
+  lv_obj_set_size(imgVanguardLogo, 480, 240);
   lv_obj_align(imgVanguardLogo, LV_ALIGN_CENTER, 0, 0);
 
   /*
