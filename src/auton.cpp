@@ -8,9 +8,9 @@
 #include "pros/rtos.hpp"
 #include <cmath>
 
-auton_type autonType = NONE;
+auton_type autonType = SKILLS;
 bool scoreAllianceStake = true;
-bool autonConfirmed = false;
+bool autonConfirmed = true;
 
 ASSET(skills_path_txt);
 
@@ -205,12 +205,12 @@ void runAuton() {
     chassis.moveToPoint(-23, 24, 1500, {.maxSpeed = 100}); // Ring 1
     chassis.turnToHeading(45, 700);
     chassis.moveToPose(27, 42, 90, 2500); // Ring 2
-    chassis.turnToPoint(4, 35, 1000, {.forwards = false});
-    chassis.moveToPoint(4, 35, 1000, {.forwards = false});
+    chassis.turnToPoint(3, 35, 1000, {.forwards = false});
+    chassis.moveToPoint(3, 35, 1000, {.forwards = false});
     chassis.turnToHeading(0, 700);
     chassis.waitUntilDone();
     setWallStakePos(ACTIVE);
-    chassis.moveToPoint(chassis.getPose().x, 50, 1000, {.maxSpeed = 50});
+    chassis.moveToPoint(chassis.getPose().x, 50, 1000, {.maxSpeed = 50}); // Wall Stake 1
     chassis.waitUntilDone();
     pros::delay(2000);
     intake.brake();
@@ -223,15 +223,20 @@ void runAuton() {
     chassis.turnToHeading(270, 700);
     chassis.waitUntilDone();
     intake.move(127);
-    chassis.moveToPoint(-56, 42, 3000, {.maxSpeed = 50});
-    chassis.moveToPoint(-44, 42, 3000, {.forwards = false, .maxSpeed = 50});
+    chassis.moveToPoint(-56, 42, 3000, {.maxSpeed = 50}); // Ring 3
+    chassis.turnToPoint(-44, 38, 700,{.forwards = false});
+    chassis.moveToPoint(-44, 38, 700, {.forwards = false, .maxSpeed = 50}); // Align 1
     chassis.turnToHeading(0, 700);
-    chassis.moveToPoint(-44, 50, 3000);
-    chassis.moveToPoint(-44, 42, 3000);
+    chassis.moveToPoint(chassis.getPose().x, 50, 700);
+    chassis.waitUntilDone();
+    pros::delay(100);
+    chassis.moveToPoint(-44, 42, 700, {.forwards = false});
     chassis.turnToHeading(135, 700);
     chassis .waitUntilDone();
     intake.brake();
     clampSet(false);
-    chassis.moveToPoint(-60, 60, 700, {.forwards = false});
+    chassis.moveToPoint(-59, 59, 700, {.forwards = false});
+    chassis.moveToPose(-47, 0, 180, 3000);
+    chassis.turnToHeading(0, 700);
   }
 }
