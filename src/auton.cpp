@@ -31,7 +31,7 @@ void setWallStakePos(wallStakePos pos) {
     wallStakeEnc.reset_position();
     lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
     lift.move(20);
-    while (wallStakeEnc.get_position() < 4500) {
+    while (wallStakeEnc.get_position() < 4700) {
       pros::delay(10);
     }
     lift.brake();
@@ -205,8 +205,8 @@ void runAuton() {
     chassis.moveToPoint(-23, 24, 1500, {.maxSpeed = 100}); // Ring 1
     chassis.turnToHeading(45, 700);
     chassis.moveToPose(27, 42, 90, 2500); // Ring 2
-    chassis.turnToPoint(3, 35, 1000, {.forwards = false});
-    chassis.moveToPoint(3, 35, 1000, {.forwards = false});
+    chassis.turnToPoint(2, 35, 1000, {.forwards = false});
+    chassis.moveToPoint(2, 35, 1000, {.forwards = false});
     chassis.turnToHeading(0, 700);
     chassis.waitUntilDone();
     setWallStakePos(ACTIVE);
@@ -218,25 +218,31 @@ void runAuton() {
     setWallStakePos(SCORING);
     pros::delay(1250);
     setWallStakePos(PASSIVE);
-    pros::delay(1250);
     chassis.moveToPoint(chassis.getPose().x, 41, 1000, {.forwards = false});
     chassis.turnToHeading(270, 700);
     chassis.waitUntilDone();
     intake.move(127);
-    chassis.moveToPoint(-56, 42, 3000, {.maxSpeed = 50}); // Ring 3
-    chassis.turnToPoint(-44, 38, 700,{.forwards = false});
-    chassis.moveToPoint(-44, 38, 700, {.forwards = false, .maxSpeed = 50}); // Align 1
+    chassis.moveToPoint(-56, chassis.getPose().y, 3000, {.maxSpeed = 50}); // Ring 3
+    chassis.turnToPoint(-50, 38, 700,{.forwards = false});
+    chassis.moveToPoint(-50, 38, 700, {.forwards = false, .maxSpeed = 50}); // Align 1
     chassis.turnToHeading(0, 700);
     chassis.moveToPoint(chassis.getPose().x, 50, 700);
     chassis.waitUntilDone();
     pros::delay(100);
     chassis.moveToPoint(-44, 42, 700, {.forwards = false});
     chassis.turnToHeading(135, 700);
-    chassis .waitUntilDone();
+    chassis.moveToPoint(-59, 59, 700, {.forwards = false});
+    chassis.waitUntilDone();
     intake.brake();
     clampSet(false);
-    chassis.moveToPoint(-59, 59, 700, {.forwards = false});
-    chassis.moveToPose(-47, 0, 180, 3000);
+    chassis.moveToPoint(-51, 38, 700);
     chassis.turnToHeading(0, 700);
+    chassis.moveToPoint(chassis.getPose().x, -23, 3000, {.forwards = false, .maxSpeed = 80});
+    chassis.waitUntilDone();
+    clampSet(true);
+    intake.move(127);
+    chassis.turnToHeading(0, 700);
+    chassis.moveToPoint(-23, -24, 3000);
+    chassis.swingToPoint(-23, -41, lemlib::DriveSide::RIGHT, 3000);
   }
 }
