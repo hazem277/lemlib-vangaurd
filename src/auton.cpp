@@ -249,8 +249,8 @@ void runAuton() {
     chassis.moveToPoint(-23, -18, 1500, {.maxSpeed = 100});
     chassis.turnToHeading(145, 700);
     chassis.moveToPose(27, -36, 90, 2500);
-    chassis.turnToPoint(2, -29, 1000, {.forwards = false});
-    chassis.moveToPoint(2, -29, 1000, {.forwards = false});
+    chassis.turnToPoint(-1, -29, 1000, {.forwards = false});
+    chassis.moveToPoint(-1, -29, 1000, {.forwards = false});
     chassis.turnToHeading(180, 700);
     chassis.waitUntilDone();
     setWallStakePos(ACTIVE);
@@ -262,5 +262,26 @@ void runAuton() {
     setWallStakePos(SCORING);
     pros::delay(1250);
     setWallStakePos(PASSIVE);
+
+    
+    chassis.moveToPoint(chassis.getPose().x, -41, 1000, {.forwards = false});
+    chassis.turnToHeading(270, 700);
+    chassis.waitUntilDone();
+    intake.move(127);
+    chassis.moveToPoint(-56, chassis.getPose().y, 3000, {.maxSpeed = 50}); // Ring 3
+    chassis.turnToPoint(-50, -38, 700,{.forwards = false});
+    chassis.moveToPoint(-50, -38, 700, {.forwards = false, .maxSpeed = 50}); // Align 1
+    chassis.turnToHeading(0, 700);
+    chassis.moveToPoint(chassis.getPose().x, -50, 1000);
+    chassis.waitUntilDone();
+    pros::delay(100);
+    chassis.moveToPoint(-44, -42, 700, {.forwards = false});
+    chassis.turnToHeading(45, 700);
+    chassis.moveToPoint(-59, -59, 700, {.forwards = false});
+    chassis.waitUntilDone();
+    intake.brake();
+    clampSet(false);
+
+
   }
 }
