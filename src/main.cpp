@@ -91,9 +91,9 @@ lemlib::ControllerSettings
 
 // angular motion controller
 lemlib::ControllerSettings
-    angularController(9,    // proportional gain (kP)
+    angularController(8.8,    // proportional gain (kP)
                       0,    // integral gain (kI)
-                      90, // derivative gain (kD)
+                      89, // derivative gain (kD)
                       0,    // anti windup
                       0.1,  // small error range, in degrees
                       0,    // small error range timeout, in milliseconds

@@ -80,7 +80,7 @@ void buttonControls(void *param) {
     !wallStakeActive) {
       wallStakeEnc.reset_position();
       lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
-      lift.move(20);
+      lift.move(25);
       while (wallStakeEnc.get_position() < 4700) {
         pros::delay(10);
       }

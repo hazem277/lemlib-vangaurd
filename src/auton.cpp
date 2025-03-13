@@ -30,7 +30,7 @@ void setWallStakePos(wallStakePos pos) {
   } else if (pos == ACTIVE) {
     wallStakeEnc.reset_position();
     lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
-    lift.move(20);
+    lift.move(25);
     while (wallStakeEnc.get_position() < 4700) {
       pros::delay(10);
     }
@@ -194,7 +194,7 @@ void runAuton() {
     intake.move(127);
     pros::delay(300);
     intake.brake();
-    chassis.moveToPoint(-51, 0, 1000);
+    chassis.moveToPoint(-51, 0, 700);
     chassis.turnToHeading(180, 700);
     chassis.moveToPoint(chassis.getPose().x, 23, 850, {.forwards = false, .maxSpeed = 80});
     chassis.waitUntilDone();
@@ -205,14 +205,14 @@ void runAuton() {
     chassis.moveToPoint(-23, 24, 1500, {.maxSpeed = 100}); // Ring 1
     chassis.turnToHeading(45, 700);
     chassis.moveToPose(27, 42, 90, 2500); // Ring 2
-    chassis.turnToPoint(2, 35, 1000, {.forwards = false});
-    chassis.moveToPoint(2, 35, 1000, {.forwards = false});
+    chassis.turnToPoint(2, 35, 500, {.forwards = false});
+    chassis.moveToPoint(2, 35, 1000, {.forwards = false, .maxSpeed = 90});
     chassis.turnToHeading(0, 700);
     chassis.waitUntilDone();
     setWallStakePos(ACTIVE);
     chassis.moveToPoint(chassis.getPose().x, 50, 1000, {.maxSpeed = 50}); // Wall Stake 1
     chassis.waitUntilDone();
-    pros::delay(2000);
+    pros::delay(1500);
     intake.brake();
     chassis.moveToPoint(chassis.getPose().x, 53, 700);
     setWallStakePos(SCORING);
@@ -223,9 +223,10 @@ void runAuton() {
     chassis.waitUntilDone();
     intake.move(127);
     chassis.moveToPoint(-56, chassis.getPose().y, 3000, {.maxSpeed = 50}); // Ring 3
-    chassis.turnToPoint(-50, 38, 700,{.forwards = false});
-    chassis.moveToPoint(-50, 38, 700, {.forwards = false, .maxSpeed = 50}); // Align 1
+    chassis.turnToPoint(-48, 38, 700,{.forwards = false});
+    chassis.moveToPoint(-48, 38, 700, {.forwards = false, .maxSpeed = 50}); // Align 1
     chassis.turnToHeading(0, 700);
+    chassis.waitUntilDone();
     chassis.moveToPoint(chassis.getPose().x, 50, 1000);
     chassis.waitUntilDone();
     pros::delay(100);
@@ -236,16 +237,11 @@ void runAuton() {
     intake.brake();
     clampSet(false);
     chassis.moveToPoint(-51, 38, 700);
-    chassis.turnToHeading(0, 700);
+    chassis.turnToHeading(0, 800);
     chassis.waitUntilDone();
-    chassis.moveToPoint(chassis.getPose().x, -20, 3000, {.forwards = false, .maxSpeed = 50});
-    while(distance.get_distance()>1620){
-      pros::delay(5);
-    }
-    chassis.cancelMotion();
+    chassis.moveToPoint(chassis.getPose().x, 3, 3000, {.forwards = false, .maxSpeed = 50});
+    chassis.waitUntilDone();
     chassis.setPose(-51,0,0);
-
-    pros::delay(300);
 
     chassis.moveToPoint(chassis.getPose().x, -23, 3000, {.forwards = false, .maxSpeed = 80});
     chassis.waitUntilDone();
@@ -259,8 +255,8 @@ void runAuton() {
     chassis.moveToPoint(-23, -18, 1500, {.maxSpeed = 100});
     chassis.turnToHeading(145, 700);
     chassis.moveToPose(27, -36, 90, 2500);
-    chassis.turnToPoint(0, -29, 1000, {.forwards = false});
-    chassis.moveToPoint(0, -29, 1000, {.forwards = false});
+    chassis.turnToPoint(3, -29, 1000, {.forwards = false});
+    chassis.moveToPoint(3, -29, 1000, {.forwards = false});
     chassis.turnToHeading(180, 700);
     chassis.waitUntilDone();
     setWallStakePos(ACTIVE);
@@ -280,7 +276,7 @@ void runAuton() {
     chassis.moveToPoint(-56, chassis.getPose().y, 3000, {.maxSpeed = 50}); // Ring 3
     chassis.turnToPoint(-50, -38, 700,{.forwards = false});
     chassis.moveToPoint(-50, -38, 700, {.forwards = false, .maxSpeed = 50}); // Align 1
-    chassis.turnToHeading(0, 700);
+    chassis.turnToHeading(180, 700);
     chassis.moveToPoint(chassis.getPose().x, -50, 1000);
     chassis.waitUntilDone();
     pros::delay(100);
@@ -290,7 +286,6 @@ void runAuton() {
     chassis.waitUntilDone();
     intake.brake();
     clampSet(false);
-
 
   }
 }
