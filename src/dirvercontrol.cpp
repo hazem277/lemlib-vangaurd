@@ -1,3 +1,4 @@
+#include "auton.h"
 #include "drivercontrol.h" // IWYU pragma: keep
 #include "main.h"
 #include "pros/abstract_motor.hpp" // IWYU pragma: keep
@@ -32,6 +33,14 @@ void buttonControls(void *param) {
     }
 
     // intake
+    if (isIntaking && !intakeReversed) { // red ≈ 14 | blue ≈ 219 | none ≈ 63
+      if ((opticalSensor.get_hue() > 210 && opticalSensor.get_hue() < 225 && (autonType == RED_POSITIVE || autonType == RED_NEGATIVE || autonType == SKILLS)) || (opticalSensor.get_hue() > 210 && opticalSensor.get_hue() < 225 && (autonType == BLUE_POSITIVE || autonType == BLUE_NEGATIVE))) {
+        pros::delay(350);
+        intake.brake();
+        pros::delay(200);
+        intake.move(127);
+      }
+    }
     if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2) &&
         (!isIntaking || intakeReversed)) {
       intake.move(-127);

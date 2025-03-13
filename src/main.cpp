@@ -35,6 +35,8 @@ pros::adi::DigitalOut arm('d');
 
 pros::Rotation wallStakeEnc(-2);
 
+pros::Optical opticalSensor(12);
+
 pros::MotorGroup lift(
   { 11,-17},
   pros::MotorGearset::green,
@@ -139,8 +141,13 @@ lemlib::Chassis chassis(drivetrain, linearController, angularController,
 
 void initialize() {
   // pros::lcd::initialize(); // initialize brain screen
+  opticalSensor.set_led_pwm(100);
   chassis.calibrate(); // calibrate sensors
   autonSelector();
+  if (autonType == SKILLS && autonConfirmed) {
+    lv_scr_load_anim(screenLogo, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000,
+      false);
+  }
 
   // the default rate is 50. however, if you need to change the rate, you
   // can do the following.
@@ -165,7 +172,7 @@ void initialize() {
       std::cout << '\r' << std::setw(20) << "X: " << chassis.getPose().x
                 << std::setw(20) << "Y: " << chassis.getPose().y
                 << std::setw(20) << "Theta: " << chassis.getPose().theta
-                << std::setw(20) << "Heading: " << wallStakeEnc.get_position()
+                << std::setw(20) << "Hue: " << opticalSensor.get_hue()
                 << std::flush;
       // delay to save resources
       pros::delay(100);

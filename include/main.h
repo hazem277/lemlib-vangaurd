@@ -66,6 +66,8 @@ extern pros::Motor intake;
 extern pros::Imu imu;
 extern pros::Distance distance;
 
+extern pros::Optical opticalSensor;
+
 extern lemlib::Chassis chassis;
 
 /**
