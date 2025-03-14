@@ -232,17 +232,16 @@ void runAuton() {
     pros::delay(100);
     chassis.moveToPoint(-44, 42, 700, {.forwards = false});
     chassis.turnToHeading(135, 700);
-    chassis.moveToPoint(-59, 59, 700, {.forwards = false});
+    chassis.moveToPoint(-70, 70, 700, {.forwards = false});
+    chassis.turnToHeading(135,400);
     chassis.waitUntilDone();
+    chassis.setPose(-57,56,135);
     intake.brake();
     clampSet(false);
+    pros::delay(500);
     chassis.moveToPoint(-51, 38, 700);
     chassis.turnToHeading(0, 800);
     chassis.waitUntilDone();
-    chassis.moveToPoint(chassis.getPose().x, 3, 3000, {.forwards = false, .maxSpeed = 50});
-    chassis.waitUntilDone();
-    chassis.setPose(-51,0,0);
-
     chassis.moveToPoint(chassis.getPose().x, -23, 3000, {.forwards = false, .maxSpeed = 80});
     chassis.waitUntilDone();
     clampSet(true); // Mogo 2
