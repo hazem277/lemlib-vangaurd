@@ -233,17 +233,17 @@ void runAuton() {
     pros::delay(100);
     chassis.moveToPoint(-44, 42, 700, {.forwards = false});
     chassis.turnToHeading(135, 700);
-    chassis.moveToPoint(-70, 70, 700, {.forwards = false});
+    chassis.moveToPoint(-70, 70, 1000, {.forwards = false});
     chassis.turnToHeading(135,400);
     chassis.waitUntilDone();
-    chassis.setPose(-58,60,135); // SET POSE HERE!!!
+    chassis.setPose(-62,64,135); // SET POSE HERE!!!
     intake.brake();
     clampSet(false);
     pros::delay(500);
-    chassis.moveToPoint(-51, 38, 900);
+    chassis.moveToPoint(-52.5, 38, 900);
     chassis.turnToHeading(0, 800);
     chassis.waitUntilDone();
-    chassis.moveToPoint(chassis.getPose().x, -17, 1700, {.forwards = false, .maxSpeed = 80});
+    chassis.moveToPoint(chassis.getPose().x, -19, 1500, {.forwards = false, .maxSpeed = 80});
     chassis.waitUntilDone();
     clampSet(true); // Mogo 2
     intake.move(127);
@@ -252,11 +252,11 @@ void runAuton() {
     chassis.turnToHeading(90, 700);
     chassis.waitUntilDone();
     intake.move(127);
-    chassis.moveToPoint(-23, chassis.getPose().y, 1500, {.maxSpeed = 80});
+    chassis.moveToPoint(-23, -18, 1500, {.maxSpeed = 80});
     chassis.turnToHeading(145, 700, {.minSpeed = 100});
-    chassis.moveToPose(27, -36, 90, 2500, {.minSpeed = 100});
-    chassis.turnToPoint(3, -29, 1000, {.forwards = false});
-    chassis.moveToPoint(3, -29, 1000, {.forwards = false});
+    chassis.moveToPose(29, -36, 90, 2500, {.minSpeed = 100});
+    chassis.turnToPoint(0, -29, 1000, {.forwards = false});
+    chassis.moveToPoint(0, -29, 1000, {.forwards = false});
     chassis.turnToHeading(180, 700);
     chassis.waitUntilDone();
     setWallStakePos(ACTIVE);
@@ -274,8 +274,8 @@ void runAuton() {
     chassis.waitUntilDone();
     intake.move(127);
     chassis.moveToPoint(-56, chassis.getPose().y, 3000, {.maxSpeed = 50}); // Ring 3
-    chassis.turnToPoint(-47, -36, 700,{.forwards = false});
-    chassis.moveToPoint(-47, -36, 700, {.forwards = false, .maxSpeed = 50}); // Align 1
+    chassis.turnToPoint(-47, -34, 700,{.forwards = false});
+    chassis.moveToPoint(-47, -34, 700, {.forwards = false, .maxSpeed = 50}); // Align 1
     chassis.turnToHeading(180, 700);
     chassis.moveToPoint(chassis.getPose().x, -52, 1000);
     chassis.waitUntilDone();
