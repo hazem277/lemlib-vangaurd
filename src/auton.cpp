@@ -206,12 +206,13 @@ void runAuton() {
     chassis.turnToHeading(45, 700, {.minSpeed = 100});
     chassis.moveToPose(27, 42, 90, 2500, {.minSpeed = 100}); // Ring 2
     chassis.waitUntilDone();
-    chassis.turnToPoint(5, chassis.getPose().y - 4, 1000, {.forwards = false, .minSpeed = 100});
-    chassis.moveToPoint(5, chassis.getPose().y - 4, 1000, {.forwards = false, .minSpeed = 100});
+    chassis.turnToPoint(6, chassis.getPose().y - 4, 1000, {.forwards = false, .minSpeed = 100});
+    chassis.moveToPoint(6, chassis.getPose().y - 4, 1000, {.forwards = false, .minSpeed = 100});
     chassis.turnToHeading(0, 700);
     chassis.waitUntilDone();
-    setWallStakePos(ACTIVE);
-    chassis.moveToPoint(chassis.getPose().x, 45, 1000, {.minSpeed = 100}); // Wall Stake 1
+    
+    setWallStakePos(ACTIVE); // Wall Stake 1
+    chassis.moveToPoint(chassis.getPose().x, 45, 1000, {.minSpeed = 100});
     chassis.waitUntilDone();
     pros::delay(1500);
     intake.brake();
@@ -219,13 +220,16 @@ void runAuton() {
     setWallStakePos(SCORING);
     pros::delay(1750);
     setWallStakePos(PASSIVE);
+
     chassis.moveToPoint(chassis.getPose().x, 38, 1000, {.forwards = false});
     chassis.turnToHeading(270, 700);
     chassis.waitUntilDone();
     intake.move(127);
-    chassis.moveToPoint(-58, chassis.getPose().y, 3000, {.maxSpeed = 70}); // Ring 3
-    chassis.turnToPoint(-47, 38, 700,{.forwards = false});
-    chassis.moveToPoint(-47, 38, 700, {.forwards = false, .maxSpeed = 70}); // Align 1
+    chassis.waitUntilDone();
+    chassis.moveToPoint(-58, chassis.getPose().y, 3000, {.maxSpeed = 70, .minSpeed = 10, .earlyExitRange = 30}); // Ring 3
+    chassis.moveToPoint(-58, chassis.getPose().y, 3000, {.maxSpeed = 40});
+    chassis.turnToPoint(-46, 38, 700,{.forwards = false});
+    chassis.moveToPoint(-46, 38, 700, {.forwards = false, .maxSpeed = 70}); // Align 1
     chassis.turnToHeading(0, 700);
     chassis.waitUntilDone();
     chassis.moveToPoint(chassis.getPose().x, 52, 1000);
@@ -246,8 +250,7 @@ void runAuton() {
     chassis.moveToPoint(chassis.getPose().x, -19, 1500, {.forwards = false, .maxSpeed = 80});
     chassis.waitUntilDone();
     clampSet(true); // Mogo 2
-    intake.move(127);
-    chassis.turnToHeading(0, 700);
+
     // mirrored
     chassis.turnToHeading(90, 700);
     chassis.waitUntilDone();
@@ -259,8 +262,8 @@ void runAuton() {
     chassis.moveToPoint(0, -29, 1000, {.forwards = false});
     chassis.turnToHeading(180, 700);
     chassis.waitUntilDone();
-    setWallStakePos(ACTIVE);
-    chassis.moveToPoint(chassis.getPose().x, -45, 1000, {.maxSpeed = 50}); // Wall Stake 2
+    setWallStakePos(ACTIVE); // Wall Stake 2
+    chassis.moveToPoint(chassis.getPose().x, -45, 1000, {.minSpeed = 100});
     chassis.waitUntilDone();
     pros::delay(2000);
     intake.brake();
@@ -269,7 +272,7 @@ void runAuton() {
     pros::delay(1250);
     setWallStakePos(PASSIVE);
 
-    chassis.moveToPoint(chassis.getPose().x, -39, 1000, {.forwards = false});
+    chassis.moveToPoint(chassis.getPose().x, -38, 1000, {.forwards = false});
     chassis.turnToHeading(270, 700);
     chassis.waitUntilDone();
     intake.move(127);
@@ -287,5 +290,14 @@ void runAuton() {
     intake.brake();
     clampSet(false);
 
+    // MOGO 3 PATH
+    intake.move(-127);
+    clampSet(false);
+    pros::delay(500);
+    intake.brake();
+    chassis.moveToPoint(-53, -57, 900);
+    chassis.turnToHeading(270, 700, {.minSpeed = 100});
+    chassis.moveToPose(58, 10, 60, 3000, {.forwards = false, .lead = 0.8});
+    clampSet(true);
   }
 }

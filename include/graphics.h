@@ -15,4 +15,6 @@ extern void debugTabs(void);
 
 extern lv_obj_t *screenLogo;
 
+extern lv_obj_t *screenDebug;
+
 #endif

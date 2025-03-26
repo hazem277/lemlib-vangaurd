@@ -1,5 +1,6 @@
 #include "auton.h"
 #include "drivercontrol.h" // IWYU pragma: keep
+#include "graphics.h"
 #include "main.h"
 #include "pros/abstract_motor.hpp" // IWYU pragma: keep
 #include "pros/misc.h"
@@ -10,6 +11,7 @@ bool isIntaking = false;
 bool intakeReversed = false;
 bool wallStakeActive = false;
 bool armDown = false;
+bool debugMode = false;
 
 void buttonControls(void *param) {
   wallStakeEnc.reset_position();
@@ -118,6 +120,22 @@ void buttonControls(void *param) {
       arm.set_value(false);
       armDown = false;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A)) {
+        pros::delay(50);
+      }
+    }
+
+    // DEBUG SCREEN (LVGL - graphics.cpp)
+    if(controller.get_digital(pros::E_CONTROLLER_DIGITAL_X) && !debugMode) {
+      lv_scr_load_anim(screenDebug, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000,
+        false);
+      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_X)) {
+        pros::delay(50);
+      }
+    }
+    else if(controller.get_digital(pros::E_CONTROLLER_DIGITAL_X) && debugMode) {
+      lv_scr_load_anim(screenLogo, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000,
+        false);
+      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_X)) {
         pros::delay(50);
       }
     }

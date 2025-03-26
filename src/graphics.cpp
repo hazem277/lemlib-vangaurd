@@ -202,6 +202,8 @@ void autonSelector(void) {
   label = lv_label_create(buttonConfirm);
   lv_label_set_text(label, "Confirm");
   lv_obj_center(label);
+
+  debugTabs();
 }
 
 void debugTabs(void) {
