@@ -170,9 +170,10 @@ void initialize() {
       lemlib::telemetrySink()->info("Chassis pose: {}", chassis.getPose());
 
       std::cout << '\r' << std::setw(20) << "X: " << chassis.getPose().x
-                << std::setw(20) << "Y: " << chassis.getPose().y
+                << std::setw(20) << "Is ejecting: " << ejectOn
                 << std::setw(20) << "Theta: " << chassis.getPose().theta
-                << std::setw(20) << "Hue: " << opticalSensor.get_hue()
+                << std::setw(20) << "is in Motion?:" << chassis.isInMotion()
+                << std::setw(20) << " "
                 << std::flush;
       // delay to save resources
       pros::delay(100);
@@ -186,7 +187,7 @@ void initialize() {
 void disabled() {}
 
 /**
- * runs after initialize if the robot is connected to field control
+ * runs after initialize if the robot is connected to field control              
  */
 void competition_initialize() {}
 
@@ -196,7 +197,9 @@ void competition_initialize() {}
  * This is an example autonomous routine which demonstrates a lot of the
  * features LemLib has to offer
  */
-void autonomous() { runAuton(); }
+void autonomous() {
+  runAuton(); 
+}
 
 /**
  * Runs in driver control
@@ -204,6 +207,7 @@ void autonomous() { runAuton(); }
 void opcontrol() {
   // controller
   // loop to continuously update motors
+  pros::Task EJECT_RING(eject);
   pros::Task BUTTON_CONTROLS(buttonControls);
   while (true) {
     // get joystick positions

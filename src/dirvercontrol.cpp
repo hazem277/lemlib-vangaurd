@@ -1,4 +1,4 @@
-#include "auton.h"
+#include "auton.h"// IWYU pragma: keep
 #include "drivercontrol.h" // IWYU pragma: keep
 #include "graphics.h"
 #include "main.h"
@@ -12,8 +12,8 @@ bool intakeReversed = false;
 bool wallStakeActive = false;
 bool armDown = false;
 bool debugMode = false;
-
-void buttonControls(void *param) {
+bool ejectOn = true;
+void buttonControls() {
   wallStakeEnc.reset_position();
   while (true) {
     // clamp
@@ -35,24 +35,17 @@ void buttonControls(void *param) {
     }
 
     // intake
-    if (isIntaking && !intakeReversed) { // red ≈ 14 | blue ≈ 219 | none ≈ 63
-      if ((opticalSensor.get_hue() > 210 && opticalSensor.get_hue() < 225 && (autonType == RED_POSITIVE || autonType == RED_NEGATIVE || autonType == SKILLS)) || (opticalSensor.get_hue() > 210 && opticalSensor.get_hue() < 225 && (autonType == BLUE_POSITIVE || autonType == BLUE_NEGATIVE))) {
-        pros::delay(350);
-        intake.brake();
-        pros::delay(200);
-        intake.move(127);
-      }
-    }
+    
     if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2) &&
-        (!isIntaking || intakeReversed)) {
+        (!isIntaking || !intakeReversed)) {
       intake.move(-127);
       isIntaking = true;
-      intakeReversed = false;
+      intakeReversed = true;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
         pros::delay(50);
       }
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2) &&
-               isIntaking && !intakeReversed) {
+               isIntaking && intakeReversed) {
       intake.brake();
       isIntaking = false;
       intakeReversed = false;
@@ -60,15 +53,15 @@ void buttonControls(void *param) {
         pros::delay(50);
       }
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1) &&
-               (!isIntaking || !intakeReversed)) {
+               (!isIntaking || intakeReversed)) {
       intake.move(127);
       isIntaking = true;
-      intakeReversed = true;
+      intakeReversed = false;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
         pros::delay(50);
       }
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1) &&
-               isIntaking && intakeReversed) {
+               isIntaking && !intakeReversed) {
       intake.brake();
       isIntaking = false;
       intakeReversed = false;
@@ -83,7 +76,7 @@ void buttonControls(void *param) {
       wallStakeEnc.reset_position();
       lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
       lift.move(25);
-      while (wallStakeEnc.get_position() < 4700) {
+      while (wallStakeEnc.get_position() < 5300) {
         pros::delay(10);
       }
       lift.brake();
@@ -92,6 +85,8 @@ void buttonControls(void *param) {
         pros::delay(50);
       }
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_UP)) {
+      lift.move(-30);
+      pros::delay(150);
       lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
       lift.brake();
       wallStakeActive = false;
@@ -100,9 +95,9 @@ void buttonControls(void *param) {
       }
     }
     if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN) &&
-        wallStakeActive && wallStakeEnc.get_position() / 100 < 250) {
+        wallStakeActive && wallStakeEnc.get_position() / 100 < 250) { //scoring
       lift.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
-      lift.move_relative(310, 127);
+      lift.move_relative(330, 127);
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN)) {
         pros::delay(50);
       }
@@ -137,6 +132,28 @@ void buttonControls(void *param) {
         false);
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_X)) {
         pros::delay(50);
+      }
+    }
+
+    //Ejection toggle
+
+    if(controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)&& ejectOn){
+
+      ejectOn = false;
+      controller.clear_line(2);
+      controller.set_text(0, 0, "Example text");
+      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)){
+        pros::delay(50);
+      }
+    }
+
+    else if(controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)&& !ejectOn){
+
+      ejectOn = true;
+        controller.clear_line(2);
+        controller.set_text(0, 0, "Example text");
+      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)){
+          pros::delay(50);
       }
     }
   }

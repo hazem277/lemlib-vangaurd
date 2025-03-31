@@ -1,5 +1,8 @@
 #ifndef DRIVERCONTROL_H
 #define DRIVERCONTROL_H
 extern bool isClamped;
-void buttonControls(void* param);
+extern bool isIntaking;
+extern bool intakeReversed;
+extern bool ejectOn;
+void buttonControls();
 #endif

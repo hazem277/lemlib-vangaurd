@@ -139,7 +139,7 @@ void autonSelector(void) {
   lv_obj_add_event_cb(
       buttonScoreAlliance,
       [](lv_event_t *e) { scoreAllianceStake = !scoreAllianceStake; },
-      LV_EVENT_ALL, NULL);
+      LV_EVENT_PRESSED, NULL);
   lv_obj_align(buttonScoreAlliance, LV_ALIGN_CENTER, xPos + 290, yPos + 40);
   lv_obj_set_size(buttonScoreAlliance, width + 60, (height * 2) + 10);
   lv_obj_add_flag(buttonScoreAlliance, LV_OBJ_FLAG_CHECKABLE);
