@@ -12,10 +12,6 @@ auton_type autonType = SKILLS;
 bool scoreAllianceStake = true;
 bool autonConfirmed = true;
 
-ASSET(skills_path_txt);
-
-lemlib_tarball::Decoder decoder(skills_path_txt);
-
 void clampSet(bool value) {
   clamp.set_value(value);
   clamp2.set_value(value);
@@ -299,114 +295,7 @@ void runAuton() {
   }
 
   else if (autonType == SKILLS) {
-    chassis.setPose(-62, 0, 90);
-    intake.move(127);
-    pros::delay(300);
-    intake.brake();
-    chassis.moveToPoint(-56, 0, 700, {.minSpeed = 100});
-    chassis.turnToHeading(180, 700, {.minSpeed = 100});
-    chassis.moveToPoint(chassis.getPose().x, 20, 850, {.forwards = false, .maxSpeed = 80}, false);
-    // chassis.waitUntilDone();
-    clampSet(true); // Mogo 1
-    chassis.turnToHeading(90, 700, {.minSpeed = 100}, false);
-    // chassis.waitUntilDone();
-    intake.move(127);
-    chassis.moveToPoint(-32, chassis.getPose().y, 1500, {.minSpeed = 100}); // Ring 1
-    chassis.turnToHeading(45, 700, {.minSpeed = 100});
-    chassis.moveToPose(27, 42, 90, 2500, {.minSpeed = 100}, false); // Ring 2
-    // chassis.waitUntilDone();
-    chassis.turnToPoint(6, chassis.getPose().y - 4, 1000, {.forwards = false, .minSpeed = 100});
-    chassis.moveToPoint(6, chassis.getPose().y - 4, 1000, {.forwards = false, .minSpeed = 100});
-    chassis.turnToHeading(0, 700, {}, false);
-    // chassis.waitUntilDone();
     
-    setWallStakePos(ACTIVE); // Wall Stake 1
-    chassis.moveToPoint(chassis.getPose().x, 45, 1000, {.minSpeed = 100}, false);
-    // chassis.waitUntilDone();
-    pros::delay(1500);
-    intake.brake();
-    chassis.moveToPoint(chassis.getPose().x, 53, 700, {.minSpeed = 100});
-    setWallStakePos(SCORING);
-    pros::delay(1750);
-    setWallStakePos(PASSIVE);
-
-    chassis.moveToPoint(chassis.getPose().x, 38, 1000, {.forwards = false});
-    chassis.turnToHeading(270, 700, {}, false);
-    // chassis.waitUntilDone();
-    intake.move(127);
-    chassis.moveToPoint(-58, chassis.getPose().y, 3000, {.maxSpeed = 70, .minSpeed = 10, .earlyExitRange = 30}); // Ring 3
-    chassis.moveToPoint(-58, chassis.getPose().y, 3000, {.maxSpeed = 40});
-    chassis.turnToPoint(-46, 38, 700,{.forwards = false});
-    chassis.moveToPoint(-46, 38, 700, {.forwards = false, .maxSpeed = 70}); // Align 1
-    chassis.turnToHeading(0, 700, {}, false);
-    // chassis.waitUntilDone();
-    chassis.moveToPoint(chassis.getPose().x, 52, 1000, {}, false);
-    // chassis.waitUntilDone();
-    pros::delay(100);
-    chassis.moveToPoint(-44, 42, 700, {.forwards = false});
-    chassis.turnToHeading(135, 700);
-    chassis.moveToPoint(-70, 70, 1000, {.forwards = false});
-    chassis.turnToHeading(135,400, {}, false);
-    // chassis.waitUntilDone();
-    chassis.setPose(-62,64,135); // SET POSE HERE!!!
-    intake.brake();
-    clampSet(false);
-    pros::delay(500);
-    chassis.moveToPoint(-52.5, 38, 900);
-    chassis.turnToHeading(0, 800);
-    pros::delay(1000);
-    chassis.moveToPoint(chassis.getPose().x, -17, 1500, {.forwards = false}, false); // AUTO STOPS HERE! ------------------------------------------------
-
-    // chassis.waitUntilDone();
-    clampSet(true); // Mogo 2
-
-    // mirrored
-    chassis.turnToHeading(90, 700, {}, false);
-    // chassis.waitUntilDone();
-    intake.move(127);
-    chassis.moveToPoint(-23, -18, 1500, {.maxSpeed = 80});
-    chassis.turnToHeading(145, 700, {.minSpeed = 100});
-    chassis.moveToPose(29, -36, 90, 2500, {.minSpeed = 100});
-    chassis.turnToPoint(0, -29, 1000, {.forwards = false},false);
-    chassis.moveToPoint(0, -29, 1000, {.forwards = false},false);
-    chassis.turnToHeading(180, 700, {}, false);
-    // chassis.waitUntilDone();
-    setWallStakePos(ACTIVE); // Wall Stake 2
-    chassis.moveToPoint(chassis.getPose().x, -45, 1000, {.minSpeed = 100}, false);
-    // chassis.waitUntilDone();
-    pros::delay(2000);
-    intake.brake();
-    chassis.moveToPoint(chassis.getPose().x, -53, 700);
-    setWallStakePos(SCORING);
-    pros::delay(1250);
-    setWallStakePos(PASSIVE);
-
-    chassis.moveToPoint(chassis.getPose().x, -38, 1000, {.forwards = false},false);
-    chassis.turnToHeading(270, 700,{},false);
-    // chassis.waitUntilDone();
-    intake.move(127);
-    chassis.moveToPoint(-56, chassis.getPose().y, 3000, {.maxSpeed = 50},false); // Ring 3
-    chassis.turnToPoint(-47, -34, 700,{.forwards = false});
-    chassis.moveToPoint(-47, -34, 700, {.forwards = false, .maxSpeed = 50},false); // Align 1
-    chassis.turnToHeading(180, 700);
-    chassis.moveToPoint(chassis.getPose().x, -52, 1000, {}, false);
-    // chassis.waitUntilDone();
-    pros::delay(100);
-    chassis.moveToPoint(-44, -42, 700, {.forwards = false});
-    chassis.turnToHeading(45, 700,{},false);
-    chassis.moveToPoint(-59, -59, 700, {.forwards = false}, false);
-    // chassis.waitUntilDone();
-    intake.brake();
-    clampSet(false);
-    // MOGO 3 PATH
-    intake.move(-127);
-    clampSet(false);
-    pros::delay(500);
-    intake.brake();
-    chassis.moveToPoint(-53, -57, 900);
-    chassis.turnToHeading(270, 700, {.minSpeed = 100},false);
-    chassis.moveToPose(58, 10, 60, 3000, {.forwards = false, .lead = 0.8},false);
-    clampSet(true);
   }
   EJECT_RING.remove();
 }
