@@ -10,16 +10,17 @@ bool isClamped = false;
 bool isIntaking = false;
 bool intakeReversed = false;
 bool wallStakeActive = false;
-bool armDown = false;
+bool rightArmDown = false;
+bool leftArmDown = false;
 bool debugMode = false;
 bool ejectOn = true;
+
 void buttonControls() {
   wallStakeEnc.reset_position();
   while (true) {
-    // clamp
+    // clamp ---------------------------------------------------------------------------------------------------------------------
     if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1) && isClamped) {
       clamp.set_value(false);
-      clamp2.set_value(false);
       isClamped = false;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1)) {
         pros::delay(50);
@@ -27,18 +28,17 @@ void buttonControls() {
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1) &&
                !isClamped) {
       clamp.set_value(true);
-      clamp2.set_value(true);
       isClamped = true;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1)) {
         pros::delay(50);
       }
     }
 
-    // intake
-    
+    // intake ---------------------------------------------------------------------------------------------------------------------
     if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2) &&
         (!isIntaking || !intakeReversed)) {
-      intake.move(-127);
+      intake.move(-95);
+      chain.move(-95);
       isIntaking = true;
       intakeReversed = true;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
@@ -47,6 +47,7 @@ void buttonControls() {
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2) &&
                isIntaking && intakeReversed) {
       intake.brake();
+      chain.brake();
       isIntaking = false;
       intakeReversed = false;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
@@ -54,7 +55,8 @@ void buttonControls() {
       }
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1) &&
                (!isIntaking || intakeReversed)) {
-      intake.move(127);
+      intake.move(95);
+      chain.move(95);
       isIntaking = true;
       intakeReversed = false;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
@@ -63,6 +65,7 @@ void buttonControls() {
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1) &&
                isIntaking && !intakeReversed) {
       intake.brake();
+      chain.brake();
       isIntaking = false;
       intakeReversed = false;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
@@ -70,7 +73,7 @@ void buttonControls() {
       }
     }
 
-    // wall stake
+    // wall stake ---------------------------------------------------------------------------------------------------------------------
     if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_UP) &&
     !wallStakeActive) {
       wallStakeEnc.reset_position();
@@ -103,23 +106,37 @@ void buttonControls() {
       }
     }
 
-    // arm
-    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A) && !armDown) {
-      arm.set_value(true);
-      armDown = true;
+    // arms ---------------------------------------------------------------------------------------------------------------------
+    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A) && !rightArmDown) {
+      rightArm.set_value(true);
+      rightArmDown = true;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A)) {
         pros::delay(50);
       }
     }
-    else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A) && armDown) {
-      arm.set_value(false);
-      armDown = false;
+    else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A) && rightArmDown) {
+      rightArm.set_value(false);
+      rightArmDown = false;
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A)) {
+        pros::delay(50);
+      }
+    }
+    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT) && !leftArmDown) {
+      leftArm.set_value(true);
+      leftArmDown = true;
+      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)) {
+        pros::delay(50);
+      }
+    }
+    else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT) && leftArmDown) {
+      leftArm.set_value(false);
+      leftArmDown = false;
+      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)) {
         pros::delay(50);
       }
     }
 
-    // DEBUG SCREEN (LVGL - graphics.cpp)
+    // DEBUG SCREEN (LVGL - graphics.cpp) ---------------------------------------------------------------------------------------------------------------------
     if(controller.get_digital(pros::E_CONTROLLER_DIGITAL_X) && !debugMode) {
       lv_scr_load_anim(screenDebug, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000,
         false);
@@ -138,15 +155,13 @@ void buttonControls() {
     //Ejection toggle
 
     if(controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)&& ejectOn){
-
       ejectOn = false;
-      controller.clear_line(2);
-      controller.set_text(0, 0, "Example text");
+      controller.clear_line(0);
+      controller.set_text(1, 1, "Example text");
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)){
         pros::delay(50);
       }
     }
-
     else if(controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)&& !ejectOn){
 
       ejectOn = true;

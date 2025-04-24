@@ -7,6 +7,7 @@
 #include "lemlib/asset.hpp" // IWYU pragma: keep
 #include "lemlib/chassis/trackingWheel.hpp"
 #include "pros/abstract_motor.hpp"
+#include "pros/adi.hpp"
 #include "pros/device.hpp" // IWYU pragma: keep
 #include "pros/motor_group.hpp"
 #include "pros/motors.h" // IWYU pragma: keep
@@ -19,33 +20,37 @@ pros::Controller partner(pros::E_CONTROLLER_PARTNER);
 
 // motor groups
 pros::MotorGroup
-    leftMotors({-8, -9, -10},
+    leftMotors({-8, -9, 10},
                pros::MotorGearset::blue); // left motor group - ports 3
                                           // (reversed), 4, 5 (reversed)
 pros::MotorGroup rightMotors(
-    {5, 6, 7},
+    {5, 6, -7},
     pros::MotorGearset::blue); // right motor group - ports 6, 7, 9 (reversed)
 
-pros::Motor intake(-19, pros::MotorGearset::blue);
+pros::Motor intake(17, pros::MotorGearset::blue);
+pros::Motor chain(-19, pros::MotorGearset::blue);
 
 pros::adi::DigitalOut clamp('a');
-pros::adi::DigitalOut clamp2('b');
 
-pros::adi::DigitalOut arm('d');
+pros::adi::DigitalOut topRing('b');
+
+pros::adi::DigitalOut leftArm('c');
+pros::adi::DigitalOut rightArm('h');
 
 pros::Rotation wallStakeEnc(-2);
 
 pros::Optical opticalSensor(12);
 
-pros::MotorGroup lift(
-  { 11,-17},
+pros::Motor lift(
+  11,
   pros::MotorGearset::green,
   pros::v5::MotorEncoderUnits::degrees
 );
 // Inertial Sensor on port 10
 pros::Imu imu(3);
 
-pros::Distance distance(4);
+pros::Distance ringDistance(4);
+pros::Distance distance(3);
 
 // tracking wheels
 // horizontal tracking wheel encoder. Rotation sensor, port 20, not reversed
@@ -56,15 +61,15 @@ pros::Rotation rightVerticalEnc(-15);
 // horizontal tracking wheel. 2" diameter, 3.25" offset, back of the robot
 // (negative)
 lemlib::TrackingWheel horizontal(&horizontalEnc, lemlib::Omniwheel::NEW_2,
-                                 -3.25);
+                                 -4);
 // vertical tracking wheel. 2" diameter, 1.75" offset, left of the robot
 // (negative)
 lemlib::TrackingWheel leftVertical(&leftVerticalEnc, lemlib::Omniwheel::NEW_2,
-                                   -1.75);
+                                   -2.125);
 // vertical tracking wheel. 2" diameter, 1.75" offset, right of the robot
 // (positive)
 lemlib::TrackingWheel rightVertical(&rightVerticalEnc, lemlib::Omniwheel::NEW_2,
-                                    1.75);
+                                    2.125);
 
 // drivetrain settings
 lemlib::Drivetrain drivetrain(

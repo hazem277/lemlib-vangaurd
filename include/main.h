@@ -46,13 +46,18 @@
 //#include "okapi/api.hpp"
 
 extern pros::adi::DigitalOut clamp;
-extern pros::adi::DigitalOut clamp2;
 
-extern pros::adi::DigitalOut arm;
+extern pros::adi::DigitalOut topRing;
+
+extern pros::adi::DigitalOut leftArm;
+extern pros::adi::DigitalOut rightArm;
+
+extern pros::adi::DigitalOut leftArm;
+extern pros::adi::DigitalOut rightArm;
 
 extern pros::Rotation wallStakeEnc;
 
-extern pros::MotorGroup lift;
+extern pros::Motor lift;
 // controller
 extern pros::Controller controller;
 extern pros::Controller partner;
@@ -61,6 +66,9 @@ extern pros::MotorGroup leftMotors; // right motor group - ports 6, 7, 9 (revers
 extern pros::MotorGroup rightMotors; // right motor group - ports 6, 7, 9 (reversed)
 
 extern pros::Motor intake;
+extern pros::Motor chain;
+
+extern pros::Distance ringDistance;
 
 // Inertial Sensor on port 10
 extern pros::Imu imu;

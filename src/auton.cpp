@@ -12,11 +12,6 @@ auton_type autonType = SKILLS;
 bool scoreAllianceStake = true;
 bool autonConfirmed = true;
 
-void clampSet(bool value) {
-  clamp.set_value(value);
-  clamp2.set_value(value);
-}
-
 enum wallStakePos { PASSIVE, ACTIVE, SCORING };
 bool isRed = 1;
 void eject(){
@@ -82,7 +77,6 @@ void runAuton() {
     // chassis.moveToPose(30, -25, 70, 2250, {.forwards = false});
     chassis.waitUntilDone();
     clamp.set_value(true);
-    clamp2.set_value(true);
     pros::delay(200);
     intake.move(127);
     chassis.turnToHeading(180, 200);
@@ -100,7 +94,6 @@ void runAuton() {
     // chassis.moveToPose(30, -25, 70, 2250, {.forwards = false});
     chassis.waitUntilDone();
     clamp.set_value(true);
-    clamp2.set_value(true);
     pros::delay(200);
     intake.move(127);
     chassis.turnToHeading(180, 200);
@@ -129,7 +122,6 @@ void runAuton() {
     // chassis.moveToPose(30, -25, 70, 2250, {.forwards = false});
     chassis.waitUntilDone();
     clamp.set_value(true);
-    clamp2.set_value(true); 
     pros::delay(200);
     intake.move(127);
     chassis.turnToHeading(0, 200);
@@ -152,7 +144,7 @@ void runAuton() {
     chassis.moveToPoint(30, -27, 1250, {.forwards = false, .maxSpeed = 80});
     // chassis.moveToPose(30, -25, 70, 2250, {.forwards = false});
     chassis.waitUntilDone();
-    clampSet(true);
+    clamp.set_value(true);
     pros::delay(200);
     intake.move(127);
     chassis.turnToHeading(0, 200);
@@ -191,7 +183,6 @@ void runAuton() {
     // chassis.moveToPose(30, -25, 70, 2250, {.forwards = false});
     chassis.waitUntilDone();
     clamp.set_value(true);
-    clamp2.set_value(true);
     pros::delay(200);
     intake.move(127);
     chassis.turnToHeading(0, 200);
@@ -209,7 +200,6 @@ void runAuton() {
     // chassis.moveToPose(30, -25, 70, 2250, {.forwards = false});
     chassis.waitUntilDone();
     clamp.set_value(true);
-    clamp2.set_value(true);
     pros::delay(200);
     intake.move(127);
     chassis.turnToHeading(0, 200);
@@ -239,7 +229,6 @@ void runAuton() {
     // chassis.moveToPose(30, -25, 70, 2250, {.forwards = false});
     chassis.waitUntilDone();
     clamp.set_value(true);
-    clamp2.set_value(true);
     pros::delay(200);
     intake.move(127);
     chassis.turnToHeading(180, 200);
@@ -271,7 +260,6 @@ void runAuton() {
     // chassis.moveToPose(30, -25, 70, 2250, {.forwards = false});
     chassis.waitUntilDone();
     clamp.set_value(true);
-    clamp2.set_value(true);
     pros::delay(200);
     intake.move(127);
     chassis.turnToHeading(180, 200);
