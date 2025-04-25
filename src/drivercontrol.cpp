@@ -5,6 +5,7 @@
 #include "pros/abstract_motor.hpp" // IWYU pragma: keep
 #include "pros/misc.h"
 #include "pros/motors.h"
+#include <ctime>
 
 bool isClamped = false;
 bool isIntaking = false;
@@ -59,32 +60,39 @@ void buttonControls() {
         isIntaking = true;
         intakeReversed = false;
       }
-      else if (isIntaking && !intakeReversed) {
+      else if (isIntaking && !intakeReversed && !wallStakeActive) {
         intake.brake();
         chain.brake();
         isIntaking = false;
-        intakeReversed = false;
+      }
+      else if (isIntaking && !intakeReversed && wallStakeActive) {
+        chain.brake();
+        isIntaking = false;
       }
     }
 
     // wall stake
     // ---------------------------------------------------------------------------------------------------------------------
     if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_UP)) {
-      if (!wallStakeActive) {
+      if (!wallStakeActive) { // activate wall stake
         wallStakeEnc.reset_position();
         lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
-        lift.move_absolute(9000, 50);
-        while (wallStakeEnc.get_position() < 8500) {
+        lift.move_absolute(9500, 50);
+        while (wallStakeEnc.get_position() < 9250) {
           pros::delay(10);
         }
         wallStakeActive = true;
       }
-      else {
-        lift.move(-40);
+      else { // retract wall stake
+        if (!isIntaking) {
+          intake.brake();
+        }
+
+        lift.move(-127);
         pros::delay(150);
         lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
         wallStakeActive = false;
-        while (wallStakeEnc.get_position() > 1000) {
+        while (wallStakeEnc.get_position() > 10000) {
           pros::delay(50);
         }
         lift.brake();
@@ -93,7 +101,7 @@ void buttonControls() {
     if (wallStakeActive) {
       if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN)) { // scoring
         lift.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
-        lift.move(40);
+        lift.move(127);
         while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN)) {
           pros::delay(50);
         }
@@ -103,7 +111,7 @@ void buttonControls() {
     }
 
     // arms
-    // ---------------------------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------------------w
     if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A) && !rightArmDown) {
       rightArm.set_value(true);
       rightArmDown = true;
