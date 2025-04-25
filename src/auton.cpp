@@ -283,7 +283,7 @@ void runAuton() {
   }
 
   else if (autonType == SKILLS) {
-    
+    chassis.turnToHeading(90, 10000);
   }
   EJECT_RING.remove();
 }

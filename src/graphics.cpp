@@ -24,17 +24,17 @@ int height = 70;
 int xPos = -160;
 int yPos = -70;
 
-lv_obj_t *imgVanguardLogo;
-LV_IMG_DECLARE(vangaurd480x240px);
+// lv_obj_t *imgVanguardLogo;
+// LV_IMG_DECLARE(vangaurd480x240px);
 
 void autonSelector(void) {
   lv_obj_t *label;
   lv_scr_load_anim(screenAutonSelector, LV_SCR_LOAD_ANIM_FADE_IN, 250, 1000, false);
 
-  imgVanguardLogo = lv_img_create(screenLogo);
-  lv_img_set_src(imgVanguardLogo, &vangaurd480x240px);
-  lv_obj_set_size(imgVanguardLogo, 480, 240);
-  lv_obj_align(imgVanguardLogo, LV_ALIGN_CENTER, 0, 0);
+  // imgVanguardLogo = lv_img_create(screenLogo);
+  // lv_img_set_src(imgVanguardLogo, &vangaurd480x240px);
+  // lv_obj_set_size(imgVanguardLogo, 480, 240);
+  // lv_obj_align(imgVanguardLogo, LV_ALIGN_CENTER, 0, 0);
 
   /*
   Red Positive
