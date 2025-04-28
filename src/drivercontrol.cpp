@@ -89,12 +89,10 @@ void buttonControls() {
         }
 
         lift.move(-127);
-        pros::delay(150);
+        pros::delay(700);
         lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
         wallStakeActive = false;
-        while (wallStakeEnc.get_position() > 10000) {
-          pros::delay(50);
-        }
+        
         lift.brake();
       }
     }
