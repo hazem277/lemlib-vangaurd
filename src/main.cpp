@@ -56,8 +56,8 @@ pros::Distance distance(3);
 // horizontal tracking wheel encoder. Rotation sensor, port 20, not reversed
 pros::Rotation horizontalEnc(16);
 // vertical tracking wheel encoder. Rotation sensor, port 11, reversed
-pros::Rotation leftVerticalEnc(20);
-pros::Rotation rightVerticalEnc(-15);
+pros::Rotation leftVerticalEnc(-20);
+pros::Rotation rightVerticalEnc(15);
 // horizontal tracking wheel. 2" diameter, 3.25" offset, back of the robot
 // (negative)
 lemlib::TrackingWheel horizontal(&horizontalEnc, lemlib::Omniwheel::NEW_2,
@@ -96,7 +96,7 @@ lemlib::ControllerSettings
 
 // angular motion controller
 lemlib::ControllerSettings
-    angularController(14,    // proportional gain (kP)
+    angularController(13.5,    // proportional gain (kP)
                       0,    // integral gain (kI)
                       89.7, // derivative gain (kD)
              0,    // anti windup
@@ -167,15 +167,15 @@ void initialize() {
   pros::Task screenTask([&]() {
     while (true) {
       // print robot location to the brain screen
-      // pros::lcd::print(0, "X: %f", chassis.getPose().x); // x
-      // pros::lcd::print(1, "Y: %f", chassis.getPose().y); // y
-      // pros::lcd::print(2, "Theta: %f", chassis.getPose().theta); // heading
-      // pros::lcd::print(3, "Heading: %f", imu.get_heading()); // heading
+      pros::lcd::print(0, "X: %f", chassis.getPose().x); // x
+      pros::lcd::print(1, "Y: %f", chassis.getPose().y); // y
+      pros::lcd::print(2, "Theta: %f", chassis.getPose().theta); // heading
+      pros::lcd::print(3, "Heading: %f", imu.get_heading()); // heading
       // log position telemetry
       lemlib::telemetrySink()->info("Chassis pose: {}", chassis.getPose());
 
       std::cout << '\r' << std::setw(20) << "X: " << chassis.getPose().x
-                << std::setw(20) << "Is ejecting: " << ejectOn
+                << std::setw(20) << "Y: " << chassis.getPose().y
                 << std::setw(20) << "Theta: " << chassis.getPose().theta
                 << std::setw(20) << "intake torque:" << chain.get_torque()
                 << std::setw(20) << " "
