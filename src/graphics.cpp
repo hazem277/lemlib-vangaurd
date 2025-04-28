@@ -1,5 +1,5 @@
 #include "graphics.h" // IWYU pragma: keep
-#include "auton.h"
+#include "auton/auton.h"
 #include "liblvgl/core/lv_disp.h"
 #include "liblvgl/core/lv_obj.h"
 #include "liblvgl/core/lv_obj_style.h"

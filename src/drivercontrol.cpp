@@ -1,5 +1,5 @@
 #include "drivercontrol.h" // IWYU pragma: keep
-#include "auton.h"         // IWYU pragma: keep
+#include "auton/auton.h"         // IWYU pragma: keep
 #include "graphics.h"
 #include "main.h"
 #include "pros/abstract_motor.hpp" // IWYU pragma: keep

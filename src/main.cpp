@@ -203,6 +203,9 @@ void competition_initialize() {}
  * features LemLib has to offer
  */
 void autonomous() {
+  while (!autonConfirmed) {
+    pros::delay(50);
+  }
   runAuton(); 
 }
 
