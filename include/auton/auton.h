@@ -1,6 +1,8 @@
 #ifndef AUTON_H
 #define AUTON_H
+
 extern bool isRed;
+
 void eject();
 void runAuton();
 
@@ -18,5 +20,7 @@ extern auton_type autonType;
 extern bool scoreAllianceStake;
 
 extern bool autonConfirmed;
+
+extern bool isClamped;
 
 #endif

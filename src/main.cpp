@@ -1,5 +1,5 @@
 #include "main.h"
-#include "auton.h"
+#include "auton/auton.h"
 #include "drivercontrol.h"
 #include "graphics.h"             // IWYU pragma: keep
 #include "lemlib-tarball/api.hpp" // IWYU pragma: keep
