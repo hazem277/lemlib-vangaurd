@@ -2,5 +2,6 @@
 #include "main.h"
 
 void skills() {
-   chassis.turnToHeading(90, 10000);
+   chassis.setPose(0, 0, 0);
+   chassis.moveToPoint(0, 48 , 10000);
 }

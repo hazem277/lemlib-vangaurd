@@ -68,8 +68,6 @@ extern pros::MotorGroup rightMotors; // right motor group - ports 6, 7, 9 (rever
 extern pros::Motor intake;
 extern pros::Motor chain;
 
-extern pros::Distance ringDistance;
-
 // Inertial Sensor on port 10
 extern pros::Imu imu;
 extern pros::Distance distance;

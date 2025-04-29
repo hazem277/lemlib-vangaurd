@@ -8,8 +8,7 @@ void red_pos() {
    lift.move(-127);
    
    pros::delay(400);
-   chassis.turnToPoint(25, 40, 5000);
-   chassis.waitUntilDone();
+   chassis.turnToPoint(25, 40, 5000, {}, false);
    lift.brake(); 
    chassis.moveToPose(0, 20, 270, 5000, { .lead = .8, .earlyExitRange = 40 });
    // // chassis.waitUntilDone();

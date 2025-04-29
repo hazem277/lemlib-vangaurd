@@ -47,9 +47,8 @@ pros::Motor lift(
   pros::v5::MotorEncoderUnits::degrees
 );
 // Inertial Sensor on port 10
-pros::Imu imu(3);
+pros::Imu imu(4);
 
-pros::Distance ringDistance(4);
 pros::Distance distance(3);
 
 // tracking wheels
@@ -96,7 +95,7 @@ lemlib::ControllerSettings
 
 // angular motion controller
 lemlib::ControllerSettings
-    angularController(13.5,    // proportional gain (kP)
+    angularController(13.25,    // proportional gain (kP)
                       0,    // integral gain (kI)
                       93, // derivative gain (kD)
              0,    // anti windup
@@ -177,7 +176,7 @@ void initialize() {
       std::cout << '\r' << std::setw(20) << "X: " << chassis.getPose().x
                 << std::setw(20) << "Y: " << chassis.getPose().y
                 << std::setw(20) << "Theta: " << chassis.getPose().theta
-                << std::setw(20) << "intake torque:" << chain.get_torque()
+                << std::setw(20) << "imu:" << imu.get_heading()
                 << std::setw(20) << " "
                 << std::flush;
       // delay to save resources
@@ -213,6 +212,7 @@ void autonomous() {
  * Runs in driver control
  */
 void opcontrol() {
+  chassis.setPose(0, 0, -35);
   // controller
   // loop to continuously update motors
   pros::Task EJECT_RING(eject);
