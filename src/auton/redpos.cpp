@@ -2,19 +2,17 @@
 #include "main.h"
 
 void red_pos() {
-   chassis.setPose(0,0,0);
-   chassis.moveToPoint(0,10,10000);
-   // chassis.setPose(60, 13, 145);
-   // lift.move(127);
-   // pros::delay(800);
-   // lift.move(-127);
+   chassis.setPose(60, 10, 145);
+   lift.move(127);
+   pros::delay(800);
+   lift.move(-127);
    
-   // pros::delay(400);
-   // chassis.turnToPoint(40, 40, 1500);
-   // chassis.waitUntilDone();
-   // lift.brake();    
-   // chassis.moveToPose(10, 30, 270, 1250, { .maxSpeed = 80});
-   // chassis.waitUntilDone();
+   pros::delay(400);
+   chassis.turnToPoint(25, 40, 5000);
+   chassis.waitUntilDone();
+   lift.brake(); 
+   chassis.moveToPose(0, 20, 270, 5000, { .lead = .8, .earlyExitRange = 40 });
+   // // chassis.waitUntilDone();
    // clamp.set_value(true);
 
 

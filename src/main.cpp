@@ -98,7 +98,7 @@ lemlib::ControllerSettings
 lemlib::ControllerSettings
     angularController(13.5,    // proportional gain (kP)
                       0,    // integral gain (kI)
-                      89.7, // derivative gain (kD)
+                      93, // derivative gain (kD)
              0,    // anti windup
               0,  // small error range, in degrees
        100,    // small error range timeout, in milliseconds
