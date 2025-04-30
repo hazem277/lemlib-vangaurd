@@ -40,7 +40,7 @@ void buttonControls() {
     // ---------------------------------------------------------------------------------------------------------------------
     if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_R2)) {
       if (!isIntaking || !intakeReversed) {
-        intake.move(-95);
+        intake.move(-127);
         chain.move(-95);
         isIntaking = true;
         intakeReversed = true;
@@ -55,7 +55,7 @@ void buttonControls() {
     else if (controller.get_digital_new_press(
                    pros::E_CONTROLLER_DIGITAL_R1)) {
       if (!isIntaking || intakeReversed) {
-        intake.move(95);
+        intake.move(127);
         chain.move(95);
         isIntaking = true;
         intakeReversed = false;

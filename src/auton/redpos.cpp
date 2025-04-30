@@ -4,11 +4,14 @@
 void red_pos() {
    chassis.setPose(60, 10, 145);
    lift.move(127);
-   pros::delay(800);
-   lift.move(-127);
-   
+  pros::delay(800);
+  chassis.moveToPoint(chassis.getPose().x + 5, chassis.getPose().y + 5, 1000, {.forwards = false});
+  lift.move(-127);
+  pros::delay(500);
+  lift.brake();
    pros::delay(400);
-   chassis.turnToPoint(25, 40, 5000, {}, false);
+   chassis.turnToPoint(chassis.getPose().x-5, chassis.getPose().y+40, 5000);
+   chassis.waitUntilDone();
    lift.brake(); 
    chassis.moveToPose(0, 20, 270, 5000, { .lead = .8, .earlyExitRange = 40 });
    // // chassis.waitUntilDone();
