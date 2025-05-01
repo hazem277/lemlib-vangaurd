@@ -14,7 +14,7 @@
 #include "skills.h"
 #include <cmath>
 
-auton_type autonType = RED_NEGATIVE;
+auton_type autonType = RED_POSITIVE;
 bool scoreAllianceStake = true;
 bool autonConfirmed = true;
 bool isRed = true;

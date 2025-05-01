@@ -2,30 +2,20 @@
 #include "main.h"
 
 void red_pos() {
-   chassis.setPose(60, 10, 145);
+   chassis.setPose(0, 0, 90);
+   chassis.moveToPoint(chassis.getPose().x + 30, chassis.getPose().y, 1000, {.minSpeed = 30, .earlyExitRange = 1}, false);
+   chassis.swingToHeading(45, lemlib::DriveSide::LEFT, 1000, {.minSpeed = 30, .earlyExitRange = 1}, false);
+   chassis.moveToPoint(chassis.getPose().x + 10, chassis.getPose().y + 10, 1000, {.minSpeed = 30}, false);
+   rightArm.set_value(true);
+   pros::delay(100);
+   chassis.swingToHeading(0, lemlib::DriveSide::RIGHT, 1000);
+   chassis.turnToHeading(20, 1000, {.minSpeed = 30, .earlyExitRange = 1}, false);
+   rightArm.set_value(false);
+   pros::delay(1000);
+   chassis.moveToPoint(chassis.getPose().x - 1, chassis.getPose().y - 2.67, 1000, {.forwards = false});
    lift.move(127);
-  pros::delay(800);
-  chassis.moveToPoint(chassis.getPose().x + 5, chassis.getPose().y + 5, 1000, {.forwards = false});
-  lift.move(-127);
-  pros::delay(500);
-  lift.brake();
+   pros::delay(800);
+   lift.move(-127);
    pros::delay(400);
-   chassis.turnToPoint(chassis.getPose().x-5, chassis.getPose().y+40, 5000);
-   chassis.waitUntilDone();
-   lift.brake(); 
-   chassis.moveToPose(0, 20, 270, 5000, { .lead = .8, .earlyExitRange = 40 });
-   // // chassis.waitUntilDone();
-   // clamp.set_value(true);
-
-
-
-   // pros::delay(200);
-   // intake.move(127);
-   // chassis.turnToHeading(180, 200);
-   
-   // chassis.moveToPoint(30, 47, 2300);
-   // chassis.turnToHeading(0, 2000);
-   // chassis.moveToPoint(30, 0, 2000, {.maxSpeed = 80});
-   // chassis.waitUntilDone();
-   // isClamped = true;
+   lift.brake();
 }
