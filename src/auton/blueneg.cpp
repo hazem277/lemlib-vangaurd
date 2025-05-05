@@ -29,15 +29,18 @@ void blue_neg() {
                         {}, false);
     chassis.moveToPoint(chassis.getPose().x - 4, chassis.getPose().y - 10, 1000,
                         {}, false);
-    // chassis.swingToPoint(chassis.getPose().x + 5, chassis.getPose().y + 20, lemlib::DriveSide::RIGHT, 2000, {}, false);
     chassis.moveToPoint(chassis.getPose().x, chassis.getPose().y + 20, 700, {.forwards = false}, false);
-    chassis.turnToPoint(4, 10, 1000, {}, false);
+    chassis.turnToPoint(8, 10, 1000, {}, false);
     topRing.set_value(true);
-    chassis.moveToPoint(4, 10, 1000);
-    // lift.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
-    // lift.move(127);
-    // pros::delay(525);
-    // lift.brake();
+    chassis.moveToPoint(8, 10, 1000, {}, false);
+    pros::delay(1000);
+    chassis.turnToHeading(90, 700, {}, false);
+    topRing.set_value(false);
+    chassis.moveToPoint(chassis.getPose().x + 18, chassis.getPose().y, 1000, {}, false);
+    lift.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+    lift.move(127);
+    pros::delay(500);
+    lift.brake();
 
     isClamped = true;
   }
