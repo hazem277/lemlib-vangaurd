@@ -7,9 +7,9 @@
 #include "drivercontrol.h"
 #include "skills.h"
 
-auton_type autonType    = RED_NEGATIVE;
-bool scoreAllianceStake = true;
+auton_type autonType    = BLUE_NEGATIVE;
 bool autonConfirmed     = true;
+bool scoreAllianceStake = true;
 bool isRed              = true;
 
 enum wallStakePos { PASSIVE, ACTIVE, SCORING };

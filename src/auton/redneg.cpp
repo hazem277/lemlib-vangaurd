@@ -1,6 +1,5 @@
 #include "auton.h"
 #include "main.h"
-#include "pros/motors.h"
 
 void red_neg() {
   if (scoreAllianceStake) {
@@ -13,6 +12,7 @@ void red_neg() {
     pros::delay(500);
     lift.brake();
     intake.move(127);
+    chassis.waitUntilDone();
     chassis.turnToPoint(chassis.getPose().x + 37, chassis.getPose().y + 7, 1000,
                         {}, false);
     chassis.moveToPoint(chassis.getPose().x + 37, chassis.getPose().y + 7, 1350,
