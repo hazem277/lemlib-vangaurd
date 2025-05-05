@@ -1,20 +1,13 @@
+#include "main.h"
 #include "auton.h"
 #include "blueneg.h"
 #include "bluepos.h"
-#include "drivercontrol.h"
-#include "fmt/format.h" // IWYU pragma: keep
-#include "lemlib-tarball/api.hpp" // IWYU pragma: keep
-#include "lemlib/chassis/chassis.hpp"
-#include "main.h"
-#include "pros/abstract_motor.hpp" // IWYU pragma: keep
-#include "pros/motors.h"
-#include "pros/rtos.hpp"
 #include "redneg.h"
 #include "redpos.h"
+#include "drivercontrol.h"
 #include "skills.h"
-#include <cmath>
 
-auton_type autonType    = RED_POSITIVE;
+auton_type autonType    = RED_NEGATIVE;
 bool scoreAllianceStake = true;
 bool autonConfirmed     = true;
 bool isRed              = true;
