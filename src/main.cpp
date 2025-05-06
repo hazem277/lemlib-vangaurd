@@ -113,7 +113,7 @@ void initialize() {
       std::cout << '\r' << std::setw(20) << "X: " << chassis.getPose().x
                 << std::setw(20) << "Y: " << chassis.getPose().y
                 << std::setw(20) << "Theta: " << chassis.getPose().theta
-                << std::setw(20) << "imu:" << imu.get_heading() << std::setw(20)
+                << std::setw(20) << "autonConfirmation" << autonConfirmed << std::setw(20)
                 << " " << std::flush;
       // delay to save resources
       pros::delay(50);
@@ -131,6 +131,9 @@ void autonomous() {
 }
 
 void opcontrol() {
+  drivetrain.leftMotors->set_brake_mode_all(MOTOR_BRAKE_COAST);
+  drivetrain.rightMotors->set_brake_mode_all(MOTOR_BRAKE_COAST);
+  
   pros::Task EJECT_RING(eject);
   pros::Task BUTTON_CONTROLS(buttonControls);
   while (true) {

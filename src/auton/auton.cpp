@@ -7,9 +7,9 @@
 #include "drivercontrol.h"
 #include "skills.h"
 
-auton_type autonType    = BLUE_POSITIVE;
-bool autonConfirmed     = true;
-bool scoreAllianceStake = false;
+auton_type autonType    = NONE;
+bool autonConfirmed     = false;
+bool scoreAllianceStake = true;
 bool isRed              = true;
 
 enum wallStakePos { PASSIVE, ACTIVE, SCORING };
@@ -17,17 +17,16 @@ enum wallStakePos { PASSIVE, ACTIVE, SCORING };
 void eject() {
   while (true) {
     if (isIntaking && ejectOn) { // red ≈ 14 | blue ≈ 219 | none ≈ 63
-      if ((opticalSensor.get_hue() > 210 && opticalSensor.get_hue() < 230 &&
+      if ((opticalSensor.get_hue() > 165 && opticalSensor.get_hue() < 230 &&
            isRed) ||
-          (opticalSensor.get_hue() > 5 && opticalSensor.get_hue() < 20 &&
+          (opticalSensor.get_hue() > 0 && opticalSensor.get_hue() < 40 &&
            (!isRed))) {
-        pros::delay(295);
-        intake.brake();
-        pros::delay(200);
-        intake.move(127);
+            chain.move(127);
+            pros::delay(600);
+            chain.move(85);
       }
     }
-    pros::delay(33);
+    pros::delay(10);
   }
 }
 
@@ -72,6 +71,4 @@ void runAuton() {
 
     case SKILLS: skills(); break;
   }
-
-  EJECT_RING.remove();
 }

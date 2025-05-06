@@ -15,24 +15,32 @@ bool rightArmDown = false;
 bool leftArmDown = false;
 bool debugMode = false;
 bool ejectOn = true;
+bool isTopRing = false;
 
 void buttonControls() {
   wallStakeEnc.reset_position();
   while (true) {
     // clamp
     // ---------------------------------------------------------------------------------------------------------------------
-    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1) && isClamped) {
-      clamp.set_value(false);
-      isClamped = false;
-      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1)) {
-        pros::delay(50);
+    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L1)) {
+      if (isClamped) {
+        clamp.set_value(false);
+        isClamped = false;
+      } else {
+        clamp.set_value(true);
+        isClamped = true;
       }
-    } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1) &&
-               !isClamped) {
-      clamp.set_value(true);
-      isClamped = true;
-      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1)) {
-        pros::delay(50);
+    }
+
+    // intake piston
+    // ---------------------------------------------------------------------------------------------------------------------
+    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_B)) {
+      if (isTopRing) {
+        topRing.set_value(false);
+        isTopRing = false;
+      } else {
+        topRing.set_value(true);
+        isTopRing = true;
       }
     }
 
@@ -41,7 +49,7 @@ void buttonControls() {
     if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_R2)) {
       if (!isIntaking || !intakeReversed) {
         intake.move(-127);
-        chain.move(-95);
+        chain.move(-85);
         isIntaking = true;
         intakeReversed = true;
       }
@@ -56,7 +64,7 @@ void buttonControls() {
                    pros::E_CONTROLLER_DIGITAL_R1)) {
       if (!isIntaking || intakeReversed) {
         intake.move(127);
-        chain.move(95);
+        chain.move(85);
         isIntaking = true;
         intakeReversed = false;
       }
@@ -110,33 +118,22 @@ void buttonControls() {
 
     // arms
     // ---------------------------------------------------------------------------------------------------------------------w
-    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A) && !rightArmDown) {
-      rightArm.set_value(true);
-      rightArmDown = true;
-      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A)) {
-        pros::delay(50);
-      }
-    } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A) &&
-               rightArmDown) {
-      rightArm.set_value(false);
-      rightArmDown = false;
-      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_A)) {
-        pros::delay(50);
+    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_A)) {
+      if (!rightArmDown) {
+        rightArm.set_value(true);
+        rightArmDown = true;
+      } else {
+        rightArm.set_value(false);
+        rightArmDown = false;
       }
     }
-    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT) &&
-        !leftArmDown) {
-      leftArm.set_value(true);
-      leftArmDown = true;
-      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)) {
-        pros::delay(50);
-      }
-    } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT) &&
-               leftArmDown) {
-      leftArm.set_value(false);
-      leftArmDown = false;
-      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)) {
-        pros::delay(50);
+    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_LEFT)) {
+      if (!leftArmDown) {
+        leftArm.set_value(true);
+        leftArmDown = true;
+      } else {
+        leftArm.set_value(false);
+        leftArmDown = false;
       }
     }
 
