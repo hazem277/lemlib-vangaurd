@@ -1,16 +1,16 @@
-#include "main.h"
 #include "auton.h"
 #include "blueneg.h"
 #include "bluepos.h"
+#include "drivercontrol.h"
+#include "main.h"
 #include "redneg.h"
 #include "redpos.h"
-#include "drivercontrol.h"
 #include "skills.h"
 
-auton_type autonType    = NONE;
-bool autonConfirmed     = false;
-bool scoreAllianceStake = true;
-bool isRed              = true;
+auton_type autonType = BLUE_POSITIVE;
+bool autonConfirmed = true;
+bool scoreAllianceStake = false;
+bool isRed = true;
 
 enum wallStakePos { PASSIVE, ACTIVE, SCORING };
 
@@ -21,9 +21,9 @@ void eject() {
            isRed) ||
           (opticalSensor.get_hue() > 0 && opticalSensor.get_hue() < 40 &&
            (!isRed))) {
-            chain.move(127);
-            pros::delay(600);
-            chain.move(85);
+        chain.move(127);
+        pros::delay(600);
+        chain.move(85);
       }
     }
     pros::delay(10);
@@ -34,15 +34,15 @@ void setWallStakePos(wallStakePos pos) {
   if (pos == PASSIVE) {
     lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
     lift.brake();
-  }
-  else if (pos == ACTIVE) {
+  } else if (pos == ACTIVE) {
     wallStakeEnc.reset_position();
     lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
     lift.move(25);
-    while (wallStakeEnc.get_position() < 4700) { pros::delay(10); }
+    while (wallStakeEnc.get_position() < 4700) {
+      pros::delay(10);
+    }
     lift.brake();
-  }
-  else if (pos == SCORING) {
+  } else if (pos == SCORING) {
     lift.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
     lift.move_relative(310, 127);
   }
@@ -52,23 +52,35 @@ void runAuton() {
   chassis.setBrakeMode(pros::E_MOTOR_BRAKE_BRAKE);
 
   pros::delay(100);
-  if (autonType == RED_POSITIVE || autonType == RED_NEGATIVE) { isRed = 1; }
-  else if (autonType == BLUE_POSITIVE || autonType == BLUE_NEGATIVE) {
+  if (autonType == RED_POSITIVE || autonType == RED_NEGATIVE) {
+    isRed = 1;
+  } else if (autonType == BLUE_POSITIVE || autonType == BLUE_NEGATIVE) {
     isRed = 0;
   }
   pros::Task EJECT_RING(eject);
 
   switch (autonType) {
-    case NONE: break;
+  case NONE:
+    break;
 
-    case RED_POSITIVE: red_pos(); break;
+  case RED_POSITIVE:
+    red_pos();
+    break;
 
-    case RED_NEGATIVE: red_neg(); break;
+  case RED_NEGATIVE:
+    red_neg();
+    break;
 
-    case BLUE_POSITIVE: blue_pos(); break;
+  case BLUE_POSITIVE:
+    blue_pos();
+    break;
 
-    case BLUE_NEGATIVE: blue_neg(); break;
+  case BLUE_NEGATIVE:
+    blue_neg();
+    break;
 
-    case SKILLS: skills(); break;
+  case SKILLS:
+    skills();
+    break;
   }
 }

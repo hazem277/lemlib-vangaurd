@@ -3,7 +3,7 @@ Language:        Cpp
 AccessModifierOffset: 0
 AlignAfterOpenBracket: Align
 AlignArrayOfStructures: None
-AlignConsecutiveAssignments: AcrossEmptyLines 
+AlignConsecutiveAssignments: None 
 AlignConsecutiveBitFields: None
 AlignConsecutiveDeclarations: None
 AlignConsecutiveMacros: None
@@ -16,7 +16,7 @@ AllowShortBlocksOnASingleLine: Always
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortEnumsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: All
-AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortIfStatementsOnASingleLine: None
 AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
 AlwaysBreakAfterReturnType: None
