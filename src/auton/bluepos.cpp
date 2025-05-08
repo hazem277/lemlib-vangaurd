@@ -1,7 +1,5 @@
 #include "auton.h"
-#include "lemlib/chassis/chassis.hpp"
 #include "main.h"
-#include "pros/motors.h"
 
 void blue_pos() {
   if (scoreAllianceStake) {
@@ -61,7 +59,7 @@ void blue_pos() {
     chassis.moveToPoint(chassis.getPose().x - 7, chassis.getPose().y + 1, 800,
                         {.forwards = false}, false);
     rightArm.set_value(false);
-    chassis.turnToHeading(118, 600, {}, false);
+    chassis.turnToHeading(120, 600, {}, false);
     lift.move(127);
     pros::delay(700);
     lift.move(-127);
@@ -92,37 +90,6 @@ void blue_pos() {
     lift.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
     lift.brake();
 
-    // OLD PATH CODE
-    // ---------------------------------------------------------------------------------------------
-    // chassis.moveToPoint(chassis.getPose().x + 29, chassis.getPose().y, 910,
-    // {.minSpeed = 30, .earlyExitRange = 1},
-    //                     false);
-    // chassis.swingToHeading(135, lemlib::DriveSide::RIGHT, 800, {.minSpeed =
-    // 30, .earlyExitRange = 1}, false); chassis.moveToPoint(chassis.getPose().x
-    // + 10, chassis.getPose().y - 10, 700, {.minSpeed = 30}, false);
-    // leftArm.set_value(true);
-    // pros::delay(100);
-    // chassis.swingToHeading(180, lemlib::DriveSide::LEFT, 500);
-    // chassis.turnToHeading(154, 1000, {.minSpeed = 30, .earlyExitRange = 1},
-    // false); leftArm.set_value(false); pros::delay(1000);
-    // chassis.moveToPoint(chassis.getPose().x - 1, chassis.getPose().y + 2.5,
-    // 500, {.forwards = false}); lift.move(127); pros::delay(1000);
-    // lift.move(-127);
-    // pros::delay(600);
-    // lift.brake();
-    // chassis.waitUntilDone();
-    // chassis.turnToHeading(225, 1000, {}, false);
-    // intake.move(127);
-    // chassis.moveToPoint(chassis.getPose().x - 17, chassis.getPose().y - 13,
-    // 900, {}, false); leftArm.set_value(true); chassis.turnToHeading(0, 1000,
-    // {}, false); chassis.moveToPoint(chassis.getPose().x + 6,
-    // chassis.getPose().y - 19, 1000, {.forwards = false}, false);
-    // clamp.set_value(true);
-    // chain.move(85);
-    // pros::delay(200);
-    // leftArm.set_value(false);
-    // chassis.turnToHeading(135, 1000, {}, false);
-    // chassis.moveToPoint(chassis.getPose().x + 9, chassis.getPose().y - 9,
-    // 1000);
+    isClamped = true;
   }
 }

@@ -1,4 +1,5 @@
 #include "auton.h"
+#include "lemlib/chassis/chassis.hpp"
 #include "main.h"
 
 void blue_neg() {
@@ -16,7 +17,7 @@ void blue_neg() {
     chassis.turnToPoint(chassis.getPose().x + 37, chassis.getPose().y - 7,700, {}, false);
     chassis.moveToPoint(chassis.getPose().x + 37, chassis.getPose().y - 7, 1350, {}, false);
     rightArm.set_value(true);
-    chassis.moveToPoint(chassis.getPose().x - 16, chassis.getPose().y + 17, 1000, {.forwards = false}, false);
+    chassis.moveToPoint(chassis.getPose().x - 16, chassis.getPose().y + 18, 1000, {.forwards = false}, false);
     rightArm.set_value(false);
     clamp.set_value(true);
     pros::delay(500);
@@ -45,6 +46,23 @@ void blue_neg() {
     isClamped = true;
   }
   else {
-    
+    chassis.setPose(0, 0, 90);
+    chassis.moveToPoint(chassis.getPose().x + 38, chassis.getPose().y, 1000, {}, false);
+    chassis.turnToPoint(chassis.getPose().x + 7, chassis.getPose().y - 3, 600, {});
+    intake.move(127);
+    chassis.moveToPoint(chassis.getPose().x + 7, chassis.getPose().y - 3, 1000, {.minSpeed = 90}, false);
+    rightArm.set_value(true);
+    int temp_x = chassis.getPose().x - 20;
+    int temp_y = chassis.getPose().y + 20;
+    chassis.moveToPoint(temp_x, temp_y, 1000, {.forwards = false, .maxSpeed = 70, .minSpeed = 30, .earlyExitRange = 10});
+    chassis.moveToPoint(temp_x, temp_y, 700, {.forwards = false, .maxSpeed = 30});
+    pros::delay(600);
+    clamp.set_value(true);
+    chain.move(85);
+    chassis.waitUntilDone();
+    rightArm.set_value(false);
+    chassis.swingToHeading(180, lemlib::DriveSide::RIGHT, 1000, {}, false);
+    chassis.moveToPoint(chassis.getPose().x, chassis.getPose().y, 1000);
+    chassis.turnToHeading(315, 700);
   }
 }

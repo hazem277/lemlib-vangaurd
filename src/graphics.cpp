@@ -186,6 +186,7 @@ void autonSelector(void) {
       buttonConfirm,
       [](lv_event_t *e) {
         if (autonType != NONE) {
+          chassis.calibrate();
           autonConfirmed = true;
           lv_scr_load_anim(screenLogo, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000,
                            false);

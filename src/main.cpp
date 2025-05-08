@@ -103,6 +103,11 @@ void initialize() {
   if (autonType == SKILLS && autonConfirmed) {
     lv_scr_load_anim(screenLogo, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000, false);
   }
+  if (testing) {
+    autonType = BLUE_NEGATIVE;
+    scoreAllianceStake = false;
+    autonConfirmed = true;
+  }
 
   // thread to for brain screen and position logging
   pros::Task screenTask([&]() {

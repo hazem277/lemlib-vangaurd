@@ -7,16 +7,17 @@
 #include "redpos.h"
 #include "skills.h"
 
-auton_type autonType = BLUE_POSITIVE;
-bool autonConfirmed = true;
-bool scoreAllianceStake = false;
+auton_type autonType = NONE;
+bool autonConfirmed = false;
+bool scoreAllianceStake = true;
 bool isRed = true;
+bool testing = true;
 
 enum wallStakePos { PASSIVE, ACTIVE, SCORING };
 
 void eject() {
   while (true) {
-    if (isIntaking && ejectOn) { // red ≈ 14 | blue ≈ 219 | none ≈ 63
+    if ((isIntaking || chain.get_actual_velocity() > 0) && ejectOn) { // red ≈ 14 | blue ≈ 219 | none ≈ 63
       if ((opticalSensor.get_hue() > 165 && opticalSensor.get_hue() < 230 &&
            isRed) ||
           (opticalSensor.get_hue() > 0 && opticalSensor.get_hue() < 40 &&

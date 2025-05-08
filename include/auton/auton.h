@@ -2,6 +2,7 @@
 #define AUTON_H
 
 extern bool isRed;
+extern bool testing;
 
 void eject();
 void runAuton();

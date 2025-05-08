@@ -36,34 +36,49 @@ void red_pos() {
   }
   else {
     chassis.setPose(0, 0, 90);
-    chassis.moveToPoint(chassis.getPose().x + 30, chassis.getPose().y, 1000, {.minSpeed = 30, .earlyExitRange = 1},
-                        false);
-    chassis.swingToHeading(45, lemlib::DriveSide::LEFT, 1000, {.minSpeed = 30, .earlyExitRange = 1}, false);
-    chassis.moveToPoint(chassis.getPose().x + 10, chassis.getPose().y + 10, 1000, {.minSpeed = 30}, false);
-    rightArm.set_value(true);
-    pros::delay(100);
-    chassis.swingToHeading(0, lemlib::DriveSide::RIGHT, 1000);
-    chassis.turnToHeading(20, 1000, {.minSpeed = 30, .earlyExitRange = 1}, false);
-    rightArm.set_value(false);
-    pros::delay(1000);
-    chassis.moveToPoint(chassis.getPose().x - 0.75, chassis.getPose().y - 2, 1000, {.forwards = false});
-    lift.move(127);
-    pros::delay(1000);
-    lift.move(-127);
-    pros::delay(600);
-    lift.brake();
+    chassis.moveToPoint(chassis.getPose().x + 34, chassis.getPose().y, 1200,
+                        {.minSpeed = 30}, false);
+    chassis.turnToPoint(chassis.getPose().x + 7, chassis.getPose().y + 2, 500,
+                        {.minSpeed = 30}, false);
+    chassis.moveToPoint(chassis.getPose().x + 7, chassis.getPose().y + 2, 600,
+                        {.minSpeed = 10});
+    pros::delay(200);
+    leftArm.set_value(true);
     chassis.waitUntilDone();
-    chassis.turnToHeading(315, 1000, {}, false);
+    chassis.moveToPoint(chassis.getPose().x - 7, chassis.getPose().y - 1, 800,
+                        {.forwards = false}, false);
+    leftArm.set_value(false);
+    chassis.turnToHeading(60, 600, {}, false);
+    lift.move(127);
+    pros::delay(700);
+    lift.move(-127);
+    pros::delay(700);
+    lift.brake();
+    chassis.turnToHeading(315, 500, {}, false);
     intake.move(127);
-    chassis.moveToPoint(chassis.getPose().x - 17, chassis.getPose().y + 11, 900, {}, false);
-    rightArm.set_value(true);
-    chassis.turnToHeading(180, 1000, {}, false);
-    chassis.moveToPoint(chassis.getPose().x + 3, chassis.getPose().y + 19, 1000, {.forwards = false}, false);
+    chassis.moveToPoint(chassis.getPose().x - 20, chassis.getPose().y + 20, 1000);
+    chassis.turnToHeading(225, 500, {}, false);
+    chassis.moveToPoint(chassis.getPose().x + 11, chassis.getPose().y + 11, 1000, {.forwards = false, .maxSpeed = 50});
+    pros::delay(700);
     clamp.set_value(true);
     chain.move(85);
+    chassis.turnToHeading(315, 500, {}, false);
+    chassis.moveToPoint(chassis.getPose().x - 17, chassis.getPose().y + 23, 700);
+    topRing.set_value(true);
+    chassis.waitUntilDone();
     pros::delay(200);
-    rightArm.set_value(false);
-    chassis.turnToHeading(45, 1000, {}, false);
-    chassis.moveToPoint(chassis.getPose().x + 9, chassis.getPose().y + 9, 1000);
+    chassis.moveToPoint(chassis.getPose().x + 10, chassis.getPose().y - 10, 700, {.forwards = false});
+    pros::delay(200);
+    topRing.set_value(false);
+    chassis.waitUntilDone();
+    chassis.turnToHeading(90, 700, {}, false);
+    chassis.moveToPoint(chassis.getPose().x + 8, chassis.getPose().y, 1000);
+    // chassis.swingToHeading(135, lemlib::DriveSide::LEFT, 500);
+    lift.move(127);
+    pros::delay(550);
+    lift.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+    lift.brake();
+
+    isClamped = true;
   }
 }

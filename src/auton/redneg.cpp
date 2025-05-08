@@ -42,8 +42,6 @@ void red_neg() {
     lift.brake();
 
     isClamped = true;
-  }
-  else {
-    
+  } else {
   }
 }
