@@ -35,6 +35,8 @@ pros::adi::DigitalOut arm('d');
 
 pros::Rotation wallStakeEnc(-2);
 
+pros::Optical opticalSensor(12);
+
 pros::MotorGroup lift(
   { 11,-17},
   pros::MotorGearset::green,
@@ -81,22 +83,22 @@ lemlib::ControllerSettings
                      3,   // derivative gain (kD)
                      0,   // anti windup
                      0.1, // small error range, in inches
-                     0,   // small error range timeout, in milliseconds
-                     0,   // large error range, in inches
-                     0,   // large error range timeout, in milliseconds
+                     100,   // small error range timeout, in milliseconds
+                     3,   // large error range, in inches
+                     500,   // large error range timeout, in milliseconds
                      0    // maximum acceleration (slew)
     );
 
 // angular motion controller
 lemlib::ControllerSettings
-    angularController(9,    // proportional gain (kP)
+    angularController(8.8,    // proportional gain (kP)
                       0,    // integral gain (kI)
-                      88, // derivative gain (kD)
+                      90, // derivative gain (kD)
                       0,    // anti windup
                       0.1,  // small error range, in degrees
-                      0,    // small error range timeout, in milliseconds
-                      0,    // large error range, in degrees
-                      0,    // large error range timeout, in milliseconds
+                      100,    // small error range timeout, in milliseconds
+                      3,    // large error range, in degrees
+                      500,    // large error range timeout, in milliseconds
                       0     // maximum acceleration (slew)
     );
 
@@ -139,8 +141,13 @@ lemlib::Chassis chassis(drivetrain, linearController, angularController,
 
 void initialize() {
   // pros::lcd::initialize(); // initialize brain screen
+  opticalSensor.set_led_pwm(100);
   chassis.calibrate(); // calibrate sensors
   autonSelector();
+  if (autonType == SKILLS && autonConfirmed) {
+    lv_scr_load_anim(screenLogo, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000,
+      false);
+  }
 
   // the default rate is 50. however, if you need to change the rate, you
   // can do the following.
@@ -163,9 +170,10 @@ void initialize() {
       lemlib::telemetrySink()->info("Chassis pose: {}", chassis.getPose());
 
       std::cout << '\r' << std::setw(20) << "X: " << chassis.getPose().x
-                << std::setw(20) << "Y: " << chassis.getPose().y
+                << std::setw(20) << "Is ejecting: " << ejectOn
                 << std::setw(20) << "Theta: " << chassis.getPose().theta
-                << std::setw(20) << "Heading: " << wallStakeEnc.get_position()
+                << std::setw(20) << "is in Motion?:" << chassis.isInMotion()
+                << std::setw(20) << " "
                 << std::flush;
       // delay to save resources
       pros::delay(100);
@@ -179,7 +187,7 @@ void initialize() {
 void disabled() {}
 
 /**
- * runs after initialize if the robot is connected to field control
+ * runs after initialize if the robot is connected to field control              
  */
 void competition_initialize() {}
 
@@ -189,7 +197,9 @@ void competition_initialize() {}
  * This is an example autonomous routine which demonstrates a lot of the
  * features LemLib has to offer
  */
-void autonomous() { runAuton(); }
+void autonomous() {
+  runAuton(); 
+}
 
 /**
  * Runs in driver control
@@ -197,6 +207,7 @@ void autonomous() { runAuton(); }
 void opcontrol() {
   // controller
   // loop to continuously update motors
+  pros::Task EJECT_RING(eject);
   pros::Task BUTTON_CONTROLS(buttonControls);
   while (true) {
     // get joystick positions
