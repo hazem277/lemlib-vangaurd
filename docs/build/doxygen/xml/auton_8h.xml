@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="auton_8h" kind="file" language="C++">
+    <compoundname>auton.h</compoundname>
+    <includedby refid="auton_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/auton.cpp</includedby>
+    <includedby refid="blue_left_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/blueLeft.cpp</includedby>
+    <includedby refid="blue_right_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/blueRight.cpp</includedby>
+    <includedby refid="red_left_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/redLeft.cpp</includedby>
+    <includedby refid="red_right_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/redRight.cpp</includedby>
+    <includedby refid="skills_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/skills.cpp</includedby>
+    <includedby refid="drivercontrol_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/drivercontrol.cpp</includedby>
+    <includedby refid="graphics_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/graphics.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/main.cpp</includedby>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="auton_8h_1a8a4947b8ef9aecab459021d56fccea56" prot="public" static="no" strong="no">
+        <type></type>
+        <name>auton_type</name>
+        <enumvalue id="auton_8h_1a8a4947b8ef9aecab459021d56fccea56a531a930f470b7572b6346d3bee0a325c" prot="public">
+          <name>RED_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="auton_8h_1a8a4947b8ef9aecab459021d56fccea56a8cabc552b63f7def9916cfd1dd8230b4" prot="public">
+          <name>RED_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="auton_8h_1a8a4947b8ef9aecab459021d56fccea56a2e744dbdae28c7f0bd7fb7717aa5c079" prot="public">
+          <name>BLUE_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="auton_8h_1a8a4947b8ef9aecab459021d56fccea56aeb3317a2d6f02e7bf71103518b5d9e07" prot="public">
+          <name>BLUE_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="auton_8h_1a8a4947b8ef9aecab459021d56fccea56af4e55c01e755ff8b829c8386ed060ee8" prot="public">
+          <name>SKILLS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="auton_8h_1a8a4947b8ef9aecab459021d56fccea56ac157bdf0b85a40d2619cbc8bc1ae5fe2" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="14" column="1" bodyfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" bodystart="14" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="auton_8h_1a40acab291435bb3c83e008b1da5ba04a" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool isRed</definition>
+        <argsstring></argsstring>
+        <name>isRed</name>
+        <briefdescription>
+<para>Used to know what color to eject in the autonomous. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="4" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="24" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="4" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="auton_8h_1a6bbd6d0faf2a5a2ae6a988e7198f0b14" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool testing</definition>
+        <argsstring></argsstring>
+        <name>testing</name>
+        <briefdescription>
+<para>Testing variable that is used to run a specific code without needing to select an autonomous. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="5" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="29" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="5" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="auton_8h_1a7e887d429b29090a31bb7a197e1c2f43" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool intakeStopped</definition>
+        <argsstring></argsstring>
+        <name>intakeStopped</name>
+        <briefdescription>
+<para>boolean to know if the intake was just stopped by the optical sensor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="6" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="34" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="6" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="auton_8h_1ab904e4a4affee35498d90d49eaa0be4f" prot="public" static="no" extern="yes" mutable="no">
+        <type>auton_type</type>
+        <definition>auton_type autonType</definition>
+        <argsstring></argsstring>
+        <name>autonType</name>
+        <briefdescription>
+<para>Defines autonomous codes for each side, Ex. blue left, blue right, and skills. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="23" column="19" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="14" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="23" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="auton_8h_1a8fa46400d4d81100f0bbf575e20e6956" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool autonConfirmed</definition>
+        <argsstring></argsstring>
+        <name>autonConfirmed</name>
+        <briefdescription>
+<para>Boolean that, when true, will make the autonomous run. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="25" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="19" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="25" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="auton_8h_1a15682f65651d2466ad8b237b058b1563" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool isClamped</definition>
+        <argsstring></argsstring>
+        <name>isClamped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="27" column="13" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="27" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="auton_8h_1a03f19b805257cc0f0f94e30a7762a8f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void imuAverage</definition>
+        <argsstring>()</argsstring>
+        <name>imuAverage</name>
+        <briefdescription>
+<para>function that averages the inertial sensor values to reduce drift </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="7" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="39" bodyend="46" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="7" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="auton_8h_1aa9e74e435afb8651e13812414ffe6410" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void runAuton</definition>
+        <argsstring>()</argsstring>
+        <name>runAuton</name>
+        <briefdescription>
+<para>Called during the beginning of the match and starts the autonomous task using a switch. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="8" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="123" bodyend="156" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="auton_8h_1a971b32805f6084e5e6cd06ffac8e543b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void detectColor</definition>
+        <argsstring>()</argsstring>
+        <name>detectColor</name>
+        <briefdescription>
+<para>delays the code until it detects a block in the bottom intake and then stops the intake. This is used in auton when we are at the match loader </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="9" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="80" bodyend="85" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="9" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="auton_8h_1a4f7300eef33242c5c28d8181a71792f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void colorDetector</definition>
+        <argsstring>()</argsstring>
+        <name>colorDetector</name>
+        <briefdescription>
+<para>function that flips a boolean if it detects the correct color in the top intake. Used to stop the intake. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="10" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="52" bodyend="60" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="auton_8h_1a6955fde277d2c6e8a2650dd60fdccbb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void colorDetector2</definition>
+        <argsstring>()</argsstring>
+        <name>colorDetector2</name>
+        <briefdescription>
+<para>Same as previous fn but it is impartial to the alliance color. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="11" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="66" bodyend="74" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="auton_8h_1a9e034ed433b0a44f92ef87091aff3ea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stopTheIntake</definition>
+        <argsstring>()</argsstring>
+        <name>stopTheIntake</name>
+        <briefdescription>
+<para>used with the aforementioned colordetect and stopIntake booleans to stop the intake when we first intake our alliance colors block. This stops the block from flying out of our intake, and gets rid of the need to micromanage the lift to keep the blocks in. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="12" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="103" bodyend="115" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="12" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="auton_8h_1a7c23618a6c8a5b3c75727ca30f66265f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void detectTopColor</definition>
+        <argsstring>()</argsstring>
+        <name>detectTopColor</name>
+        <briefdescription>
+<para>delays the code until it detects a block in the top lift and then stops the intake and lift. This is used in auton when we are at the match loader </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h" line="13" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/auton.cpp" bodystart="91" bodyend="97" declfile="C:/Users/Kyle/Vanguard/include/auton/auton.h" declline="13" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>AUTON_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUTON_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isRed;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>testing;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>intakeStopped;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>imuAverage();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>runAuton();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>detectColor();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>colorDetector();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>colorDetector2();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>stopTheIntake();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>detectTopColor();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>auton_type<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>RED_LEFT,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>RED_RIGHT,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>BLUE_LEFT,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>BLUE_RIGHT,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>SKILLS,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>NONE</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>auton_type<sp/>autonType;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>autonConfirmed;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isClamped;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Kyle/Vanguard/include/auton/auton.h"/>
+  </compounddef>
+</doxygen>

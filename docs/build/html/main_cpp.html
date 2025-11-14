@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>main.cpp &mdash; Vanguard 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="auton.cpp" href="auton/auton_cpp.html" />
+    <link rel="prev" title="Source Files" href="source.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Vanguard
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="source.html">Source Files</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">main.cpp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv410controllerN4pros19E_CONTROLLER_MASTERE"><code class="docutils literal notranslate"><span class="pre">controller()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv47partnerN4pros20E_CONTROLLER_PARTNERE"><code class="docutils literal notranslate"><span class="pre">partner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv410initializev"><code class="docutils literal notranslate"><span class="pre">initialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv48disabledv"><code class="docutils literal notranslate"><span class="pre">disabled()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv422competition_initializev"><code class="docutils literal notranslate"><span class="pre">competition_initialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv410autonomousv"><code class="docutils literal notranslate"><span class="pre">autonomous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv49opcontrolv"><code class="docutils literal notranslate"><span class="pre">opcontrol()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="auton/auton_cpp.html">auton.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graphics_cpp.html">graphics.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivercontrol_cpp.html">drivercontrol.cpp</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Vanguard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="source.html">Source Files</a></li>
+      <li class="breadcrumb-item active">main.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/main_cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="main-cpp">
+<h1>main.cpp<a class="headerlink" href="#main-cpp" title="Link to this heading"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410controllerN4pros19E_CONTROLLER_MASTERE">
+<span id="_CPPv310controllerN4pros19E_CONTROLLER_MASTERE"></span><span id="_CPPv210controllerN4pros19E_CONTROLLER_MASTERE"></span><span id="controller__pros::E_CONTROLLER_MASTER"></span><span class="target" id="main_8cpp_1af7921e40f53b0a5ed21ab8b8967806ca"></span><span class="n"><span class="pre">pros</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Controller</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">controller</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pros</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">E_CONTROLLER_MASTER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410controllerN4pros19E_CONTROLLER_MASTERE" title="Link to this definition"></a><br /></dt>
+<dd><p>defines the main controller that we use for moving the robot </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv47partnerN4pros20E_CONTROLLER_PARTNERE">
+<span id="_CPPv37partnerN4pros20E_CONTROLLER_PARTNERE"></span><span id="_CPPv27partnerN4pros20E_CONTROLLER_PARTNERE"></span><span id="partner__pros::E_CONTROLLER_PARTNER"></span><span class="target" id="main_8cpp_1abb369301ef97f999624b86e719dc63a8"></span><span class="n"><span class="pre">pros</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Controller</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">partner</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pros</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">E_CONTROLLER_PARTNER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47partnerN4pros20E_CONTROLLER_PARTNERE" title="Link to this definition"></a><br /></dt>
+<dd><p>defines a secondary controller if we want to use one </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a6b81d6d8927400415fa1ac389b857173"></span><span class="sig-name descname"><span class="pre">pros::MotorGroup</span> <span class="pre">leftMotors</span> <span class="pre">({-18,</span> <span class="pre">19,</span> <span class="pre">-20},</span> <span class="pre">pros::MotorGearset::blue)</span></span></dt>
+<dd><p>Left drivetrain motorgroup, negative values indicate it is reversed. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1ac4447d8d994323233ac40c561d46ed52"></span><span class="sig-name descname"><span class="pre">pros::MotorGroup</span> <span class="pre">rightMotors</span> <span class="pre">({8,</span> <span class="pre">-9,</span> <span class="pre">10},</span> <span class="pre">pros::MotorGearset::blue)</span></span></dt>
+<dd><p>Right drivetrain motorgroup, negative values indicate it is reversed. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a64abb0df0a8b50816cca06c953d63f86"></span><span class="sig-name descname"><span class="pre">pros::Motor</span> <span class="pre">intake</span> <span class="pre">(-11,</span> <span class="pre">pros::MotorGearset::blue)</span></span></dt>
+<dd><p>Bottom intake motor that spins the flex wheels. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a3d725f5440c6da43fff68552a7b1dbb7"></span><span class="sig-name descname"><span class="pre">pros::Motor</span> <span class="pre">liftM</span> <span class="pre">(-1,</span> <span class="pre">pros::MotorGearset::blue)</span></span></dt>
+<dd><p>Middle part of the lift that brings blocks up to the indexer. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a33175f340fc9c0e15cb68b043bc90abb"></span><span class="sig-name descname"><span class="pre">pros::Motor</span> <span class="pre">liftI</span> <span class="pre">(-12,</span> <span class="pre">pros::MotorGearset::blue)</span></span></dt>
+<dd><p>Top indexer that can spin to either score in the long goal or middle center goal. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1ab1de3edc2b4a163bbbed627e684313a3"></span><span class="sig-name descname"><span class="pre">pros::adi::DigitalOut</span> <span class="pre">matchL1</span> <span class="pre">('a')</span></span></dt>
+<dd><p>Pneumatics for the match loader. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1ac2c14d743a9de6375bb9f23f807bbc43"></span><span class="sig-name descname"><span class="pre">pros::adi::DigitalOut</span> <span class="pre">matchL2</span> <span class="pre">('h')</span></span></dt>
+<dd><p>Pneumatics for the match loader. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1abea703e3af3380b53d1b5bdf67840ad6"></span><span class="sig-name descname"><span class="pre">pros::adi::DigitalOut</span> <span class="pre">descore</span> <span class="pre">('b')</span></span></dt>
+<dd><p>Pneumatics for the side descore mech. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a33f39d29d121dc120ceb4d4d0729fecc"></span><span class="sig-name descname"><span class="pre">pros::adi::DigitalOut</span> <span class="pre">topDescore</span> <span class="pre">('c')</span></span></dt>
+<dd><p>Pneumatics for the top descore mech. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1af9112e06c833bb184010b928440b1d24"></span><span class="sig-name descname"><span class="pre">pros::Optical</span> <span class="pre">topticalSensor</span> <span class="pre">(3)</span></span></dt>
+<dd><p>Top optical sensor for detecting which color block is in our top intake. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1aeec948e3eb6abbfe5f029aa1431bc47e"></span><span class="sig-name descname"><span class="pre">pros::Optical</span> <span class="pre">bottomSensor</span> <span class="pre">(16)</span></span></dt>
+<dd><p>Bottom optical sensor for detecting which color block is in our bottom intake. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1ace145d4f8b1001ded1391043e7340016"></span><span class="sig-name descname"><span class="pre">pros::Imu</span> <span class="pre">imu</span> <span class="pre">(13)</span></span></dt>
+<dd><p>1st inertial sensor for odometry </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a38e2437348f74a02cd94bb2202544d31"></span><span class="sig-name descname"><span class="pre">pros::Imu</span> <span class="pre">imu2</span> <span class="pre">(14)</span></span></dt>
+<dd><p>2nd Inertial sensor for odometry </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a3ff7926ebc890beaa87f259f7f573ad9"></span><span class="sig-name descname"><span class="pre">pros::Imu</span> <span class="pre">imuAvg</span> <span class="pre">(17)</span></span></dt>
+<dd><p>Averages the two inertial sensor values out. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1ae8c509802325a203db077122b4fc308a"></span><span class="sig-name descname"><span class="pre">pros::Rotation</span> <span class="pre">horizontalEnc</span> <span class="pre">(6)</span></span></dt>
+<dd><p>Horizontal rotational sensor for odometry. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a1869fcac76127451fb33e19e639092c7"></span><span class="sig-name descname"><span class="pre">pros::Rotation</span> <span class="pre">leftVerticalEnc</span> <span class="pre">(-15)</span></span></dt>
+<dd><p>Left Vertical rotational sensor for odometry. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a4f125cd8430924a5cf354c004f9f7701"></span><span class="sig-name descname"><span class="pre">pros::Rotation</span> <span class="pre">rightVerticalEnc</span> <span class="pre">(5)</span></span></dt>
+<dd><p>Right Vertical rotational sensor for odometry. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1a811793491b3b1454200a47b22477b7c5"></span><span class="sig-name descname"><span class="pre">lemlib::ControllerSettings</span> <span class="pre">linearController</span> <span class="pre">(10,</span> <span class="pre">0,</span> <span class="pre">3,</span> <span class="pre">0,</span> <span class="pre">0.1,</span> <span class="pre">100,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></dt>
+<dd><p>The PID values that control linear motion. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1abea2558a263bdc9dd840e50c181e137a"></span><span class="sig-name descname"><span class="pre">lemlib::ControllerSettings</span> <span class="pre">angularController</span> <span class="pre">(11,</span> <span class="pre">0,</span> <span class="pre">94.5,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></dt>
+<dd><p>The PID values that control angular motion. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1ae08faad49f3677e4d78a7682e072bd59"></span><span class="sig-name descname"><span class="pre">lemlib::ExpoDriveCurve</span> <span class="pre">throttleCurve</span> <span class="pre">(3,</span> <span class="pre">10,</span> <span class="pre">1.019)</span></span></dt>
+<dd><p>input curve for throttle input during driver control </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1ae5d76e88ea8e14424d7ab50e57790ff8"></span><span class="sig-name descname"><span class="pre">lemlib::ExpoDriveCurve</span> <span class="pre">steerCurve</span> <span class="pre">(3,</span> <span class="pre">10,</span> <span class="pre">1.019)</span></span></dt>
+<dd><p>input curve for steer input during driver control </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1aa81dbd28a7b40229f87fc2fcd075b0c9"></span><span class="sig-name descname"><span class="pre">lemlib::Chassis</span> <span class="pre">chassis</span> <span class="pre">(drivetrain,</span> <span class="pre">linearController,</span> <span class="pre">angularController,</span> <span class="pre">sensors,</span> <span class="pre">&amp;throttleCurve,</span> <span class="pre">&amp;steerCurve)</span></span></dt>
+<dd><p>defines the chassis with the motors and sensors defined earlier </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410initializev">
+<span id="_CPPv310initializev"></span><span id="_CPPv210initializev"></span><span id="initialize"></span><span class="target" id="main_8cpp_1a25a40b6614565f755233080a384c35f1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410initializev" title="Link to this definition"></a><br /></dt>
+<dd><p>Part of the code that runs when you first start the program. Used to turn on lights for sensors, calibrate chassis/sensors, ect. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv48disabledv">
+<span id="_CPPv38disabledv"></span><span id="_CPPv28disabledv"></span><span id="disabled"></span><span class="target" id="main_8cpp_1a4e1a74721457de1f01d41566400fb3e5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48disabledv" title="Link to this definition"></a><br /></dt>
+<dd><p>Runs when the robot is in the disabled state, before autonomous. This is where we reset our IMU’s. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422competition_initializev">
+<span id="_CPPv322competition_initializev"></span><span id="_CPPv222competition_initializev"></span><span id="competition_initialize"></span><span class="target" id="main_8cpp_1a870462d80a8efe920f8c95ee313cb9e5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">competition_initialize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422competition_initializev" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410autonomousv">
+<span id="_CPPv310autonomousv"></span><span id="_CPPv210autonomousv"></span><span id="autonomous"></span><span class="target" id="main_8cpp_1a3c7ca506bbc071fa740de13805b7f376"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autonomous</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410autonomousv" title="Link to this definition"></a><br /></dt>
+<dd><p>This function runs our autonomous code after we select it on the brain screen. </p>
+<p>If you find doing pros::Motor() to be tedious and you’d prefer just to do Motor, you can use the namespace with the following commented out line.</p>
+<p>IMPORTANT: Only the okapi or pros namespace may be used, not both concurrently! The okapi namespace will export all symbols inside the pros namespace. Prototypes for the competition control tasks are redefined here to ensure that they can be called from user code (i.e. calling autonomous from a button press in opcontrol() for testing purposes). </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49opcontrolv">
+<span id="_CPPv39opcontrolv"></span><span id="_CPPv29opcontrolv"></span><span id="opcontrol"></span><span class="target" id="main_8cpp_1ac57194c628bb97b849be48d79c99c4ac"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">opcontrol</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49opcontrolv" title="Link to this definition"></a><br /></dt>
+<dd><p>Runs after autonomous is finished. Uses tasks to run the button controls and joystick inputs for moving around the field. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1acc9797822140f0179640edc0f31ac8f7"></span><span class="sig-name descname"><span class="pre">lemlib::TrackingWheel</span> <span class="pre">horizontal</span> <span class="pre">&amp;</span> <span class="pre">horizontalEnc</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1afa6ab695d14a5e4ab1bdbe255ce356af"></span><span class="sig-name descname"><span class="pre">lemlib::TrackingWheel</span> <span class="pre">leftVertical</span> <span class="pre">&amp;</span> <span class="pre">leftVerticalEnc</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1af9533d7f94f27a7661b5f116a301cc2b"></span><span class="sig-name descname"><span class="pre">lemlib::TrackingWheel</span> <span class="pre">rightVertical</span> <span class="pre">&amp;</span> <span class="pre">rightVerticalEnc</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1ab78ee60d7445457f722b76a91e890ddd"></span><span class="sig-name descname"><span class="pre">lemlib::Drivetrain</span> <span class="pre">drivetrain</span> <span class="pre">&amp;</span> <span class="pre">leftMotors</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="main_8cpp_1ababd359697e92040cba46fdf37ad5fc5"></span><span class="sig-name descname"><span class="pre">lemlib::OdomSensors</span> <span class="pre">sensors</span> <span class="pre">&amp;</span> <span class="pre">leftVertical</span></span></dt>
+<dd><p>Defines the necessary lemlib classes using the motors and sensors defined in pros. </p>
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="source.html" class="btn btn-neutral float-left" title="Source Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="auton/auton_cpp.html" class="btn btn-neutral float-right" title="auton.cpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Kyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

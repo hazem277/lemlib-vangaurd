@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="drivercontrol_8h" kind="file" language="C++">
+    <compoundname>drivercontrol.h</compoundname>
+    <includedby refid="auton_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/auton.cpp</includedby>
+    <includedby refid="blue_left_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/blueLeft.cpp</includedby>
+    <includedby refid="blue_right_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/blueRight.cpp</includedby>
+    <includedby refid="red_left_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/redLeft.cpp</includedby>
+    <includedby refid="red_right_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/redRight.cpp</includedby>
+    <includedby refid="skills_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/skills.cpp</includedby>
+    <includedby refid="drivercontrol_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/drivercontrol.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/main.cpp</includedby>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="drivercontrol_8h_1a15682f65651d2466ad8b237b058b1563" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool isClamped</definition>
+        <argsstring></argsstring>
+        <name>isClamped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h" line="3" column="13" declfile="C:/Users/Kyle/Vanguard/include/drivercontrol.h" declline="3" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="drivercontrol_8h_1a67b2b85a16ad42288bafe490ce2eeebb" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool isIntaking</definition>
+        <argsstring></argsstring>
+        <name>isIntaking</name>
+        <briefdescription>
+<para>Toggle variable for intake system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h" line="4" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/drivercontrol.cpp" bodystart="18" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/drivercontrol.h" declline="4" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="drivercontrol_8h_1ad0443e3d15cf623de707d6ad748b6812" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool intakeReversed</definition>
+        <argsstring></argsstring>
+        <name>intakeReversed</name>
+        <briefdescription>
+<para>Toggle variable to know if the intake is reversed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h" line="5" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/drivercontrol.cpp" bodystart="23" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/drivercontrol.h" declline="5" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="drivercontrol_8h_1ad226d97fcb1322359d014f4de5c5635c" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool ejectOn</definition>
+        <argsstring></argsstring>
+        <name>ejectOn</name>
+        <briefdescription>
+<para>When on then the blocks will be thrown out of our intake. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h" line="6" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/drivercontrol.cpp" bodystart="38" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/drivercontrol.h" declline="6" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="drivercontrol_8h_1acc427cbc207dc5ccf501b0635faf8ee2" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool colorDetect</definition>
+        <argsstring></argsstring>
+        <name>colorDetect</name>
+        <briefdescription>
+<para>boolean that is true when same color block is in your top intake </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h" line="7" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/drivercontrol.cpp" bodystart="28" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/drivercontrol.h" declline="7" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="drivercontrol_8h_1a471308e46be843a5250177aab9abed98" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool stopIntake</definition>
+        <argsstring></argsstring>
+        <name>stopIntake</name>
+        <briefdescription>
+<para>Boolean to know if it needs to stop the intake when it detects the color. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h" line="8" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/drivercontrol.cpp" bodystart="63" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/drivercontrol.h" declline="8" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="drivercontrol_8h_1afd711ba96cd563c6101b23f77411e579" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool chainFwd</definition>
+        <argsstring></argsstring>
+        <name>chainFwd</name>
+        <briefdescription>
+<para>Boolean that flips if top intake chain is moving fwds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h" line="9" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/drivercontrol.cpp" bodystart="43" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/drivercontrol.h" declline="9" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="drivercontrol_8h_1a3716a8b04f760209d65b46d5eec8e606" prot="public" static="no" extern="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool chainRvs</definition>
+        <argsstring></argsstring>
+        <name>chainRvs</name>
+        <briefdescription>
+<para>Boolean that flips if top intake chain is moving in reverse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h" line="10" column="13" bodyfile="C:/Users/Kyle/Vanguard/src/drivercontrol.cpp" bodystart="48" bodyend="-1" declfile="C:/Users/Kyle/Vanguard/include/drivercontrol.h" declline="10" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="drivercontrol_8h_1af77c36926f11afcc3ef278904515d3e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void buttonControls</definition>
+        <argsstring>()</argsstring>
+        <name>buttonControls</name>
+        <briefdescription>
+<para>Runs toggles for all of the buttons on the controller to carry out tasks. Used in conjunction with the variables (See below). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h" line="11" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/drivercontrol.cpp" bodystart="73" bodyend="252" declfile="C:/Users/Kyle/Vanguard/include/drivercontrol.h" declline="11" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DRIVERCONTROL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DRIVERCONTROL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isClamped;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isIntaking;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>intakeReversed;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ejectOn;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>colorDetect;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stopIntake;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>chainFwd;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>chainRvs;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>buttonControls();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Kyle/Vanguard/include/drivercontrol.h"/>
+  </compounddef>
+</doxygen>

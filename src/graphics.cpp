@@ -6,27 +6,74 @@
 #include "liblvgl/misc/lv_color.h"
 #include "liblvgl/widgets/lv_btn.h" // IWYU pragma: keep
 #include "main.h"                   // IWYU pragma: keep
-
+/** 
+*@brief
+*Creates the object for the auton selector screen
+**/
 lv_obj_t *screenAutonSelector = lv_obj_create(NULL);
-lv_obj_t *screenLogo = lv_obj_create(NULL);
+/** 
+*@brief
+*Creates the object for the debug screen
+**/
 lv_obj_t *screenDebug = lv_obj_create(NULL);
 
-lv_obj_t *buttonRedPos = lv_btn_create(screenAutonSelector);
-lv_obj_t *buttonRedNeg = lv_btn_create(screenAutonSelector);
-lv_obj_t *buttonBluePos = lv_btn_create(screenAutonSelector);
-lv_obj_t *buttonBlueNeg = lv_btn_create(screenAutonSelector);
-lv_obj_t *buttonScoreAlliance = lv_btn_create(screenAutonSelector);
+/** 
+*@brief
+*Creates a button for selecting the right side red code
+**/
+lv_obj_t *buttonRedRight = lv_btn_create(screenAutonSelector);
+/** 
+*@brief
+*Creates a button for selecting the left side red code
+**/
+lv_obj_t *buttonRedLeft = lv_btn_create(screenAutonSelector);
+/** 
+*@brief
+*Creates a button for selecting the left side blue code
+**/
+lv_obj_t *buttonBlueLeft = lv_btn_create(screenAutonSelector);
+/** 
+*@brief
+*Creates a button for selecting the right side blue code
+**/
+lv_obj_t *buttonBlueRight = lv_btn_create(screenAutonSelector);
+/** 
+*@brief
+*Creates a button for selecting the skills autonomous code
+**/
 lv_obj_t *buttonSkills = lv_btn_create(screenAutonSelector);
+/** 
+*@brief
+*Creates a button for confirming your selection so you dont need to disable the auton before running
+**/
 lv_obj_t *buttonConfirm = lv_btn_create(screenAutonSelector);
-
+/** 
+*@brief
+*How wide the button is
+**/
 int width = 120;
+/** 
+*@brief
+*The height of the button
+**/
 int height = 70;
+/** 
+*@brief
+*The x position of the button
+**/
 int xPos = -160;
+/** 
+*@brief
+*The y position of the button
+**/
 int yPos = -70;
 
 // lv_obj_t *imgVanguardLogo;
 // LV_IMG_DECLARE(vangaurd480x240px);
-
+/** 
+*@brief
+*Allows us to select an autonomous code using buttons on the brain screen. We utilize the LVGL library for this.
+**/
 void autonSelector(void) {
   lv_obj_t *label;
   lv_scr_load_anim(screenAutonSelector, LV_SCR_LOAD_ANIM_FADE_IN, 250, 1000, false);
@@ -40,120 +87,100 @@ void autonSelector(void) {
   Red Positive
   */
   lv_obj_add_event_cb(
-      buttonRedPos,
+      buttonRedRight,
       [](lv_event_t *e) {
-        lv_obj_add_state(buttonRedPos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonRedNeg, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonBluePos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonBlueNeg, LV_STATE_DISABLED);
+        lv_obj_add_state(buttonRedRight, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonRedLeft, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonBlueLeft, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonBlueRight, LV_STATE_DISABLED);
         lv_obj_clear_state(buttonSkills, LV_STATE_DISABLED);
-        autonType = RED_POSITIVE;
+        autonType = RED_RIGHT;
       },
       LV_EVENT_PRESSED, NULL);
-  lv_obj_align(buttonRedPos, LV_ALIGN_CENTER, xPos, yPos);
-  lv_obj_set_size(buttonRedPos, width, height);
+  lv_obj_align(buttonRedRight, LV_ALIGN_CENTER, xPos, yPos);
+  lv_obj_set_size(buttonRedRight, width, height);
 
-  lv_obj_set_style_radius(buttonRedPos, 2, 0);
-  lv_obj_set_style_bg_color(buttonRedPos, lv_palette_main(LV_PALETTE_RED),
+  lv_obj_set_style_radius(buttonRedRight, 2, 0);
+  lv_obj_set_style_bg_color(buttonRedRight, lv_palette_main(LV_PALETTE_RED),
                             LV_STATE_DEFAULT);
-  lv_obj_set_style_bg_color(buttonRedPos, lv_palette_darken(LV_PALETTE_RED, 3),
+  lv_obj_set_style_bg_color(buttonRedRight, lv_palette_darken(LV_PALETTE_RED, 3),
                             LV_STATE_DISABLED);
 
-  label = lv_label_create(buttonRedPos);
-  lv_label_set_text(label, "Red Positive");
+  label = lv_label_create(buttonRedRight);
+  lv_label_set_text(label, "Red Right");
   lv_obj_center(label);
 
   /*
   Red Negative
   */
   lv_obj_add_event_cb(
-      buttonRedNeg,
+      buttonRedLeft,
       [](lv_event_t *e) {
-        lv_obj_add_state(buttonRedNeg, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonRedPos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonBluePos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonBlueNeg, LV_STATE_DISABLED);
+        lv_obj_add_state(buttonRedLeft, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonRedRight, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonBlueLeft, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonBlueRight, LV_STATE_DISABLED);
         lv_obj_clear_state(buttonSkills, LV_STATE_DISABLED);
-        autonType = RED_NEGATIVE;
+        autonType = RED_LEFT;
       },
       LV_EVENT_PRESSED, NULL);
-  lv_obj_align(buttonRedNeg, LV_ALIGN_CENTER, xPos + 130, yPos);
-  lv_obj_set_size(buttonRedNeg, width, height);
+  lv_obj_align(buttonRedLeft, LV_ALIGN_CENTER, xPos + 130, yPos);
+  lv_obj_set_size(buttonRedLeft, width, height);
 
-  lv_obj_set_style_radius(buttonRedNeg, 2, 0);
-  lv_obj_set_style_bg_color(buttonRedNeg, lv_palette_main(LV_PALETTE_RED),
+  lv_obj_set_style_radius(buttonRedLeft, 2, 0);
+  lv_obj_set_style_bg_color(buttonRedLeft, lv_palette_main(LV_PALETTE_RED),
                             LV_STATE_DEFAULT);
-  lv_obj_set_style_bg_color(buttonRedNeg, lv_palette_darken(LV_PALETTE_RED, 3),
+  lv_obj_set_style_bg_color(buttonRedLeft, lv_palette_darken(LV_PALETTE_RED, 3),
                             LV_STATE_DISABLED);
 
-  label = lv_label_create(buttonRedNeg);
-  lv_label_set_text(label, "Red Negative");
+  label = lv_label_create(buttonRedLeft);
+  lv_label_set_text(label, "Red Left");
   lv_obj_center(label);
 
   /*
   Blue Positive
   */
   lv_obj_add_event_cb(
-      buttonBluePos,
+      buttonBlueLeft,
       [](lv_event_t *e) {
-        lv_obj_add_state(buttonBluePos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonBlueNeg, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonRedPos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonRedNeg, LV_STATE_DISABLED);
+        lv_obj_add_state(buttonBlueLeft, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonBlueRight, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonRedRight, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonRedLeft, LV_STATE_DISABLED);
         lv_obj_clear_state(buttonSkills, LV_STATE_DISABLED);
-        autonType = BLUE_POSITIVE;
+        autonType = BLUE_LEFT;
       },
       LV_EVENT_PRESSED, NULL);
-  lv_obj_align(buttonBluePos, LV_ALIGN_CENTER, xPos, yPos + 80);
-  lv_obj_set_size(buttonBluePos, width, height);
+  lv_obj_align(buttonBlueLeft, LV_ALIGN_CENTER, xPos, yPos + 80);
+  lv_obj_set_size(buttonBlueLeft, width, height);
 
-  lv_obj_set_style_radius(buttonBluePos, 2, 0);
+  lv_obj_set_style_radius(buttonBlueLeft, 2, 0);
 
-  label = lv_label_create(buttonBluePos);
-  lv_label_set_text(label, "Blue Positive");
-  lv_obj_center(label);
-
-  /*
-  Score Alliance Stake
-  */
-  lv_obj_add_event_cb(
-      buttonBlueNeg,
-      [](lv_event_t *e) {
-        lv_obj_add_state(buttonBlueNeg, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonBluePos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonRedPos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonRedNeg, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonSkills, LV_STATE_DISABLED);
-        autonType = BLUE_NEGATIVE;
-      },
-      LV_EVENT_PRESSED, NULL);
-  lv_obj_align(buttonBlueNeg, LV_ALIGN_CENTER, xPos + 130, yPos + 80);
-  lv_obj_set_size(buttonBlueNeg, width, height);
-
-  lv_obj_set_style_radius(buttonBlueNeg, 2, 0);
-
-  label = lv_label_create(buttonBlueNeg);
-  lv_label_set_text(label, "Blue Negative");
+  label = lv_label_create(buttonBlueLeft);
+  lv_label_set_text(label, "Blue Left");
   lv_obj_center(label);
 
   lv_obj_add_event_cb(
-      buttonScoreAlliance,
-      [](lv_event_t *e) { scoreAllianceStake = !scoreAllianceStake; },
+      buttonBlueRight,
+      [](lv_event_t *e) {
+        lv_obj_add_state(buttonBlueRight, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonBlueLeft, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonRedRight, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonRedLeft, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonSkills, LV_STATE_DISABLED);
+        autonType = BLUE_RIGHT;
+      },
       LV_EVENT_PRESSED, NULL);
-  lv_obj_align(buttonScoreAlliance, LV_ALIGN_CENTER, xPos + 290, yPos + 40);
-  lv_obj_set_size(buttonScoreAlliance, width + 60, (height * 2) + 10);
-  lv_obj_add_flag(buttonScoreAlliance, LV_OBJ_FLAG_CHECKABLE);
+  lv_obj_align(buttonBlueRight, LV_ALIGN_CENTER, xPos + 130, yPos + 80);
+  lv_obj_set_size(buttonBlueRight, width, height);
 
-  lv_obj_set_style_radius(buttonScoreAlliance, 2, 0);
-  lv_obj_set_style_bg_color(
-      buttonScoreAlliance, lv_palette_main(LV_PALETTE_GREEN), LV_STATE_DEFAULT);
-  lv_obj_set_style_bg_color(buttonScoreAlliance,
-                            lv_palette_main(LV_PALETTE_GREY), LV_STATE_CHECKED);
+  lv_obj_set_style_radius(buttonBlueRight, 2, 0);
 
-  label = lv_label_create(buttonScoreAlliance);
-  lv_label_set_text(label, "Alliance Stake");
+  label = lv_label_create(buttonBlueRight);
+  lv_label_set_text(label, "Blue Right");
   lv_obj_center(label);
 
+  
   /*
   Skills
   */
@@ -161,10 +188,10 @@ void autonSelector(void) {
       buttonSkills,
       [](lv_event_t *e) {
         lv_obj_add_state(buttonSkills, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonRedPos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonRedNeg, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonBluePos, LV_STATE_DISABLED);
-        lv_obj_clear_state(buttonBlueNeg, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonRedRight, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonRedLeft, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonBlueLeft, LV_STATE_DISABLED);
+        lv_obj_clear_state(buttonBlueRight, LV_STATE_DISABLED);
         autonType = SKILLS;
       },
       LV_EVENT_PRESSED, NULL);
@@ -186,10 +213,14 @@ void autonSelector(void) {
       buttonConfirm,
       [](lv_event_t *e) {
         if (autonType != NONE) {
+          lv_obj_set_style_bg_color(buttonConfirm, lv_palette_darken(LV_PALETTE_LIGHT_GREEN, 4),
+                            0);
           chassis.calibrate();
           autonConfirmed = true;
-          lv_scr_load_anim(screenLogo, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000,
-                           false);
+          
+          // lv_scr_load_anim(screenLogo, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000,
+          //                  false);
+          
         }
       },
       LV_EVENT_PRESSED, NULL);
@@ -206,7 +237,10 @@ void autonSelector(void) {
 
   debugTabs();
 }
-
+/** 
+*@brief
+*Creates a screen that we can use to debug problems in the code (WIP)
+**/
 void debugTabs(void) {
   /*Create a Tab view object*/
   lv_obj_t *tabview;

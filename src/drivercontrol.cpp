@@ -4,58 +4,101 @@
 #include "main.h"
 #include "pros/abstract_motor.hpp" // IWYU pragma: keep
 #include "pros/misc.h"
-#include "pros/motors.h"
+#include "pros/motors.h" // IWYU pragma: keep
 #include <ctime>
-
-bool isClamped = false;
+/** 
+*@brief
+*Toggle variable for the match loader
+**/
+bool isPoppedDown = false;
+/** 
+*@brief
+*Toggle variable for intake system
+**/
 bool isIntaking = false;
+/** 
+*@brief
+*Toggle variable to know if the intake is reversed
+**/
 bool intakeReversed = false;
-bool wallStakeActive = false;
-bool rightArmDown = false;
-bool leftArmDown = false;
+/** 
+*@brief
+*boolean that is true when same color block is in your top intake
+**/
+bool colorDetect = false;
+/** 
+*@brief
+*boolean that turns on debug screen if needed
+**/
 bool debugMode = false;
+/** 
+*@brief
+*When on then the blocks will be thrown out of our intake
+**/
 bool ejectOn = true;
-bool isTopRing = false;
-
+/** 
+*@brief
+*Boolean that flips if top intake chain is moving fwds
+**/
+bool chainFwd= false;
+/** 
+*@brief
+*Boolean that flips if top intake chain is moving in reverse
+**/
+bool chainRvs = false;
+/** 
+*@brief
+*When true, indexer spins in reverse to score on the middle goal
+**/
+bool scoreToggle = false;
+/** 
+*@brief
+*Boolean for toggle on the top descore mech
+**/
+bool descoreMech = false;
+/** 
+*@brief
+*Boolean to know if it needs to stop the intake when it detects the color
+**/
+bool stopIntake = false;
+/** 
+*@brief
+*Boolean for toggle on the side descore mechanism
+**/
+bool isDescoring = true;
+/** 
+*@brief
+*Runs toggles for all of the buttons on the controller to carry out tasks. Used in conjunction with the variables (See below)
+**/
 void buttonControls() {
-  wallStakeEnc.reset_position();
   while (true) {
     // clamp
     // ---------------------------------------------------------------------------------------------------------------------
-    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L1)) {
-      if (isClamped) {
-        clamp.set_value(false);
-        isClamped = false;
-      } else {
-        clamp.set_value(true);
-        isClamped = true;
+    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_LEFT)) {
+      if (isPoppedDown) {
+        matchL1.set_value(false);
+        matchL2.set_value(false);
+        isPoppedDown = false;
+        pros::delay(100);
+      } else if (!isPoppedDown){
+        matchL1.set_value(true);
+        matchL2.set_value(true);
+        isPoppedDown = true;
+        pros::delay(100);
       }
     }
 
-    // intake piston
-    // ---------------------------------------------------------------------------------------------------------------------
-    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_B)) {
-      if (isTopRing) {
-        topRing.set_value(false);
-        isTopRing = false;
-      } else {
-        topRing.set_value(true);
-        isTopRing = true;
-      }
-    }
 
     // intake
     // ---------------------------------------------------------------------------------------------------------------------
     if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_R2)) {
       if (!isIntaking || !intakeReversed) {
         intake.move(-127);
-        chain.move(-85);
         isIntaking = true;
         intakeReversed = true;
       }
       else if (isIntaking && intakeReversed) {
         intake.brake();
-        chain.brake();
         isIntaking = false;
         intakeReversed = false;
       }
@@ -64,78 +107,103 @@ void buttonControls() {
                    pros::E_CONTROLLER_DIGITAL_R1)) {
       if (!isIntaking || intakeReversed) {
         intake.move(127);
-        chain.move(85);
+  
         isIntaking = true;
         intakeReversed = false;
       }
-      else if (isIntaking && !intakeReversed && !wallStakeActive) {
+      else if (isIntaking && !intakeReversed ) {
         intake.brake();
-        chain.brake();
+     
         isIntaking = false;
       }
-      else if (isIntaking && !intakeReversed && wallStakeActive) {
-        chain.brake();
+      else if (isIntaking && !intakeReversed) {
+
         isIntaking = false;
       }
+      
+    } else if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L1)){
+    if(intakeStopped){
+      intakeStopped=false;
+      stopIntake=false;
+      controller.clear_line(0);
+      if(!chainFwd && scoreToggle){
+        liftI.move(-127);
+        liftM.move(127);
+        chainFwd = true;
+        chainRvs = false;
+      }else if (!chainFwd && !scoreToggle){
+        liftI.move(127);
+        liftM.move(127);
+        chainFwd = true;
+        chainRvs = false;
+      }else if (chainFwd){
+        liftI.move(0);
+        liftM.move(0);
+        chainFwd = false;
+        chainRvs=false;
+      }
+    pros::delay(75);
+      controller.set_text(0,0,"off");
+    }else if (!intakeStopped){
+        stopIntake=true;
+        controller.clear_line(0);
+          if(!chainFwd && scoreToggle){
+          liftI.move(-127);
+          liftM.move(127);
+          chainFwd = true;
+          chainRvs = false;
+      }else if (!chainFwd && !scoreToggle){
+         liftI.move(127);
+         liftM.move(127);
+         chainFwd = true;
+         chainRvs = false;
+      }else if (chainFwd){
+         liftI.move(0);
+         liftM.move(0);
+         chainFwd = false;
+         chainRvs=false;
+      }
+        pros::delay(75);
+        controller.set_text(0,0,"on");
     }
-
-    // wall stake
-    // ---------------------------------------------------------------------------------------------------------------------
-    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_UP)) {
-      if (!wallStakeActive) { // activate wall stake
-        wallStakeEnc.reset_position();
-        lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
-        lift.move_absolute(9500, 50);
-        while (wallStakeEnc.get_position() < 9250) {
-          pros::delay(10);
+    }else if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L2)){
+      if(!chainRvs){
+        liftM.move(-127);
+        liftI.move(0);
+        chainFwd = false;
+        chainRvs=true;
+      }else{
+        liftM.move(0);
+        liftI.move(0);
+        chainRvs = false;
+        chainFwd=false;
+      }
+    }
+    
+    if(controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_A)){
+      scoreToggle= !scoreToggle;
+      if(scoreToggle){
+        controller.clear_line(1);
+        pros::delay(100);
+        controller.set_text(1,0,"Top");
+      }else{
+      controller.clear_line(1);
+      pros::delay(100);
+      controller.set_text(1,0,"middle");
+    }
+      }
+    // DESCORE MECH
+    //----------------------------------------------------------------------------------------------------------------------
+      if(controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_DOWN)){
+        if(!descoreMech){
+          descore.set_value(1);
+        descoreMech = true;
+      }else if(descoreMech){
+        descore.set_value(0);
+        descoreMech = false;
         }
-        wallStakeActive = true;
       }
-      else { // retract wall stake
-        if (!isIntaking) {
-          intake.brake();
-        }
 
-        lift.move(-127);
-        pros::delay(700);
-        lift.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
-        wallStakeActive = false;
-        
-        lift.brake();
-      }
-    }
-    if (wallStakeActive) {
-      if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN)) { // scoring
-        lift.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
-        lift.move(127);
-        while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN)) {
-          pros::delay(50);
-        }
-      } else {
-        lift.brake();
-      }
-    }
-
-    // arms
-    // ---------------------------------------------------------------------------------------------------------------------w
-    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_A)) {
-      if (!rightArmDown) {
-        rightArm.set_value(true);
-        rightArmDown = true;
-      } else {
-        rightArm.set_value(false);
-        rightArmDown = false;
-      }
-    }
-    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_LEFT)) {
-      if (!leftArmDown) {
-        leftArm.set_value(true);
-        leftArmDown = true;
-      } else {
-        leftArm.set_value(false);
-        leftArmDown = false;
-      }
-    }
 
     // DEBUG SCREEN (LVGL - graphics.cpp)
     // ---------------------------------------------------------------------------------------------------------------------
@@ -146,7 +214,7 @@ void buttonControls() {
       }
     } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_X) &&
                debugMode) {
-      lv_scr_load_anim(screenLogo, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000, false);
+      // lv_scr_load_anim(screenLogo, LV_SCR_LOAD_ANIM_FADE_ON, 250, 1000, false);
       while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_X)) {
         pros::delay(50);
       }
@@ -154,22 +222,31 @@ void buttonControls() {
 
     // Ejection toggle
 
-    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT) && ejectOn) {
+    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_RIGHT) && ejectOn) {
       ejectOn = false;
       controller.clear_line(0);
       controller.set_text(1, 1, "Example text");
-      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)) {
-        pros::delay(50);
-      }
-    } else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT) &&
+      
+    } else if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_RIGHT) &&
                !ejectOn) {
 
       ejectOn = true;
       controller.clear_line(2);
       controller.set_text(0, 0, "Example text");
-      while (controller.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT)) {
-        pros::delay(50);
-      }
+    }
+
+     //top descore mech
+
+  if(controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_B)){
+    if(isDescoring){
+      topDescore.set_value(0);
+      isDescoring = false;
+    }else{
+      topDescore.set_value(1);
+      isDescoring = true;
     }
   }
+  } 
+
+ 
 }

@@ -1,0 +1,222 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>graphics.cpp &mdash; Vanguard 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="drivercontrol.cpp" href="drivercontrol_cpp.html" />
+    <link rel="prev" title="auton.cpp" href="auton/auton_cpp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Vanguard
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="source.html">Source Files</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main_cpp.html">main.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auton/auton_cpp.html">auton.cpp</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">graphics.cpp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413autonSelectorv"><code class="docutils literal notranslate"><span class="pre">autonSelector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv49debugTabsv"><code class="docutils literal notranslate"><span class="pre">debugTabs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv419screenAutonSelector"><code class="docutils literal notranslate"><span class="pre">screenAutonSelector</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411screenDebug"><code class="docutils literal notranslate"><span class="pre">screenDebug</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv414buttonRedRight"><code class="docutils literal notranslate"><span class="pre">buttonRedRight</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413buttonRedLeft"><code class="docutils literal notranslate"><span class="pre">buttonRedLeft</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv414buttonBlueLeft"><code class="docutils literal notranslate"><span class="pre">buttonBlueLeft</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv415buttonBlueRight"><code class="docutils literal notranslate"><span class="pre">buttonBlueRight</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv412buttonSkills"><code class="docutils literal notranslate"><span class="pre">buttonSkills</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413buttonConfirm"><code class="docutils literal notranslate"><span class="pre">buttonConfirm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv45width"><code class="docutils literal notranslate"><span class="pre">width</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv46height"><code class="docutils literal notranslate"><span class="pre">height</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv44xPos"><code class="docutils literal notranslate"><span class="pre">xPos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv44yPos"><code class="docutils literal notranslate"><span class="pre">yPos</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="drivercontrol_cpp.html">drivercontrol.cpp</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Vanguard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="source.html">Source Files</a></li>
+      <li class="breadcrumb-item active">graphics.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/graphics_cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="graphics-cpp">
+<h1>graphics.cpp<a class="headerlink" href="#graphics-cpp" title="Link to this heading"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413autonSelectorv">
+<span id="_CPPv313autonSelectorv"></span><span id="_CPPv213autonSelectorv"></span><span id="autonSelector__void"></span><span class="target" id="graphics_8cpp_1acfd9b298c32629192c2b26e711344685"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autonSelector</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413autonSelectorv" title="Link to this definition"></a><br /></dt>
+<dd><p>Allows us to select an autonomous code using buttons on the brain screen. We utilize the LVGL library for this. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49debugTabsv">
+<span id="_CPPv39debugTabsv"></span><span id="_CPPv29debugTabsv"></span><span id="debugTabs__void"></span><span class="target" id="graphics_8cpp_1ae7360d387260173c4b6259c90f319c39"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debugTabs</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49debugTabsv" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates a screen that we can use to debug problems in the code (WIP). </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv419screenAutonSelector">
+<span id="_CPPv319screenAutonSelector"></span><span id="_CPPv219screenAutonSelector"></span><span id="screenAutonSelector__lv_obj_tP"></span><span class="target" id="graphics_8cpp_1a76060b4e4e1dffa2d30cd6479b29b002"></span><span class="n"><span class="pre">lv_obj_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">screenAutonSelector</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">lv_obj_create</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">NULL</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv419screenAutonSelector" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates the object for the auton selector screen. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv411screenDebug">
+<span id="_CPPv311screenDebug"></span><span id="_CPPv211screenDebug"></span><span id="screenDebug__lv_obj_tP"></span><span class="target" id="graphics_8cpp_1a9d5b13324e91091b74420f37aa94fb8b"></span><span class="n"><span class="pre">lv_obj_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">screenDebug</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">lv_obj_create</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">NULL</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv411screenDebug" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates the object for the debug screen. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv414buttonRedRight">
+<span id="_CPPv314buttonRedRight"></span><span id="_CPPv214buttonRedRight"></span><span id="buttonRedRight__lv_obj_tP"></span><span class="target" id="graphics_8cpp_1a5e8545ee7a6f63655566e37e4effc338"></span><span class="n"><span class="pre">lv_obj_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">buttonRedRight</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">lv_btn_create</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv419screenAutonSelector" title="screenAutonSelector"><span class="n"><span class="pre">screenAutonSelector</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv414buttonRedRight" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates a button for selecting the right side red code. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413buttonRedLeft">
+<span id="_CPPv313buttonRedLeft"></span><span id="_CPPv213buttonRedLeft"></span><span id="buttonRedLeft__lv_obj_tP"></span><span class="target" id="graphics_8cpp_1a3bdff6208c4299e1925f2d946a5ca4fc"></span><span class="n"><span class="pre">lv_obj_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">buttonRedLeft</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">lv_btn_create</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv419screenAutonSelector" title="screenAutonSelector"><span class="n"><span class="pre">screenAutonSelector</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv413buttonRedLeft" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates a button for selecting the left side red code. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv414buttonBlueLeft">
+<span id="_CPPv314buttonBlueLeft"></span><span id="_CPPv214buttonBlueLeft"></span><span id="buttonBlueLeft__lv_obj_tP"></span><span class="target" id="graphics_8cpp_1a06def40520e1a6dcf9eb4b8bf501fd6a"></span><span class="n"><span class="pre">lv_obj_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">buttonBlueLeft</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">lv_btn_create</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv419screenAutonSelector" title="screenAutonSelector"><span class="n"><span class="pre">screenAutonSelector</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv414buttonBlueLeft" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates a button for selecting the left side blue code. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv415buttonBlueRight">
+<span id="_CPPv315buttonBlueRight"></span><span id="_CPPv215buttonBlueRight"></span><span id="buttonBlueRight__lv_obj_tP"></span><span class="target" id="graphics_8cpp_1a44b43c817c8a705c425174bc6c8e77da"></span><span class="n"><span class="pre">lv_obj_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">buttonBlueRight</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">lv_btn_create</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv419screenAutonSelector" title="screenAutonSelector"><span class="n"><span class="pre">screenAutonSelector</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv415buttonBlueRight" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates a button for selecting the right side blue code. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv412buttonSkills">
+<span id="_CPPv312buttonSkills"></span><span id="_CPPv212buttonSkills"></span><span id="buttonSkills__lv_obj_tP"></span><span class="target" id="graphics_8cpp_1a35d9cb73ef5ea1f383ad957057a66cd9"></span><span class="n"><span class="pre">lv_obj_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">buttonSkills</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">lv_btn_create</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv419screenAutonSelector" title="screenAutonSelector"><span class="n"><span class="pre">screenAutonSelector</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv412buttonSkills" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates a button for selecting the skills autonomous code. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413buttonConfirm">
+<span id="_CPPv313buttonConfirm"></span><span id="_CPPv213buttonConfirm"></span><span id="buttonConfirm__lv_obj_tP"></span><span class="target" id="graphics_8cpp_1a56fb26e5df9d633dd2640a2633425c0c"></span><span class="n"><span class="pre">lv_obj_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">buttonConfirm</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">lv_btn_create</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv419screenAutonSelector" title="screenAutonSelector"><span class="n"><span class="pre">screenAutonSelector</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv413buttonConfirm" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates a button for confirming your selection so you dont need to disable the auton before running. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv45width">
+<span id="_CPPv35width"></span><span id="_CPPv25width"></span><span id="width__i"></span><span class="target" id="graphics_8cpp_1a2474a5474cbff19523a51eb1de01cda4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">width</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">120</span></span><a class="headerlink" href="#_CPPv45width" title="Link to this definition"></a><br /></dt>
+<dd><p>How wide the button is. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv46height">
+<span id="_CPPv36height"></span><span id="_CPPv26height"></span><span id="height__i"></span><span class="target" id="graphics_8cpp_1ad12fc34ce789bce6c8a05d8a17138534"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">height</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">70</span></span><a class="headerlink" href="#_CPPv46height" title="Link to this definition"></a><br /></dt>
+<dd><p>The height of the button. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv44xPos">
+<span id="_CPPv34xPos"></span><span id="_CPPv24xPos"></span><span id="xPos__i"></span><span class="target" id="graphics_8cpp_1a6806e78862b165988ca9b855e230084e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xPos</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">160</span></span><a class="headerlink" href="#_CPPv44xPos" title="Link to this definition"></a><br /></dt>
+<dd><p>The x position of the button. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv44yPos">
+<span id="_CPPv34yPos"></span><span id="_CPPv24yPos"></span><span id="yPos__i"></span><span class="target" id="graphics_8cpp_1adbae1d6f68d046bbecaa7230baf64762"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">yPos</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">70</span></span><a class="headerlink" href="#_CPPv44yPos" title="Link to this definition"></a><br /></dt>
+<dd><p>The y position of the button. </p>
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="auton/auton_cpp.html" class="btn btn-neutral float-left" title="auton.cpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="drivercontrol_cpp.html" class="btn btn-neutral float-right" title="drivercontrol.cpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Kyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+blueRight.cpp
+=========
+.. doxygenfile:: blueRight.cpp

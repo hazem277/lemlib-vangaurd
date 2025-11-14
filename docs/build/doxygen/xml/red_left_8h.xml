@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="red_left_8h" kind="file" language="C++">
+    <compoundname>redLeft.h</compoundname>
+    <includedby refid="auton_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/auton.cpp</includedby>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="red_left_8h_1a7c929e15ff41cbde012d7cbf28a056d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void red_left</definition>
+        <argsstring>()</argsstring>
+        <name>red_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/redLeft.h" line="4" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/redLeft.cpp" bodystart="4" bodyend="49" declfile="C:/Users/Kyle/Vanguard/include/auton/redLeft.h" declline="4" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>REDLEFT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REDLEFT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>red_left();</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Kyle/Vanguard/include/auton/redLeft.h"/>
+  </compounddef>
+</doxygen>

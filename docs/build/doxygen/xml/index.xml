@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1acf9db466e90feb907fcc26ef81cb632a" kind="define"><name>PROS_VERSION_MAJOR</name></member>
+    <member refid="api_8h_1a2d562412188fb07e89b1e3090acfe6be" kind="define"><name>PROS_VERSION_MINOR</name></member>
+    <member refid="api_8h_1a5ff4cca1c0567779b8f298931b19a213" kind="define"><name>PROS_VERSION_PATCH</name></member>
+    <member refid="api_8h_1a451f2006e330023022107fb96992d6cd" kind="define"><name>PROS_VERSION_STRING</name></member>
+  </compound>
+  <compound refid="auton_8h" kind="file"><name>auton.h</name>
+    <member refid="auton_8h_1a8a4947b8ef9aecab459021d56fccea56" kind="enum"><name>auton_type</name></member>
+    <member refid="auton_8h_1a8a4947b8ef9aecab459021d56fccea56a531a930f470b7572b6346d3bee0a325c" kind="enumvalue"><name>RED_LEFT</name></member>
+    <member refid="auton_8h_1a8a4947b8ef9aecab459021d56fccea56a8cabc552b63f7def9916cfd1dd8230b4" kind="enumvalue"><name>RED_RIGHT</name></member>
+    <member refid="auton_8h_1a8a4947b8ef9aecab459021d56fccea56a2e744dbdae28c7f0bd7fb7717aa5c079" kind="enumvalue"><name>BLUE_LEFT</name></member>
+    <member refid="auton_8h_1a8a4947b8ef9aecab459021d56fccea56aeb3317a2d6f02e7bf71103518b5d9e07" kind="enumvalue"><name>BLUE_RIGHT</name></member>
+    <member refid="auton_8h_1a8a4947b8ef9aecab459021d56fccea56af4e55c01e755ff8b829c8386ed060ee8" kind="enumvalue"><name>SKILLS</name></member>
+    <member refid="auton_8h_1a8a4947b8ef9aecab459021d56fccea56ac157bdf0b85a40d2619cbc8bc1ae5fe2" kind="enumvalue"><name>NONE</name></member>
+    <member refid="auton_8h_1a40acab291435bb3c83e008b1da5ba04a" kind="variable"><name>isRed</name></member>
+    <member refid="auton_8h_1a6bbd6d0faf2a5a2ae6a988e7198f0b14" kind="variable"><name>testing</name></member>
+    <member refid="auton_8h_1a7e887d429b29090a31bb7a197e1c2f43" kind="variable"><name>intakeStopped</name></member>
+    <member refid="auton_8h_1ab904e4a4affee35498d90d49eaa0be4f" kind="variable"><name>autonType</name></member>
+    <member refid="auton_8h_1a8fa46400d4d81100f0bbf575e20e6956" kind="variable"><name>autonConfirmed</name></member>
+    <member refid="auton_8h_1a15682f65651d2466ad8b237b058b1563" kind="variable"><name>isClamped</name></member>
+    <member refid="auton_8h_1a03f19b805257cc0f0f94e30a7762a8f4" kind="function"><name>imuAverage</name></member>
+    <member refid="auton_8h_1aa9e74e435afb8651e13812414ffe6410" kind="function"><name>runAuton</name></member>
+    <member refid="auton_8h_1a971b32805f6084e5e6cd06ffac8e543b" kind="function"><name>detectColor</name></member>
+    <member refid="auton_8h_1a4f7300eef33242c5c28d8181a71792f4" kind="function"><name>colorDetector</name></member>
+    <member refid="auton_8h_1a6955fde277d2c6e8a2650dd60fdccbb5" kind="function"><name>colorDetector2</name></member>
+    <member refid="auton_8h_1a9e034ed433b0a44f92ef87091aff3ea0" kind="function"><name>stopTheIntake</name></member>
+    <member refid="auton_8h_1a7c23618a6c8a5b3c75727ca30f66265f" kind="function"><name>detectTopColor</name></member>
+  </compound>
+  <compound refid="blue_left_8h" kind="file"><name>blueLeft.h</name>
+    <member refid="blue_left_8h_1a15b0fd18461f3033f83a4a1722b440c4" kind="function"><name>blue_left</name></member>
+  </compound>
+  <compound refid="blue_right_8h" kind="file"><name>blueRight.h</name>
+    <member refid="blue_right_8h_1a572356efac277edd1e87fb7ebb90ce76" kind="function"><name>blue_right</name></member>
+  </compound>
+  <compound refid="red_left_8h" kind="file"><name>redLeft.h</name>
+    <member refid="red_left_8h_1a7c929e15ff41cbde012d7cbf28a056d4" kind="function"><name>red_left</name></member>
+  </compound>
+  <compound refid="red_right_8h" kind="file"><name>redRight.h</name>
+    <member refid="red_right_8h_1a095d82a6488be1fa672a5edf01e722af" kind="function"><name>red_right</name></member>
+  </compound>
+  <compound refid="skills_8h" kind="file"><name>skills.h</name>
+    <member refid="skills_8h_1a6aa5793b0357b08ef15d9b9d8309c4e9" kind="function"><name>skills</name></member>
+  </compound>
+  <compound refid="drivercontrol_8h" kind="file"><name>drivercontrol.h</name>
+    <member refid="drivercontrol_8h_1a15682f65651d2466ad8b237b058b1563" kind="variable"><name>isClamped</name></member>
+    <member refid="drivercontrol_8h_1a67b2b85a16ad42288bafe490ce2eeebb" kind="variable"><name>isIntaking</name></member>
+    <member refid="drivercontrol_8h_1ad0443e3d15cf623de707d6ad748b6812" kind="variable"><name>intakeReversed</name></member>
+    <member refid="drivercontrol_8h_1ad226d97fcb1322359d014f4de5c5635c" kind="variable"><name>ejectOn</name></member>
+    <member refid="drivercontrol_8h_1acc427cbc207dc5ccf501b0635faf8ee2" kind="variable"><name>colorDetect</name></member>
+    <member refid="drivercontrol_8h_1a471308e46be843a5250177aab9abed98" kind="variable"><name>stopIntake</name></member>
+    <member refid="drivercontrol_8h_1afd711ba96cd563c6101b23f77411e579" kind="variable"><name>chainFwd</name></member>
+    <member refid="drivercontrol_8h_1a3716a8b04f760209d65b46d5eec8e606" kind="variable"><name>chainRvs</name></member>
+    <member refid="drivercontrol_8h_1af77c36926f11afcc3ef278904515d3e2" kind="function"><name>buttonControls</name></member>
+  </compound>
+  <compound refid="graphics_8h" kind="file"><name>graphics.h</name>
+    <member refid="graphics_8h_1afd656c73884afefa57a78ad6446961e6" kind="variable"><name>screenLogo</name></member>
+    <member refid="graphics_8h_1a9d5b13324e91091b74420f37aa94fb8b" kind="variable"><name>screenDebug</name></member>
+    <member refid="graphics_8h_1a5b10728c4d59d79b76e7214b59b95e15" kind="function"><name>lv_example_chart_5</name></member>
+    <member refid="graphics_8h_1acfd9b298c32629192c2b26e711344685" kind="function"><name>autonSelector</name></member>
+    <member refid="graphics_8h_1ae7360d387260173c4b6259c90f319c39" kind="function"><name>debugTabs</name></member>
+  </compound>
+  <compound refid="main_8h" kind="file"><name>main.h</name>
+    <member refid="main_8h_1ae5817dbade24ea595c3ce938b34f9994" kind="define"><name>PROS_USE_SIMPLE_NAMES</name></member>
+    <member refid="main_8h_1ab1b081349029f8bf68a7f2086732e42b" kind="define"><name>PROS_USE_LITERALS</name></member>
+    <member refid="main_8h_1a5ab6c8a3e8078d13e517476b0838feb9" kind="variable"><name>matchL1</name></member>
+    <member refid="main_8h_1afccaf6982f4236e035e1f6f276a04114" kind="variable"><name>descore</name></member>
+    <member refid="main_8h_1a1db71b6ec4e30b2dfa7163b55fc4ebdd" kind="variable"><name>leftArm</name></member>
+    <member refid="main_8h_1aff168aa7d0d459d4dce4bb15063006c9" kind="variable"><name>rightArm</name></member>
+    <member refid="main_8h_1acf083b20d86a4251b4509f37b041826c" kind="variable"><name>matchL2</name></member>
+    <member refid="main_8h_1a49160552e95994a313a3998fd030c205" kind="variable"><name>topDescore</name></member>
+    <member refid="main_8h_1aa6fc8b494865a4663d7ac9478ebf11c9" kind="variable"><name>liftM</name></member>
+    <member refid="main_8h_1a3e183d8db2ff3eeb8bc2e747661a9a38" kind="variable"><name>liftI</name></member>
+    <member refid="main_8h_1ac9aa69b1a91abea16b870b83bdcdfb29" kind="variable"><name>controller</name></member>
+    <member refid="main_8h_1a0d76b2fdd98eca1729de71ec3dfbda3b" kind="variable"><name>partner</name></member>
+    <member refid="main_8h_1ac31fdd99eba4b5be812b4b85dada0bf8" kind="variable"><name>leftMotors</name></member>
+    <member refid="main_8h_1a3e9516e5179889387d635eee0c3251c2" kind="variable"><name>rightMotors</name></member>
+    <member refid="main_8h_1ad63607261058823dc607c6860a8384d6" kind="variable"><name>intake</name></member>
+    <member refid="main_8h_1a5816ea6049288e25b838ff87fca4cbbe" kind="variable"><name>bottomSensor</name></member>
+    <member refid="main_8h_1a3275a89fec7b2ca3cb7117f26f2c955e" kind="variable"><name>imu</name></member>
+    <member refid="main_8h_1a598a9f3c198a6515672d2155746168dc" kind="variable"><name>imu2</name></member>
+    <member refid="main_8h_1ade2fa96e17b2bbc56d05d3bc15f7c082" kind="variable"><name>imuAvg</name></member>
+    <member refid="main_8h_1aae7694fa69ad4e69c45503c7f5d5ea09" kind="variable"><name>distance</name></member>
+    <member refid="main_8h_1a685d69c150bb16bd66cbf70439650f17" kind="variable"><name>topticalSensor</name></member>
+    <member refid="main_8h_1a55a503e58133d61702aa85fb1ba05074" kind="variable"><name>chassis</name></member>
+    <member refid="main_8h_1a2df3d06bc5bced154da27fce393f991f" kind="function"><name>autonomous</name></member>
+    <member refid="main_8h_1a9efe22aaead3a5e936b5df459de02eba" kind="function"><name>initialize</name></member>
+    <member refid="main_8h_1a3ed01880f60e5a3afffc71f623174dbd" kind="function"><name>disabled</name></member>
+    <member refid="main_8h_1a16a77889800f9a99f69f9dd026013505" kind="function"><name>competition_initialize</name></member>
+    <member refid="main_8h_1a1903abdb5ef0f301d660754c8315fc17" kind="function"><name>opcontrol</name></member>
+  </compound>
+  <compound refid="auton_8cpp" kind="file"><name>auton.cpp</name>
+    <member refid="auton_8cpp_1ab904e4a4affee35498d90d49eaa0be4f" kind="variable"><name>autonType</name></member>
+    <member refid="auton_8cpp_1a8fa46400d4d81100f0bbf575e20e6956" kind="variable"><name>autonConfirmed</name></member>
+    <member refid="auton_8cpp_1a40acab291435bb3c83e008b1da5ba04a" kind="variable"><name>isRed</name></member>
+    <member refid="auton_8cpp_1a6bbd6d0faf2a5a2ae6a988e7198f0b14" kind="variable"><name>testing</name></member>
+    <member refid="auton_8cpp_1a7e887d429b29090a31bb7a197e1c2f43" kind="variable"><name>intakeStopped</name></member>
+    <member refid="auton_8cpp_1a03f19b805257cc0f0f94e30a7762a8f4" kind="function"><name>imuAverage</name></member>
+    <member refid="auton_8cpp_1a4f7300eef33242c5c28d8181a71792f4" kind="function"><name>colorDetector</name></member>
+    <member refid="auton_8cpp_1a6955fde277d2c6e8a2650dd60fdccbb5" kind="function"><name>colorDetector2</name></member>
+    <member refid="auton_8cpp_1a971b32805f6084e5e6cd06ffac8e543b" kind="function"><name>detectColor</name></member>
+    <member refid="auton_8cpp_1a7c23618a6c8a5b3c75727ca30f66265f" kind="function"><name>detectTopColor</name></member>
+    <member refid="auton_8cpp_1a9e034ed433b0a44f92ef87091aff3ea0" kind="function"><name>stopTheIntake</name></member>
+    <member refid="auton_8cpp_1aa9e74e435afb8651e13812414ffe6410" kind="function"><name>runAuton</name></member>
+  </compound>
+  <compound refid="blue_left_8cpp" kind="file"><name>blueLeft.cpp</name>
+    <member refid="blue_left_8cpp_1a15b0fd18461f3033f83a4a1722b440c4" kind="function"><name>blue_left</name></member>
+  </compound>
+  <compound refid="blue_right_8cpp" kind="file"><name>blueRight.cpp</name>
+    <member refid="blue_right_8cpp_1a572356efac277edd1e87fb7ebb90ce76" kind="function"><name>blue_right</name></member>
+  </compound>
+  <compound refid="red_left_8cpp" kind="file"><name>redLeft.cpp</name>
+    <member refid="red_left_8cpp_1a7c929e15ff41cbde012d7cbf28a056d4" kind="function"><name>red_left</name></member>
+  </compound>
+  <compound refid="red_right_8cpp" kind="file"><name>redRight.cpp</name>
+    <member refid="red_right_8cpp_1a095d82a6488be1fa672a5edf01e722af" kind="function"><name>red_right</name></member>
+  </compound>
+  <compound refid="skills_8cpp" kind="file"><name>skills.cpp</name>
+    <member refid="skills_8cpp_1a6aa5793b0357b08ef15d9b9d8309c4e9" kind="function"><name>skills</name></member>
+  </compound>
+  <compound refid="drivercontrol_8cpp" kind="file"><name>drivercontrol.cpp</name>
+    <member refid="drivercontrol_8cpp_1ae99303477e299fe9e0cc96d574f6f541" kind="variable"><name>isPoppedDown</name></member>
+    <member refid="drivercontrol_8cpp_1a67b2b85a16ad42288bafe490ce2eeebb" kind="variable"><name>isIntaking</name></member>
+    <member refid="drivercontrol_8cpp_1ad0443e3d15cf623de707d6ad748b6812" kind="variable"><name>intakeReversed</name></member>
+    <member refid="drivercontrol_8cpp_1acc427cbc207dc5ccf501b0635faf8ee2" kind="variable"><name>colorDetect</name></member>
+    <member refid="drivercontrol_8cpp_1aa3cee5bb562891fe08f778861a9a3b8d" kind="variable"><name>debugMode</name></member>
+    <member refid="drivercontrol_8cpp_1ad226d97fcb1322359d014f4de5c5635c" kind="variable"><name>ejectOn</name></member>
+    <member refid="drivercontrol_8cpp_1afd711ba96cd563c6101b23f77411e579" kind="variable"><name>chainFwd</name></member>
+    <member refid="drivercontrol_8cpp_1a3716a8b04f760209d65b46d5eec8e606" kind="variable"><name>chainRvs</name></member>
+    <member refid="drivercontrol_8cpp_1a474914bd7912b3c09ea5ea5f2ff83711" kind="variable"><name>scoreToggle</name></member>
+    <member refid="drivercontrol_8cpp_1ab3a1ffc3867f7d28e89e63c30db2068a" kind="variable"><name>descoreMech</name></member>
+    <member refid="drivercontrol_8cpp_1a471308e46be843a5250177aab9abed98" kind="variable"><name>stopIntake</name></member>
+    <member refid="drivercontrol_8cpp_1a6b41f6d7ab49ae9d1d80e521ed25f663" kind="variable"><name>isDescoring</name></member>
+    <member refid="drivercontrol_8cpp_1af77c36926f11afcc3ef278904515d3e2" kind="function"><name>buttonControls</name></member>
+  </compound>
+  <compound refid="graphics_8cpp" kind="file"><name>graphics.cpp</name>
+    <member refid="graphics_8cpp_1a76060b4e4e1dffa2d30cd6479b29b002" kind="variable"><name>screenAutonSelector</name></member>
+    <member refid="graphics_8cpp_1a9d5b13324e91091b74420f37aa94fb8b" kind="variable"><name>screenDebug</name></member>
+    <member refid="graphics_8cpp_1a5e8545ee7a6f63655566e37e4effc338" kind="variable"><name>buttonRedRight</name></member>
+    <member refid="graphics_8cpp_1a3bdff6208c4299e1925f2d946a5ca4fc" kind="variable"><name>buttonRedLeft</name></member>
+    <member refid="graphics_8cpp_1a06def40520e1a6dcf9eb4b8bf501fd6a" kind="variable"><name>buttonBlueLeft</name></member>
+    <member refid="graphics_8cpp_1a44b43c817c8a705c425174bc6c8e77da" kind="variable"><name>buttonBlueRight</name></member>
+    <member refid="graphics_8cpp_1a35d9cb73ef5ea1f383ad957057a66cd9" kind="variable"><name>buttonSkills</name></member>
+    <member refid="graphics_8cpp_1a56fb26e5df9d633dd2640a2633425c0c" kind="variable"><name>buttonConfirm</name></member>
+    <member refid="graphics_8cpp_1a2474a5474cbff19523a51eb1de01cda4" kind="variable"><name>width</name></member>
+    <member refid="graphics_8cpp_1ad12fc34ce789bce6c8a05d8a17138534" kind="variable"><name>height</name></member>
+    <member refid="graphics_8cpp_1a6806e78862b165988ca9b855e230084e" kind="variable"><name>xPos</name></member>
+    <member refid="graphics_8cpp_1adbae1d6f68d046bbecaa7230baf64762" kind="variable"><name>yPos</name></member>
+    <member refid="graphics_8cpp_1acfd9b298c32629192c2b26e711344685" kind="function"><name>autonSelector</name></member>
+    <member refid="graphics_8cpp_1ae7360d387260173c4b6259c90f319c39" kind="function"><name>debugTabs</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1acc9797822140f0179640edc0f31ac8f7" kind="variable"><name>horizontalEnc</name></member>
+    <member refid="main_8cpp_1afa6ab695d14a5e4ab1bdbe255ce356af" kind="variable"><name>leftVerticalEnc</name></member>
+    <member refid="main_8cpp_1af9533d7f94f27a7661b5f116a301cc2b" kind="variable"><name>rightVerticalEnc</name></member>
+    <member refid="main_8cpp_1ab78ee60d7445457f722b76a91e890ddd" kind="variable"><name>leftMotors</name></member>
+    <member refid="main_8cpp_1ababd359697e92040cba46fdf37ad5fc5" kind="variable"><name>leftVertical</name></member>
+    <member refid="main_8cpp_1af7921e40f53b0a5ed21ab8b8967806ca" kind="function"><name>controller</name></member>
+    <member refid="main_8cpp_1abb369301ef97f999624b86e719dc63a8" kind="function"><name>partner</name></member>
+    <member refid="main_8cpp_1a6b81d6d8927400415fa1ac389b857173" kind="function"><name>leftMotors</name></member>
+    <member refid="main_8cpp_1ac4447d8d994323233ac40c561d46ed52" kind="function"><name>rightMotors</name></member>
+    <member refid="main_8cpp_1a64abb0df0a8b50816cca06c953d63f86" kind="function"><name>intake</name></member>
+    <member refid="main_8cpp_1a3d725f5440c6da43fff68552a7b1dbb7" kind="function"><name>liftM</name></member>
+    <member refid="main_8cpp_1a33175f340fc9c0e15cb68b043bc90abb" kind="function"><name>liftI</name></member>
+    <member refid="main_8cpp_1ab1de3edc2b4a163bbbed627e684313a3" kind="function"><name>matchL1</name></member>
+    <member refid="main_8cpp_1ac2c14d743a9de6375bb9f23f807bbc43" kind="function"><name>matchL2</name></member>
+    <member refid="main_8cpp_1abea703e3af3380b53d1b5bdf67840ad6" kind="function"><name>descore</name></member>
+    <member refid="main_8cpp_1a33f39d29d121dc120ceb4d4d0729fecc" kind="function"><name>topDescore</name></member>
+    <member refid="main_8cpp_1af9112e06c833bb184010b928440b1d24" kind="function"><name>topticalSensor</name></member>
+    <member refid="main_8cpp_1aeec948e3eb6abbfe5f029aa1431bc47e" kind="function"><name>bottomSensor</name></member>
+    <member refid="main_8cpp_1ace145d4f8b1001ded1391043e7340016" kind="function"><name>imu</name></member>
+    <member refid="main_8cpp_1a38e2437348f74a02cd94bb2202544d31" kind="function"><name>imu2</name></member>
+    <member refid="main_8cpp_1a3ff7926ebc890beaa87f259f7f573ad9" kind="function"><name>imuAvg</name></member>
+    <member refid="main_8cpp_1ae8c509802325a203db077122b4fc308a" kind="function"><name>horizontalEnc</name></member>
+    <member refid="main_8cpp_1a1869fcac76127451fb33e19e639092c7" kind="function"><name>leftVerticalEnc</name></member>
+    <member refid="main_8cpp_1a4f125cd8430924a5cf354c004f9f7701" kind="function"><name>rightVerticalEnc</name></member>
+    <member refid="main_8cpp_1a811793491b3b1454200a47b22477b7c5" kind="function"><name>linearController</name></member>
+    <member refid="main_8cpp_1abea2558a263bdc9dd840e50c181e137a" kind="function"><name>angularController</name></member>
+    <member refid="main_8cpp_1ae08faad49f3677e4d78a7682e072bd59" kind="function"><name>throttleCurve</name></member>
+    <member refid="main_8cpp_1ae5d76e88ea8e14424d7ab50e57790ff8" kind="function"><name>steerCurve</name></member>
+    <member refid="main_8cpp_1aa81dbd28a7b40229f87fc2fcd075b0c9" kind="function"><name>chassis</name></member>
+    <member refid="main_8cpp_1a25a40b6614565f755233080a384c35f1" kind="function"><name>initialize</name></member>
+    <member refid="main_8cpp_1a4e1a74721457de1f01d41566400fb3e5" kind="function"><name>disabled</name></member>
+    <member refid="main_8cpp_1a870462d80a8efe920f8c95ee313cb9e5" kind="function"><name>competition_initialize</name></member>
+    <member refid="main_8cpp_1a3c7ca506bbc071fa740de13805b7f376" kind="function"><name>autonomous</name></member>
+    <member refid="main_8cpp_1ac57194c628bb97b849be48d79c99c4ac" kind="function"><name>opcontrol</name></member>
+  </compound>
+  <compound refid="dir_5030338112239ed78ce422df2879bda5" kind="dir"><name>C:/Users/Kyle/Vanguard/include/auton</name>
+  </compound>
+  <compound refid="dir_576a79cfee5ffb31c8c29a5f6bb691ae" kind="dir"><name>C:/Users/Kyle/Vanguard/src/auton</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>C:/Users/Kyle/Vanguard/include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>C:/Users/Kyle/Vanguard/src</name>
+  </compound>
+</doxygenindex>

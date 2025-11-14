@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>C:/Users/Kyle/Vanguard/include</compoundname>
+    <innerdir refid="dir_5030338112239ed78ce422df2879bda5">C:/Users/Kyle/Vanguard/include/auton</innerdir>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <innerfile refid="drivercontrol_8h">drivercontrol.h</innerfile>
+    <innerfile refid="graphics_8h">graphics.h</innerfile>
+    <innerfile refid="main_8h">main.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Kyle/Vanguard/include/"/>
+  </compounddef>
+</doxygen>

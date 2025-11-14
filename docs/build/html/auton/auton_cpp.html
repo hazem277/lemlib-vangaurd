@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>auton.cpp &mdash; Vanguard 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="graphics.cpp" href="../graphics_cpp.html" />
+    <link rel="prev" title="main.cpp" href="../main_cpp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Vanguard
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../source.html">Source Files</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../main_cpp.html">main.cpp</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">auton.cpp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv410imuAveragev"><code class="docutils literal notranslate"><span class="pre">imuAverage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413colorDetectorv"><code class="docutils literal notranslate"><span class="pre">colorDetector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv414colorDetector2v"><code class="docutils literal notranslate"><span class="pre">colorDetector2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411detectColorv"><code class="docutils literal notranslate"><span class="pre">detectColor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv414detectTopColorv"><code class="docutils literal notranslate"><span class="pre">detectTopColor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413stopTheIntakev"><code class="docutils literal notranslate"><span class="pre">stopTheIntake()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv48runAutonv"><code class="docutils literal notranslate"><span class="pre">runAuton()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv49autonType"><code class="docutils literal notranslate"><span class="pre">autonType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv414autonConfirmed"><code class="docutils literal notranslate"><span class="pre">autonConfirmed</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv45isRed"><code class="docutils literal notranslate"><span class="pre">isRed</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv47testing"><code class="docutils literal notranslate"><span class="pre">testing</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413intakeStopped"><code class="docutils literal notranslate"><span class="pre">intakeStopped</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../graphics_cpp.html">graphics.cpp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivercontrol_cpp.html">drivercontrol.cpp</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Vanguard</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../source.html">Source Files</a></li>
+      <li class="breadcrumb-item active">auton.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/auton/auton_cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="auton-cpp">
+<h1>auton.cpp<a class="headerlink" href="#auton-cpp" title="Link to this heading"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410imuAveragev">
+<span id="_CPPv310imuAveragev"></span><span id="_CPPv210imuAveragev"></span><span id="imuAverage"></span><span class="target" id="auton_8cpp_1a03f19b805257cc0f0f94e30a7762a8f4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">imuAverage</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410imuAveragev" title="Link to this definition"></a><br /></dt>
+<dd><p>function that averages the inertial sensor values to reduce drift </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413colorDetectorv">
+<span id="_CPPv313colorDetectorv"></span><span id="_CPPv213colorDetectorv"></span><span id="colorDetector"></span><span class="target" id="auton_8cpp_1a4f7300eef33242c5c28d8181a71792f4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">colorDetector</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413colorDetectorv" title="Link to this definition"></a><br /></dt>
+<dd><p>function that flips a boolean if it detects the correct color in the top intake. Used to stop the intake. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414colorDetector2v">
+<span id="_CPPv314colorDetector2v"></span><span id="_CPPv214colorDetector2v"></span><span id="colorDetector2"></span><span class="target" id="auton_8cpp_1a6955fde277d2c6e8a2650dd60fdccbb5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">colorDetector2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414colorDetector2v" title="Link to this definition"></a><br /></dt>
+<dd><p>Same as previous fn but it is impartial to the alliance color. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411detectColorv">
+<span id="_CPPv311detectColorv"></span><span id="_CPPv211detectColorv"></span><span id="detectColor"></span><span class="target" id="auton_8cpp_1a971b32805f6084e5e6cd06ffac8e543b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">detectColor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411detectColorv" title="Link to this definition"></a><br /></dt>
+<dd><p>delays the code until it detects a block in the bottom intake and then stops the intake. This is used in auton when we are at the match loader </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414detectTopColorv">
+<span id="_CPPv314detectTopColorv"></span><span id="_CPPv214detectTopColorv"></span><span id="detectTopColor"></span><span class="target" id="auton_8cpp_1a7c23618a6c8a5b3c75727ca30f66265f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">detectTopColor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414detectTopColorv" title="Link to this definition"></a><br /></dt>
+<dd><p>delays the code until it detects a block in the top lift and then stops the intake and lift. This is used in auton when we are at the match loader </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413stopTheIntakev">
+<span id="_CPPv313stopTheIntakev"></span><span id="_CPPv213stopTheIntakev"></span><span id="stopTheIntake"></span><span class="target" id="auton_8cpp_1a9e034ed433b0a44f92ef87091aff3ea0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stopTheIntake</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413stopTheIntakev" title="Link to this definition"></a><br /></dt>
+<dd><p>used with the aforementioned colordetect and stopIntake booleans to stop the intake when we first intake our alliance colors block. This stops the block from flying out of our intake, and gets rid of the need to micromanage the lift to keep the blocks in. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv48runAutonv">
+<span id="_CPPv38runAutonv"></span><span id="_CPPv28runAutonv"></span><span id="runAuton"></span><span class="target" id="auton_8cpp_1aa9e74e435afb8651e13812414ffe6410"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">runAuton</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48runAutonv" title="Link to this definition"></a><br /></dt>
+<dd><p>Called during the beginning of the match and starts the autonomous task using a switch. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv49autonType">
+<span id="_CPPv39autonType"></span><span id="_CPPv29autonType"></span><span id="autonType__auton_type"></span><span class="target" id="auton_8cpp_1ab904e4a4affee35498d90d49eaa0be4f"></span><span class="n"><span class="pre">auton_type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autonType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">NONE</span></span><a class="headerlink" href="#_CPPv49autonType" title="Link to this definition"></a><br /></dt>
+<dd><p>Defines autonomous codes for each side, Ex. blue left, blue right, and skills. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv414autonConfirmed">
+<span id="_CPPv314autonConfirmed"></span><span id="_CPPv214autonConfirmed"></span><span id="autonConfirmed__b"></span><span class="target" id="auton_8cpp_1a8fa46400d4d81100f0bbf575e20e6956"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autonConfirmed</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv414autonConfirmed" title="Link to this definition"></a><br /></dt>
+<dd><p>Boolean that, when true, will make the autonomous run. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv45isRed">
+<span id="_CPPv35isRed"></span><span id="_CPPv25isRed"></span><span id="isRed__b"></span><span class="target" id="auton_8cpp_1a40acab291435bb3c83e008b1da5ba04a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isRed</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv45isRed" title="Link to this definition"></a><br /></dt>
+<dd><p>Used to know what color to eject in the autonomous. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv47testing">
+<span id="_CPPv37testing"></span><span id="_CPPv27testing"></span><span id="testing__b"></span><span class="target" id="auton_8cpp_1a6bbd6d0faf2a5a2ae6a988e7198f0b14"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">testing</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv47testing" title="Link to this definition"></a><br /></dt>
+<dd><p>Testing variable that is used to run a specific code without needing to select an autonomous. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413intakeStopped">
+<span id="_CPPv313intakeStopped"></span><span id="_CPPv213intakeStopped"></span><span id="intakeStopped__b"></span><span class="target" id="auton_8cpp_1a7e887d429b29090a31bb7a197e1c2f43"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">intakeStopped</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv413intakeStopped" title="Link to this definition"></a><br /></dt>
+<dd><p>boolean to know if the intake was just stopped by the optical sensor </p>
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../main_cpp.html" class="btn btn-neutral float-left" title="main.cpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../graphics_cpp.html" class="btn btn-neutral float-right" title="graphics.cpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Kyle.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="skills_8cpp" kind="file" language="C++">
+    <compoundname>skills.cpp</compoundname>
+    <includes refid="auton_8h" local="yes">auton.h</includes>
+    <includes refid="drivercontrol_8h" local="yes">drivercontrol.h</includes>
+    <includes local="yes">lemlib/chassis/chassis.hpp</includes>
+    <includes refid="main_8h" local="yes">main.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>auton.h</label>
+        <link refid="auton_8h_source"/>
+      </node>
+      <node id="3">
+        <label>drivercontrol.h</label>
+        <link refid="drivercontrol_8h_source"/>
+      </node>
+      <node id="5">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Kyle/Vanguard/src/auton/skills.cpp</label>
+        <link refid="skills_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>errno.h</label>
+      </node>
+      <node id="35">
+        <label>lemlib/api.hpp</label>
+      </node>
+      <node id="6">
+        <label>lemlib/asset.hpp</label>
+      </node>
+      <node id="4">
+        <label>lemlib/chassis/chassis.hpp</label>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+      </node>
+      <node id="18">
+        <label>pros/adi.h</label>
+      </node>
+      <node id="7">
+        <label>pros/adi.hpp</label>
+      </node>
+      <node id="19">
+        <label>pros/colors.h</label>
+      </node>
+      <node id="20">
+        <label>pros/device.h</label>
+      </node>
+      <node id="21">
+        <label>pros/distance.h</label>
+      </node>
+      <node id="22">
+        <label>pros/error.h</label>
+      </node>
+      <node id="23">
+        <label>pros/ext_adi.h</label>
+      </node>
+      <node id="24">
+        <label>pros/gps.h</label>
+      </node>
+      <node id="25">
+        <label>pros/imu.h</label>
+      </node>
+      <node id="26">
+        <label>pros/link.h</label>
+      </node>
+      <node id="27">
+        <label>pros/llemu.h</label>
+      </node>
+      <node id="28">
+        <label>pros/misc.h</label>
+      </node>
+      <node id="29">
+        <label>pros/motors.h</label>
+      </node>
+      <node id="30">
+        <label>pros/optical.h</label>
+      </node>
+      <node id="31">
+        <label>pros/rotation.h</label>
+      </node>
+      <node id="8">
+        <label>pros/rotation.hpp</label>
+      </node>
+      <node id="32">
+        <label>pros/rtos.h</label>
+      </node>
+      <node id="33">
+        <label>pros/screen.h</label>
+      </node>
+      <node id="34">
+        <label>pros/vision.h</label>
+      </node>
+      <node id="12">
+        <label>stdbool.h</label>
+      </node>
+      <node id="13">
+        <label>stddef.h</label>
+      </node>
+      <node id="14">
+        <label>stdint.h</label>
+      </node>
+      <node id="15">
+        <label>stdio.h</label>
+      </node>
+      <node id="16">
+        <label>stdlib.h</label>
+      </node>
+      <node id="17">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="skills_8cpp_1a6aa5793b0357b08ef15d9b9d8309c4e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void skills</definition>
+        <argsstring>()</argsstring>
+        <name>skills</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/auton/skills.cpp" line="6" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/skills.cpp" bodystart="6" bodyend="113"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;auton.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;drivercontrol.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lemlib/chassis/chassis.hpp&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="main_8h" kindref="compound">main.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>skills()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/>chassis.setPose(0,<sp/>0,<sp/>289);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>pros::Task<sp/>AVERAGE_IMU(imuAverage);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>pros::Task<sp/>detectTheColor(colorDetector2);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>pros::delay(200);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>intake.move(100);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>-<sp/>15,<sp/>chassis.getPose().y<sp/>+<sp/>5.33,<sp/>800,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.maxSpeed<sp/>=<sp/>70},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>-<sp/>10,<sp/>chassis.getPose().y<sp/>+<sp/>(3),<sp/>800,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x<sp/>-<sp/>6.7,<sp/>chassis.getPose().y<sp/>-<sp/>7.7,<sp/>600,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>intake.move(0);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>-<sp/>6.7,<sp/>chassis.getPose().y<sp/>-<sp/>7.7,<sp/>800,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>intake.move(-127);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>liftM.move(-127);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>pros::delay(1000);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>intake.move(0);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>liftM.move(0);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>+<sp/>4,<sp/>chassis.getPose().y<sp/>+<sp/>4,<sp/>500,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.forwards<sp/>=<sp/>false},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x<sp/>+<sp/>24.6,<sp/>chassis.getPose().y<sp/>+<sp/>29.2,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>800,<sp/>{},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>+<sp/>24.6,<sp/>chassis.getPose().y<sp/>+<sp/>29.2,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2000,<sp/>{.maxSpeed<sp/>=<sp/>70},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x<sp/>+<sp/>60,<sp/>chassis.getPose().y,<sp/>800,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="main_8h_1a5ab6c8a3e8078d13e517476b0838feb9" kindref="member">matchL1</ref>.set_value(1);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>matchL2.set_value(1);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>pros::delay(200);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>intake.move(127);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>liftM.move(127);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>+<sp/>60,<sp/>chassis.getPose().y<sp/>,<sp/>1000,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.maxSpeed<sp/>=<sp/>60},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>detectTopColor();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>pros::delay(1000);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x<sp/>-<sp/>30,<sp/>chassis.getPose().y<sp/>+.25,<sp/>800,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.forwards<sp/>=<sp/>false},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>-<sp/>30,<sp/>chassis.getPose().y+.25<sp/>,<sp/>1200,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.forwards<sp/>=<sp/>false,<sp/>.maxSpeed<sp/>=<sp/>80},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>intake.move(125);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>liftM.move(125);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>liftI.move(125);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>pros::delay(1000);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>chassis.setPose(0,<sp/>0,<sp/>90);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>pros::delay(2000);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><ref refid="main_8h_1a5ab6c8a3e8078d13e517476b0838feb9" kindref="member">matchL1</ref>.set_value(0);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>matchL2.set_value(0);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>liftM.move(0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>liftI.move(0);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>+<sp/>5,<sp/>chassis.getPose().y,<sp/>1000,<sp/>{},</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x,<sp/>chassis.getPose().y<sp/>-<sp/>50,<sp/>700,<sp/>{},</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x,<sp/>chassis.getPose().y<sp/>-<sp/>50,<sp/>2500,<sp/>{},</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x<sp/>-<sp/>8.4,<sp/>chassis.getPose().y<sp/>-<sp/>20,<sp/>700,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>-<sp/>13.2,<sp/>chassis.getPose().y<sp/>-<sp/>30,<sp/>2500,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.maxSpeed<sp/>=<sp/>50},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>pros::delay(300);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x<sp/>-<sp/>11.5,<sp/>chassis.getPose().y<sp/>+<sp/>12.88,<sp/>800,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.forwards<sp/>=<sp/>false},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>-<sp/>11.5,<sp/>chassis.getPose().y<sp/>+<sp/>12.88,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1500,<sp/>{.forwards<sp/>=<sp/>false,<sp/>.maxSpeed<sp/>=<sp/>40},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>liftM.move(127);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>liftI.move(-127);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>pros::delay(2000);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>+<sp/>4,<sp/>chassis.getPose().y<sp/>-<sp/>4,<sp/>500,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.forwards<sp/>=<sp/>false},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x<sp/>+<sp/>25,<sp/>chassis.getPose().y<sp/>-<sp/>32,<sp/>800,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>+<sp/>25,<sp/>chassis.getPose().y<sp/>-<sp/>32,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2000,<sp/>{.maxSpeed<sp/>=<sp/>80},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x<sp/>+<sp/>60,<sp/>chassis.getPose().y,<sp/>800,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.maxSpeed<sp/>=<sp/>60},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="main_8h_1a5ab6c8a3e8078d13e517476b0838feb9" kindref="member">matchL1</ref>.set_value(1);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>matchL2.set_value(1);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>pros::delay(200);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>intake.move(127);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>liftM.move(60);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>+<sp/>60,<sp/>chassis.getPose().y,<sp/>1000,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.maxSpeed<sp/>=<sp/>70},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>pros::delay(100);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>detectTopColor();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x<sp/>-<sp/>30,<sp/>chassis.getPose().y-.5,<sp/>1200,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.forwards<sp/>=<sp/>false},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x<sp/>-<sp/>30,<sp/>chassis.getPose().y-.5,<sp/>1200,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{.forwards<sp/>=<sp/>false,<sp/>.maxSpeed<sp/>=<sp/>80},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="main_8h_1a5ab6c8a3e8078d13e517476b0838feb9" kindref="member">matchL1</ref>.set_value(0);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>matchL2.set_value(0);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>intake.move(125);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>liftM.move(125);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>liftI.move(125);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>pros::delay(2000);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x+4,chassis.getPose().y,600,{.maxSpeed=50},</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x+4,chassis.getPose().y,600,{.maxSpeed=50},</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x,chassis.getPose().y+20,<sp/>800,{},</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x,chassis.getPose().y+50,<sp/>2400,{.maxSpeed=80},</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>chassis.turnToPoint(chassis.getPose().x+30,chassis.getPose().y,600,{.forwards=false,.minSpeed=127},</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>chassis.moveToPoint(chassis.getPose().x+30,chassis.getPose().y,7000,{.forwards=false,.minSpeed=127},</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Kyle/Vanguard/src/auton/skills.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1077 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="main_8h" local="yes">main.h</includes>
+    <includes refid="auton_8h" local="yes">auton/auton.h</includes>
+    <includes refid="drivercontrol_8h" local="yes">drivercontrol.h</includes>
+    <includes refid="graphics_8h" local="yes">graphics.h</includes>
+    <includes local="yes">lemlib-tarball/api.hpp</includes>
+    <includes local="yes">lemlib/api.hpp</includes>
+    <includes local="yes">lemlib/asset.hpp</includes>
+    <includes local="yes">lemlib/chassis/trackingWheel.hpp</includes>
+    <includes local="yes">pros/abstract_motor.hpp</includes>
+    <includes local="yes">pros/adi.hpp</includes>
+    <includes local="yes">pros/device.hpp</includes>
+    <includes local="yes">pros/misc.h</includes>
+    <includes local="yes">pros/misc.hpp</includes>
+    <includes local="yes">pros/motor_group.hpp</includes>
+    <includes local="yes">pros/motors.h</includes>
+    <includes local="yes">pros/rotation.hpp</includes>
+    <includes local="yes">pros/rtos.hpp</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>auton/auton.h</label>
+        <link refid="auton_8h_source"/>
+      </node>
+      <node id="34">
+        <label>drivercontrol.h</label>
+        <link refid="drivercontrol_8h_source"/>
+      </node>
+      <node id="35">
+        <label>graphics.h</label>
+        <link refid="graphics_8h_source"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Kyle/Vanguard/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>errno.h</label>
+      </node>
+      <node id="37">
+        <label>lemlib-tarball/api.hpp</label>
+      </node>
+      <node id="32">
+        <label>lemlib/api.hpp</label>
+      </node>
+      <node id="3">
+        <label>lemlib/asset.hpp</label>
+      </node>
+      <node id="38">
+        <label>lemlib/chassis/trackingWheel.hpp</label>
+      </node>
+      <node id="36">
+        <label>liblvgl/core/lv_obj.h</label>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+      </node>
+      <node id="39">
+        <label>pros/abstract_motor.hpp</label>
+      </node>
+      <node id="15">
+        <label>pros/adi.h</label>
+      </node>
+      <node id="4">
+        <label>pros/adi.hpp</label>
+      </node>
+      <node id="16">
+        <label>pros/colors.h</label>
+      </node>
+      <node id="17">
+        <label>pros/device.h</label>
+      </node>
+      <node id="40">
+        <label>pros/device.hpp</label>
+      </node>
+      <node id="18">
+        <label>pros/distance.h</label>
+      </node>
+      <node id="19">
+        <label>pros/error.h</label>
+      </node>
+      <node id="20">
+        <label>pros/ext_adi.h</label>
+      </node>
+      <node id="21">
+        <label>pros/gps.h</label>
+      </node>
+      <node id="22">
+        <label>pros/imu.h</label>
+      </node>
+      <node id="23">
+        <label>pros/link.h</label>
+      </node>
+      <node id="24">
+        <label>pros/llemu.h</label>
+      </node>
+      <node id="25">
+        <label>pros/misc.h</label>
+      </node>
+      <node id="41">
+        <label>pros/misc.hpp</label>
+      </node>
+      <node id="42">
+        <label>pros/motor_group.hpp</label>
+      </node>
+      <node id="26">
+        <label>pros/motors.h</label>
+      </node>
+      <node id="27">
+        <label>pros/optical.h</label>
+      </node>
+      <node id="28">
+        <label>pros/rotation.h</label>
+      </node>
+      <node id="5">
+        <label>pros/rotation.hpp</label>
+      </node>
+      <node id="29">
+        <label>pros/rtos.h</label>
+      </node>
+      <node id="43">
+        <label>pros/rtos.hpp</label>
+      </node>
+      <node id="30">
+        <label>pros/screen.h</label>
+      </node>
+      <node id="31">
+        <label>pros/vision.h</label>
+      </node>
+      <node id="9">
+        <label>stdbool.h</label>
+      </node>
+      <node id="10">
+        <label>stddef.h</label>
+      </node>
+      <node id="11">
+        <label>stdint.h</label>
+      </node>
+      <node id="12">
+        <label>stdio.h</label>
+      </node>
+      <node id="13">
+        <label>stdlib.h</label>
+      </node>
+      <node id="14">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8cpp_1acc9797822140f0179640edc0f31ac8f7" prot="public" static="no" mutable="no">
+        <type>lemlib::TrackingWheel horizontal &amp;</type>
+        <definition>lemlib::TrackingWheel horizontal&amp; horizontalEnc</definition>
+        <argsstring></argsstring>
+        <name>horizontalEnc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="119" column="23" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1afa6ab695d14a5e4ab1bdbe255ce356af" prot="public" static="no" mutable="no">
+        <type>lemlib::TrackingWheel leftVertical &amp;</type>
+        <definition>lemlib::TrackingWheel leftVertical&amp; leftVerticalEnc</definition>
+        <argsstring></argsstring>
+        <name>leftVerticalEnc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="120" column="23" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1af9533d7f94f27a7661b5f116a301cc2b" prot="public" static="no" mutable="no">
+        <type>lemlib::TrackingWheel rightVertical &amp;</type>
+        <definition>lemlib::TrackingWheel rightVertical&amp; rightVerticalEnc</definition>
+        <argsstring></argsstring>
+        <name>rightVerticalEnc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="122" column="23" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ab78ee60d7445457f722b76a91e890ddd" prot="public" static="no" mutable="no">
+        <type>lemlib::Drivetrain drivetrain &amp;</type>
+        <definition>lemlib::Drivetrain drivetrain&amp; leftMotors</definition>
+        <argsstring></argsstring>
+        <name>leftMotors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="126" column="20" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ababd359697e92040cba46fdf37ad5fc5" prot="public" static="no" mutable="no">
+        <type>lemlib::OdomSensors sensors &amp;</type>
+        <definition>lemlib::OdomSensors sensors&amp; leftVertical</definition>
+        <argsstring></argsstring>
+        <name>leftVertical</name>
+        <briefdescription>
+<para>Defines the necessary lemlib classes using the motors and sensors defined in pros. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="167" column="21" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1af7921e40f53b0a5ed21ab8b8967806ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Controller</type>
+        <definition>pros::Controller controller</definition>
+        <argsstring>(pros::E_CONTROLLER_MASTER)</argsstring>
+        <name>controller</name>
+        <param>
+          <type>pros::E_CONTROLLER_MASTER</type>
+        </param>
+        <briefdescription>
+<para>defines the main controller that we use for moving the robot </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="24" column="18" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="24" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1abb369301ef97f999624b86e719dc63a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Controller</type>
+        <definition>pros::Controller partner</definition>
+        <argsstring>(pros::E_CONTROLLER_PARTNER)</argsstring>
+        <name>partner</name>
+        <param>
+          <type>pros::E_CONTROLLER_PARTNER</type>
+        </param>
+        <briefdescription>
+<para>defines a secondary controller if we want to use one </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="29" column="18" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="29" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a6b81d6d8927400415fa1ac389b857173" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::MotorGroup</type>
+        <definition>pros::MotorGroup leftMotors</definition>
+        <argsstring>({-18, 19, -20}, pros::MotorGearset::blue)</argsstring>
+        <name>leftMotors</name>
+        <param>
+          <type>{-18, 19, -20}</type>
+        </param>
+        <param>
+          <type>pros::MotorGearset::blue</type>
+        </param>
+        <briefdescription>
+<para>Left drivetrain motorgroup, negative values indicate it is reversed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="35" column="18" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="35" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1ac4447d8d994323233ac40c561d46ed52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::MotorGroup</type>
+        <definition>pros::MotorGroup rightMotors</definition>
+        <argsstring>({8, -9, 10}, pros::MotorGearset::blue)</argsstring>
+        <name>rightMotors</name>
+        <param>
+          <type>{8, -9, 10}</type>
+        </param>
+        <param>
+          <type>pros::MotorGearset::blue</type>
+        </param>
+        <briefdescription>
+<para>Right drivetrain motorgroup, negative values indicate it is reversed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="40" column="18" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="40" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a64abb0df0a8b50816cca06c953d63f86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Motor</type>
+        <definition>pros::Motor intake</definition>
+        <argsstring>(-11, pros::MotorGearset::blue)</argsstring>
+        <name>intake</name>
+        <param>
+          <type>-</type>
+          <declname>11</declname>
+        </param>
+        <param>
+          <type>pros::MotorGearset::blue</type>
+        </param>
+        <briefdescription>
+<para>Bottom intake motor that spins the flex wheels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="45" column="13" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="45" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a3d725f5440c6da43fff68552a7b1dbb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Motor</type>
+        <definition>pros::Motor liftM</definition>
+        <argsstring>(-1, pros::MotorGearset::blue)</argsstring>
+        <name>liftM</name>
+        <param>
+          <type>-</type>
+          <declname>1</declname>
+        </param>
+        <param>
+          <type>pros::MotorGearset::blue</type>
+        </param>
+        <briefdescription>
+<para>Middle part of the lift that brings blocks up to the indexer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="50" column="13" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="50" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a33175f340fc9c0e15cb68b043bc90abb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Motor</type>
+        <definition>pros::Motor liftI</definition>
+        <argsstring>(-12, pros::MotorGearset::blue)</argsstring>
+        <name>liftI</name>
+        <param>
+          <type>-</type>
+          <declname>12</declname>
+        </param>
+        <param>
+          <type>pros::MotorGearset::blue</type>
+        </param>
+        <briefdescription>
+<para>Top indexer that can spin to either score in the long goal or middle center goal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="55" column="13" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="55" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1ab1de3edc2b4a163bbbed627e684313a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::adi::DigitalOut</type>
+        <definition>pros::adi::DigitalOut matchL1</definition>
+        <argsstring>(&apos;a&apos;)</argsstring>
+        <name>matchL1</name>
+        <param>
+          <type>&apos;a&apos;</type>
+        </param>
+        <briefdescription>
+<para>Pneumatics for the match loader. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="60" column="23" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="60" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1ac2c14d743a9de6375bb9f23f807bbc43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::adi::DigitalOut</type>
+        <definition>pros::adi::DigitalOut matchL2</definition>
+        <argsstring>(&apos;h&apos;)</argsstring>
+        <name>matchL2</name>
+        <param>
+          <type>&apos;h&apos;</type>
+        </param>
+        <briefdescription>
+<para>Pneumatics for the match loader. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="65" column="23" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="65" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1abea703e3af3380b53d1b5bdf67840ad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::adi::DigitalOut</type>
+        <definition>pros::adi::DigitalOut descore</definition>
+        <argsstring>(&apos;b&apos;)</argsstring>
+        <name>descore</name>
+        <param>
+          <type>&apos;b&apos;</type>
+        </param>
+        <briefdescription>
+<para>Pneumatics for the side descore mech. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="70" column="23" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="70" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a33f39d29d121dc120ceb4d4d0729fecc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::adi::DigitalOut</type>
+        <definition>pros::adi::DigitalOut topDescore</definition>
+        <argsstring>(&apos;c&apos;)</argsstring>
+        <name>topDescore</name>
+        <param>
+          <type>&apos;c&apos;</type>
+        </param>
+        <briefdescription>
+<para>Pneumatics for the top descore mech. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="75" column="23" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="75" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1af9112e06c833bb184010b928440b1d24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Optical</type>
+        <definition>pros::Optical topticalSensor</definition>
+        <argsstring>(3)</argsstring>
+        <name>topticalSensor</name>
+        <param>
+          <type>3</type>
+        </param>
+        <briefdescription>
+<para>Top optical sensor for detecting which color block is in our top intake. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="80" column="15" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="80" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1aeec948e3eb6abbfe5f029aa1431bc47e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Optical</type>
+        <definition>pros::Optical bottomSensor</definition>
+        <argsstring>(16)</argsstring>
+        <name>bottomSensor</name>
+        <param>
+          <type>16</type>
+        </param>
+        <briefdescription>
+<para>Bottom optical sensor for detecting which color block is in our bottom intake. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="85" column="15" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="85" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1ace145d4f8b1001ded1391043e7340016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Imu</type>
+        <definition>pros::Imu imu</definition>
+        <argsstring>(13)</argsstring>
+        <name>imu</name>
+        <param>
+          <type>13</type>
+        </param>
+        <briefdescription>
+<para>1st inertial sensor for odometry </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="90" column="11" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="90" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a38e2437348f74a02cd94bb2202544d31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Imu</type>
+        <definition>pros::Imu imu2</definition>
+        <argsstring>(14)</argsstring>
+        <name>imu2</name>
+        <param>
+          <type>14</type>
+        </param>
+        <briefdescription>
+<para>2nd Inertial sensor for odometry </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="95" column="11" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="95" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a3ff7926ebc890beaa87f259f7f573ad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Imu</type>
+        <definition>pros::Imu imuAvg</definition>
+        <argsstring>(17)</argsstring>
+        <name>imuAvg</name>
+        <param>
+          <type>17</type>
+        </param>
+        <briefdescription>
+<para>Averages the two inertial sensor values out. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="100" column="11" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="100" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1ae8c509802325a203db077122b4fc308a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Rotation</type>
+        <definition>pros::Rotation horizontalEnc</definition>
+        <argsstring>(6)</argsstring>
+        <name>horizontalEnc</name>
+        <param>
+          <type>6</type>
+        </param>
+        <briefdescription>
+<para>Horizontal rotational sensor for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="108" column="16" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="108" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a1869fcac76127451fb33e19e639092c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Rotation</type>
+        <definition>pros::Rotation leftVerticalEnc</definition>
+        <argsstring>(-15)</argsstring>
+        <name>leftVerticalEnc</name>
+        <param>
+          <type>-</type>
+          <declname>15</declname>
+        </param>
+        <briefdescription>
+<para>Left Vertical rotational sensor for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="113" column="16" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="113" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a4f125cd8430924a5cf354c004f9f7701" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pros::Rotation</type>
+        <definition>pros::Rotation rightVerticalEnc</definition>
+        <argsstring>(5)</argsstring>
+        <name>rightVerticalEnc</name>
+        <param>
+          <type>5</type>
+        </param>
+        <briefdescription>
+<para>Right Vertical rotational sensor for odometry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="118" column="16" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="118" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a811793491b3b1454200a47b22477b7c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lemlib::ControllerSettings</type>
+        <definition>lemlib::ControllerSettings linearController</definition>
+        <argsstring>(10, 0, 3, 0, 0.1, 100, 0, 0, 0)</argsstring>
+        <name>linearController</name>
+        <param>
+          <type>10</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>3</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>1</declname>
+        </param>
+        <param>
+          <type>100</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <briefdescription>
+<para>The PID values that control linear motion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="135" column="5" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="135" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1abea2558a263bdc9dd840e50c181e137a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lemlib::ControllerSettings</type>
+        <definition>lemlib::ControllerSettings angularController</definition>
+        <argsstring>(11, 0, 94.5, 0, 0, 0, 0, 0, 0)</argsstring>
+        <name>angularController</name>
+        <param>
+          <type>11</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>94.</type>
+          <declname>5</declname>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <briefdescription>
+<para>The PID values that control angular motion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="151" column="5" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="151" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1ae08faad49f3677e4d78a7682e072bd59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lemlib::ExpoDriveCurve</type>
+        <definition>lemlib::ExpoDriveCurve throttleCurve</definition>
+        <argsstring>(3, 10, 1.019)</argsstring>
+        <name>throttleCurve</name>
+        <param>
+          <type>3</type>
+        </param>
+        <param>
+          <type>10</type>
+        </param>
+        <param>
+          <type>1.</type>
+          <declname>019</declname>
+        </param>
+        <briefdescription>
+<para>input curve for throttle input during driver control </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="175" column="5" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="175" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1ae5d76e88ea8e14424d7ab50e57790ff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lemlib::ExpoDriveCurve</type>
+        <definition>lemlib::ExpoDriveCurve steerCurve</definition>
+        <argsstring>(3, 10, 1.019)</argsstring>
+        <name>steerCurve</name>
+        <param>
+          <type>3</type>
+        </param>
+        <param>
+          <type>10</type>
+        </param>
+        <param>
+          <type>1.</type>
+          <declname>019</declname>
+        </param>
+        <briefdescription>
+<para>input curve for steer input during driver control </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="186" column="5" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="186" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1aa81dbd28a7b40229f87fc2fcd075b0c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>lemlib::Chassis</type>
+        <definition>lemlib::Chassis chassis</definition>
+        <argsstring>(drivetrain, linearController, angularController, sensors, &amp;throttleCurve, &amp;steerCurve)</argsstring>
+        <name>chassis</name>
+        <param>
+          <type>drivetrain</type>
+        </param>
+        <param>
+          <type>linearController</type>
+        </param>
+        <param>
+          <type>angularController</type>
+        </param>
+        <param>
+          <type>sensors</type>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>throttleCurve</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>steerCurve</declname>
+        </param>
+        <briefdescription>
+<para>defines the chassis with the motors and sensors defined earlier </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="194" column="17" declfile="C:/Users/Kyle/Vanguard/src/main.cpp" declline="194" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a25a40b6614565f755233080a384c35f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+<para>Part of the code that runs when you first start the program. Used to turn on lights for sensors, calibrate chassis/sensors, ect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="201" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="201" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a4e1a74721457de1f01d41566400fb3e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void disabled</definition>
+        <argsstring>()</argsstring>
+        <name>disabled</name>
+        <briefdescription>
+<para>Runs when the robot is in the disabled state, before autonomous. This is where we reset our IMU&apos;s. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="236" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="236" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a870462d80a8efe920f8c95ee313cb9e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void competition_initialize</definition>
+        <argsstring>()</argsstring>
+        <name>competition_initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="242" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="242" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a3c7ca506bbc071fa740de13805b7f376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void autonomous</definition>
+        <argsstring>()</argsstring>
+        <name>autonomous</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function runs our autonomous code after we select it on the brain screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If you find doing pros::Motor() to be tedious and you&apos;d prefer just to do Motor, you can use the namespace with the following commented out line.</para>
+<para>IMPORTANT: Only the okapi or pros namespace may be used, not both concurrently! The okapi namespace will export all symbols inside the pros namespace. Prototypes for the competition control tasks are redefined here to ensure that they can be called from user code (i.e. calling autonomous from a button press in <ref refid="main_8h_1a1903abdb5ef0f301d660754c8315fc17" kindref="member">opcontrol()</ref> for testing purposes). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="247" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="247" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1ac57194c628bb97b849be48d79c99c4ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opcontrol</definition>
+        <argsstring>()</argsstring>
+        <name>opcontrol</name>
+        <briefdescription>
+<para>Runs after autonomous is finished. Uses tasks to run the button controls and joystick inputs for moving around the field. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/main.cpp" line="258" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/main.cpp" bodystart="258" bodyend="281"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="main_8h" kindref="compound">main.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;auton/auton.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;drivercontrol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;graphics.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lemlib-tarball/api.hpp&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lemlib/api.hpp&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lemlib/asset.hpp&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lemlib/chassis/trackingWheel.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/abstract_motor.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/adi.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/device.hpp&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/misc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/misc.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/motor_group.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/motors.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/rotation.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pros/rtos.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">pros::Controller<sp/>controller(pros::E_CONTROLLER_MASTER);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">pros::Controller<sp/>partner(pros::E_CONTROLLER_PARTNER);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>motor<sp/>groups</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">pros::MotorGroup<sp/>leftMotors({-18,<sp/>19,<sp/>-20},<sp/>pros::MotorGearset::blue);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">pros::MotorGroup<sp/>rightMotors({8,<sp/>-9,<sp/>10},<sp/>pros::MotorGearset::blue);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">pros::Motor<sp/>intake(-11,<sp/>pros::MotorGearset::blue);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">pros::Motor<sp/>liftM(-1,<sp/>pros::MotorGearset::blue);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">pros::Motor<sp/>liftI(-12,<sp/>pros::MotorGearset::blue);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">pros::adi::DigitalOut<sp/><ref refid="main_8h_1a5ab6c8a3e8078d13e517476b0838feb9" kindref="member">matchL1</ref>(</highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">pros::adi::DigitalOut<sp/>matchL2(</highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">pros::adi::DigitalOut<sp/>descore(</highlight><highlight class="charliteral">&apos;b&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">pros::adi::DigitalOut<sp/>topDescore(</highlight><highlight class="charliteral">&apos;c&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">pros::Optical<sp/>topticalSensor(3);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">pros::Optical<sp/>bottomSensor(16);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">pros::Imu<sp/>imu(13);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">pros::Imu<sp/>imu2(14);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">pros::Imu<sp/>imuAvg(17);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//<sp/>tracking<sp/>wheels</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">pros::Rotation<sp/>horizontalEnc(6);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">pros::Rotation<sp/>leftVerticalEnc(-15);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">pros::Rotation<sp/>rightVerticalEnc(5);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">lemlib::TrackingWheel<sp/>horizontal(&amp;horizontalEnc,<sp/>lemlib::Omniwheel::NEW_2,<sp/>-2.125);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">lemlib::TrackingWheel<sp/>leftVertical(&amp;leftVerticalEnc,<sp/>lemlib::Omniwheel::NEW_2,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0.75);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">lemlib::TrackingWheel<sp/>rightVertical(&amp;rightVerticalEnc,<sp/>lemlib::Omniwheel::NEW_2,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.75);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/>drivetrain<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">lemlib::Drivetrain<sp/>drivetrain(&amp;leftMotors,<sp/>&amp;rightMotors,<sp/>12.55,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lemlib::Omniwheel::NEW_325,<sp/>360,<sp/>2);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>lateral<sp/>motion<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">lemlib::ControllerSettings</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>linearController(10,<sp/></highlight><highlight class="comment">//<sp/>proportional<sp/>gain<sp/>(kP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>integral<sp/>gain<sp/>(kI)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3,<sp/></highlight><highlight class="comment">//<sp/>derivative<sp/>gain<sp/>(kD)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>anti<sp/>windup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.1,<sp/></highlight><highlight class="comment">//<sp/>small<sp/>error<sp/>range,<sp/>in<sp/>inches</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>100,<sp/></highlight><highlight class="comment">//<sp/>small<sp/>error<sp/>range<sp/>timeout,<sp/>in<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>large<sp/>error<sp/>range,<sp/>in<sp/>inches</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>large<sp/>error<sp/>range<sp/>timeout,<sp/>in<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/></highlight><highlight class="comment">//<sp/>maximum<sp/>acceleration<sp/>(slew)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//<sp/>angular<sp/>motion<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">lemlib::ControllerSettings</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>angularController(11,<sp/></highlight><highlight class="comment">//<sp/>proportional<sp/>gain<sp/>(kP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>integral<sp/>gain<sp/>(kI)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>94.5,<sp/></highlight><highlight class="comment">//<sp/>derivative<sp/>gain<sp/>(kD)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>anti<sp/>windup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>small<sp/>error<sp/>range,<sp/>in<sp/>inches</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>small<sp/>error<sp/>range<sp/>timeout,<sp/>in<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>large<sp/>error<sp/>range,<sp/>in<sp/>inches</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="comment">//<sp/>large<sp/>error<sp/>range<sp/>timeout,<sp/>in<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/></highlight><highlight class="comment">//<sp/>maximum<sp/>acceleration<sp/>(slew)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sensors<sp/>for<sp/>odometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">lemlib::OdomSensors<sp/>sensors(&amp;leftVertical,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;horizontal,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;imuAvg);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">lemlib::ExpoDriveCurve</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>throttleCurve(3,<sp/></highlight><highlight class="comment">//<sp/>joystick<sp/>deadband<sp/>out<sp/>of<sp/>127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10,<sp/></highlight><highlight class="comment">//<sp/>minimum<sp/>output<sp/>where<sp/>drivetrain<sp/>will<sp/>move<sp/>out<sp/>of<sp/>127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.019<sp/></highlight><highlight class="comment">//<sp/>expo<sp/>curve<sp/>gain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">lemlib::ExpoDriveCurve</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>steerCurve(3,<sp/></highlight><highlight class="comment">//<sp/>joystick<sp/>deadband<sp/>out<sp/>of<sp/>127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10,<sp/></highlight><highlight class="comment">//<sp/>minimum<sp/>output<sp/>where<sp/>drivetrain<sp/>will<sp/>move<sp/>out<sp/>of<sp/>127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.019<sp/></highlight><highlight class="comment">//<sp/>expo<sp/>curve<sp/>gain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">lemlib::Chassis<sp/>chassis(drivetrain,<sp/>linearController,<sp/>angularController,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sensors,<sp/>&amp;throttleCurve,<sp/>&amp;steerCurve);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8h_1a9efe22aaead3a5e936b5df459de02eba" kindref="member">initialize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>topticalSensor.set_led_pwm(100);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>bottomSensor.set_led_pwm(100);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/>chassis.calibrate();<sp/></highlight><highlight class="comment">//<sp/>calibrate<sp/>sensors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>autonSelector();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(autonType<sp/>==<sp/>SKILLS<sp/>&amp;&amp;<sp/>autonConfirmed)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>lv_scr_load_anim(screenLogo,<sp/>LV_SCR_LOAD_ANIM_FADE_ON,<sp/>250,<sp/>1000,<sp/>false);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(testing)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>autonType<sp/>=<sp/>BLUE_RIGHT;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>autonConfirmed<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>thread<sp/>to<sp/>for<sp/>brain<sp/>screen<sp/>and<sp/>position<sp/>logging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>pros::Task<sp/>screenTask([&amp;]()<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>log<sp/>position<sp/>telemetry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lemlib::telemetrySink()-&gt;info(</highlight><highlight class="stringliteral">&quot;Chassis<sp/>pose:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>chassis.getPose());</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\r&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::setw(20)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Chassis<sp/>X:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>chassis.getPose().x</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::setw(20)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Chassis<sp/>Y:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>chassis.getPose().y</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::setw(20)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Theta:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>chassis.getPose().theta</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::setw(20)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Bool:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>colorDetect</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;std::setw(20)<sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>topticalSensor.get_hue()</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delay<sp/>to<sp/>save<sp/>resources</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pros::delay(50);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8h_1a3ed01880f60e5a3afffc71f623174dbd" kindref="member">disabled</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>imu.reset(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>imu2.reset(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/>controller.clear();</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>competition_initialize()<sp/>{}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8h_1a2df3d06bc5bced154da27fce393f991f" kindref="member">autonomous</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>topDescore.set_value(1);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!autonConfirmed)<sp/>{<sp/>pros::delay(50);<sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>runAuton();</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8h_1a1903abdb5ef0f301d660754c8315fc17" kindref="member">opcontrol</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(autonType<sp/>==<sp/>RED_LEFT<sp/>||<sp/>autonType<sp/>==<sp/>RED_RIGHT)<sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>isRed<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(autonType<sp/>==<sp/>BLUE_LEFT<sp/>||<sp/>autonType<sp/>==<sp/>BLUE_RIGHT)<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>isRed<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/>drivetrain.leftMotors-&gt;set_brake_mode_all(MOTOR_BRAKE_COAST);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>drivetrain.rightMotors-&gt;set_brake_mode_all(MOTOR_BRAKE_COAST);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>pros::Task<sp/>AVERAGE_IMU(imuAverage);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>pros::Task<sp/>BUTTON_CONTROLS(buttonControls);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(autonType<sp/>!=<sp/>NONE){</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/>pros::Task<sp/>detectTheColor(colorDetector);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal">}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>pros::Task<sp/>detectTheColor(colorDetector2);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">pros::Task<sp/>stop(stopTheIntake);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>leftY<sp/><sp/>=<sp/>controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rightY<sp/>=<sp/>controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>chassis.tank(leftY,<sp/>rightY);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>pros::delay(10);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Kyle/Vanguard/src/main.cpp"/>
+  </compounddef>
+</doxygen>

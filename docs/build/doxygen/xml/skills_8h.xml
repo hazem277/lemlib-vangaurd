@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="skills_8h" kind="file" language="C++">
+    <compoundname>skills.h</compoundname>
+    <includedby refid="auton_8cpp" local="yes">C:/Users/Kyle/Vanguard/src/auton/auton.cpp</includedby>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="skills_8h_1a6aa5793b0357b08ef15d9b9d8309c4e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void skills</definition>
+        <argsstring>()</argsstring>
+        <name>skills</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/include/auton/skills.h" line="4" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/auton/skills.cpp" bodystart="6" bodyend="113" declfile="C:/Users/Kyle/Vanguard/include/auton/skills.h" declline="4" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SKILLS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SKILLS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>skills();</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Kyle/Vanguard/include/auton/skills.h"/>
+  </compounddef>
+</doxygen>

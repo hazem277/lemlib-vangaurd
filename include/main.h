@@ -25,7 +25,8 @@
  * not convenient for most student programmers.
  */
 #include "lemlib/asset.hpp" // IWYU pragma: keep
-#include "pros/rotation.hpp"
+#include "pros/adi.hpp"
+#include "pros/rotation.hpp" // IWYU pragma: keep
 #define PROS_USE_SIMPLE_NAMES
 
 /**
@@ -44,19 +45,20 @@
  */
 //#include "okapi/api.hpp"
 
-extern pros::adi::DigitalOut clamp;
+extern pros::adi::DigitalOut matchL1;
 
-extern pros::adi::DigitalOut topRing;
-
-extern pros::adi::DigitalOut leftArm;
-extern pros::adi::DigitalOut rightArm;
+extern pros::adi::DigitalOut descore;
 
 extern pros::adi::DigitalOut leftArm;
 extern pros::adi::DigitalOut rightArm;
 
-extern pros::Rotation wallStakeEnc;
+extern pros::adi::DigitalOut leftArm;
+extern pros::adi::DigitalOut matchL2;
+extern pros::adi::DigitalOut topDescore;
 
-extern pros::Motor lift;
+
+extern pros::Motor liftM;
+extern pros::Motor liftI;
 // controller
 extern pros::Controller controller;
 extern pros::Controller partner;
@@ -65,13 +67,15 @@ extern pros::MotorGroup leftMotors; // right motor group - ports 6, 7, 9 (revers
 extern pros::MotorGroup rightMotors; // right motor group - ports 6, 7, 9 (reversed)
 
 extern pros::Motor intake;
-extern pros::Motor chain;
+extern pros::Optical bottomSensor;
 
 // Inertial Sensor on port 10
 extern pros::Imu imu;
+extern pros::Imu imu2;
+extern pros::Imu imuAvg;
 extern pros::Distance distance;
 
-extern pros::Optical opticalSensor;
+extern pros::Optical topticalSensor;
 
 extern lemlib::Chassis chassis;
 

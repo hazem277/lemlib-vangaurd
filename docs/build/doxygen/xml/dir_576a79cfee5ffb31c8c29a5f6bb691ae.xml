@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_576a79cfee5ffb31c8c29a5f6bb691ae" kind="dir">
+    <compoundname>C:/Users/Kyle/Vanguard/src/auton</compoundname>
+    <innerfile refid="auton_8cpp">auton.cpp</innerfile>
+    <innerfile refid="blue_left_8cpp">blueLeft.cpp</innerfile>
+    <innerfile refid="blue_right_8cpp">blueRight.cpp</innerfile>
+    <innerfile refid="red_left_8cpp">redLeft.cpp</innerfile>
+    <innerfile refid="red_right_8cpp">redRight.cpp</innerfile>
+    <innerfile refid="skills_8cpp">skills.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Kyle/Vanguard/src/auton/"/>
+  </compounddef>
+</doxygen>

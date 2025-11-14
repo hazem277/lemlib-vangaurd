@@ -1,0 +1,670 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="graphics_8cpp" kind="file" language="C++">
+    <compoundname>graphics.cpp</compoundname>
+    <includes refid="graphics_8h" local="yes">graphics.h</includes>
+    <includes refid="auton_8h" local="yes">auton/auton.h</includes>
+    <includes local="yes">liblvgl/core/lv_disp.h</includes>
+    <includes local="yes">liblvgl/core/lv_obj.h</includes>
+    <includes local="yes">liblvgl/core/lv_obj_style.h</includes>
+    <includes local="yes">liblvgl/misc/lv_color.h</includes>
+    <includes local="yes">liblvgl/widgets/lv_btn.h</includes>
+    <includes refid="main_8h" local="yes">main.h</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>auton/auton.h</label>
+        <link refid="auton_8h_source"/>
+      </node>
+      <node id="2">
+        <label>graphics.h</label>
+        <link refid="graphics_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/Kyle/Vanguard/src/graphics.cpp</label>
+        <link refid="graphics_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>errno.h</label>
+      </node>
+      <node id="39">
+        <label>lemlib/api.hpp</label>
+      </node>
+      <node id="10">
+        <label>lemlib/asset.hpp</label>
+      </node>
+      <node id="5">
+        <label>liblvgl/core/lv_disp.h</label>
+      </node>
+      <node id="3">
+        <label>liblvgl/core/lv_obj.h</label>
+      </node>
+      <node id="6">
+        <label>liblvgl/core/lv_obj_style.h</label>
+      </node>
+      <node id="7">
+        <label>liblvgl/misc/lv_color.h</label>
+      </node>
+      <node id="8">
+        <label>liblvgl/widgets/lv_btn.h</label>
+      </node>
+      <node id="15">
+        <label>math.h</label>
+      </node>
+      <node id="22">
+        <label>pros/adi.h</label>
+      </node>
+      <node id="11">
+        <label>pros/adi.hpp</label>
+      </node>
+      <node id="23">
+        <label>pros/colors.h</label>
+      </node>
+      <node id="24">
+        <label>pros/device.h</label>
+      </node>
+      <node id="25">
+        <label>pros/distance.h</label>
+      </node>
+      <node id="26">
+        <label>pros/error.h</label>
+      </node>
+      <node id="27">
+        <label>pros/ext_adi.h</label>
+      </node>
+      <node id="28">
+        <label>pros/gps.h</label>
+      </node>
+      <node id="29">
+        <label>pros/imu.h</label>
+      </node>
+      <node id="30">
+        <label>pros/link.h</label>
+      </node>
+      <node id="31">
+        <label>pros/llemu.h</label>
+      </node>
+      <node id="32">
+        <label>pros/misc.h</label>
+      </node>
+      <node id="33">
+        <label>pros/motors.h</label>
+      </node>
+      <node id="34">
+        <label>pros/optical.h</label>
+      </node>
+      <node id="35">
+        <label>pros/rotation.h</label>
+      </node>
+      <node id="12">
+        <label>pros/rotation.hpp</label>
+      </node>
+      <node id="36">
+        <label>pros/rtos.h</label>
+      </node>
+      <node id="37">
+        <label>pros/screen.h</label>
+      </node>
+      <node id="38">
+        <label>pros/vision.h</label>
+      </node>
+      <node id="16">
+        <label>stdbool.h</label>
+      </node>
+      <node id="17">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>stdint.h</label>
+      </node>
+      <node id="19">
+        <label>stdio.h</label>
+      </node>
+      <node id="20">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="graphics_8cpp_1a76060b4e4e1dffa2d30cd6479b29b002" prot="public" static="no" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* screenAutonSelector</definition>
+        <argsstring></argsstring>
+        <name>screenAutonSelector</name>
+        <initializer>= lv_obj_create(NULL)</initializer>
+        <briefdescription>
+<para>Creates the object for the auton selector screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="13" column="10" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1a9d5b13324e91091b74420f37aa94fb8b" prot="public" static="no" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* screenDebug</definition>
+        <argsstring></argsstring>
+        <name>screenDebug</name>
+        <initializer>= lv_obj_create(NULL)</initializer>
+        <briefdescription>
+<para>Creates the object for the debug screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="18" column="10" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1a5e8545ee7a6f63655566e37e4effc338" prot="public" static="no" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* buttonRedRight</definition>
+        <argsstring></argsstring>
+        <name>buttonRedRight</name>
+        <initializer>= lv_btn_create(screenAutonSelector)</initializer>
+        <briefdescription>
+<para>Creates a button for selecting the right side red code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="24" column="10" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1a3bdff6208c4299e1925f2d946a5ca4fc" prot="public" static="no" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* buttonRedLeft</definition>
+        <argsstring></argsstring>
+        <name>buttonRedLeft</name>
+        <initializer>= lv_btn_create(screenAutonSelector)</initializer>
+        <briefdescription>
+<para>Creates a button for selecting the left side red code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="29" column="10" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1a06def40520e1a6dcf9eb4b8bf501fd6a" prot="public" static="no" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* buttonBlueLeft</definition>
+        <argsstring></argsstring>
+        <name>buttonBlueLeft</name>
+        <initializer>= lv_btn_create(screenAutonSelector)</initializer>
+        <briefdescription>
+<para>Creates a button for selecting the left side blue code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="34" column="10" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1a44b43c817c8a705c425174bc6c8e77da" prot="public" static="no" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* buttonBlueRight</definition>
+        <argsstring></argsstring>
+        <name>buttonBlueRight</name>
+        <initializer>= lv_btn_create(screenAutonSelector)</initializer>
+        <briefdescription>
+<para>Creates a button for selecting the right side blue code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="39" column="10" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1a35d9cb73ef5ea1f383ad957057a66cd9" prot="public" static="no" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* buttonSkills</definition>
+        <argsstring></argsstring>
+        <name>buttonSkills</name>
+        <initializer>= lv_btn_create(screenAutonSelector)</initializer>
+        <briefdescription>
+<para>Creates a button for selecting the skills autonomous code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="44" column="10" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1a56fb26e5df9d633dd2640a2633425c0c" prot="public" static="no" mutable="no">
+        <type>lv_obj_t *</type>
+        <definition>lv_obj_t* buttonConfirm</definition>
+        <argsstring></argsstring>
+        <name>buttonConfirm</name>
+        <initializer>= lv_btn_create(screenAutonSelector)</initializer>
+        <briefdescription>
+<para>Creates a button for confirming your selection so you dont need to disable the auton before running. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="49" column="10" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1a2474a5474cbff19523a51eb1de01cda4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>= 120</initializer>
+        <briefdescription>
+<para>How wide the button is. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="54" column="5" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1ad12fc34ce789bce6c8a05d8a17138534" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>= 70</initializer>
+        <briefdescription>
+<para>The height of the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="59" column="5" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1a6806e78862b165988ca9b855e230084e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xPos</definition>
+        <argsstring></argsstring>
+        <name>xPos</name>
+        <initializer>= -160</initializer>
+        <briefdescription>
+<para>The x position of the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="64" column="5" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="graphics_8cpp_1adbae1d6f68d046bbecaa7230baf64762" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int yPos</definition>
+        <argsstring></argsstring>
+        <name>yPos</name>
+        <initializer>= -70</initializer>
+        <briefdescription>
+<para>The y position of the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="69" column="5" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="graphics_8cpp_1acfd9b298c32629192c2b26e711344685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void autonSelector</definition>
+        <argsstring>(void)</argsstring>
+        <name>autonSelector</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Allows us to select an autonomous code using buttons on the brain screen. We utilize the LVGL library for this. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="77" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="77" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="graphics_8cpp_1ae7360d387260173c4b6259c90f319c39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void debugTabs</definition>
+        <argsstring>(void)</argsstring>
+        <name>debugTabs</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates a screen that we can use to debug problems in the code (WIP). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp" line="244" column="6" bodyfile="C:/Users/Kyle/Vanguard/src/graphics.cpp" bodystart="244" bodyend="285"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;graphics.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;auton/auton.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;liblvgl/core/lv_disp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;liblvgl/core/lv_obj.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;liblvgl/core/lv_obj_style.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;liblvgl/misc/lv_color.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;liblvgl/widgets/lv_btn.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="main_8h" kindref="compound">main.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">lv_obj_t<sp/>*screenAutonSelector<sp/>=<sp/>lv_obj_create(NULL);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">lv_obj_t<sp/>*screenDebug<sp/>=<sp/>lv_obj_create(NULL);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">lv_obj_t<sp/>*buttonRedRight<sp/>=<sp/>lv_btn_create(screenAutonSelector);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">lv_obj_t<sp/>*buttonRedLeft<sp/>=<sp/>lv_btn_create(screenAutonSelector);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">lv_obj_t<sp/>*buttonBlueLeft<sp/>=<sp/>lv_btn_create(screenAutonSelector);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">lv_obj_t<sp/>*buttonBlueRight<sp/>=<sp/>lv_btn_create(screenAutonSelector);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">lv_obj_t<sp/>*buttonSkills<sp/>=<sp/>lv_btn_create(screenAutonSelector);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">lv_obj_t<sp/>*buttonConfirm<sp/>=<sp/>lv_btn_create(screenAutonSelector);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width<sp/>=<sp/>120;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height<sp/>=<sp/>70;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xPos<sp/>=<sp/>-160;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>yPos<sp/>=<sp/>-70;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>lv_obj_t<sp/>*imgVanguardLogo;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LV_IMG_DECLARE(vangaurd480x240px);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>autonSelector(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*label;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>lv_scr_load_anim(screenAutonSelector,<sp/>LV_SCR_LOAD_ANIM_FADE_IN,<sp/>250,<sp/>1000,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>imgVanguardLogo<sp/>=<sp/>lv_img_create(screenLogo);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>lv_img_set_src(imgVanguardLogo,<sp/>&amp;vangaurd480x240px);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>lv_obj_set_size(imgVanguardLogo,<sp/>480,<sp/>240);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>lv_obj_align(imgVanguardLogo,<sp/>LV_ALIGN_CENTER,<sp/>0,<sp/>0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/>Red<sp/>Positive</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>lv_obj_add_event_cb(</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buttonRedRight,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](lv_event_t<sp/>*e)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_add_state(buttonRedRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonRedLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonBlueLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonBlueRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonSkills,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autonType<sp/>=<sp/>RED_RIGHT;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LV_EVENT_PRESSED,<sp/>NULL);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>lv_obj_align(buttonRedRight,<sp/>LV_ALIGN_CENTER,<sp/>xPos,<sp/>yPos);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>lv_obj_set_size(buttonRedRight,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>lv_obj_set_style_radius(buttonRedRight,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(buttonRedRight,<sp/>lv_palette_main(LV_PALETTE_RED),</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LV_STATE_DEFAULT);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(buttonRedRight,<sp/>lv_palette_darken(LV_PALETTE_RED,<sp/>3),</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(buttonRedRight);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Red<sp/>Right&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>lv_obj_center(label);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/>Red<sp/>Negative</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>lv_obj_add_event_cb(</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buttonRedLeft,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](lv_event_t<sp/>*e)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_add_state(buttonRedLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonRedRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonBlueLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonBlueRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonSkills,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autonType<sp/>=<sp/>RED_LEFT;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LV_EVENT_PRESSED,<sp/>NULL);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>lv_obj_align(buttonRedLeft,<sp/>LV_ALIGN_CENTER,<sp/>xPos<sp/>+<sp/>130,<sp/>yPos);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>lv_obj_set_size(buttonRedLeft,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>lv_obj_set_style_radius(buttonRedLeft,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(buttonRedLeft,<sp/>lv_palette_main(LV_PALETTE_RED),</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LV_STATE_DEFAULT);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(buttonRedLeft,<sp/>lv_palette_darken(LV_PALETTE_RED,<sp/>3),</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(buttonRedLeft);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Red<sp/>Left&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>lv_obj_center(label);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/>Blue<sp/>Positive</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>lv_obj_add_event_cb(</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buttonBlueLeft,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](lv_event_t<sp/>*e)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_add_state(buttonBlueLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonBlueRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonRedRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonRedLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonSkills,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autonType<sp/>=<sp/>BLUE_LEFT;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LV_EVENT_PRESSED,<sp/>NULL);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>lv_obj_align(buttonBlueLeft,<sp/>LV_ALIGN_CENTER,<sp/>xPos,<sp/>yPos<sp/>+<sp/>80);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>lv_obj_set_size(buttonBlueLeft,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>lv_obj_set_style_radius(buttonBlueLeft,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(buttonBlueLeft);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Blue<sp/>Left&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>lv_obj_center(label);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>lv_obj_add_event_cb(</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buttonBlueRight,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](lv_event_t<sp/>*e)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_add_state(buttonBlueRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonBlueLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonRedRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonRedLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonSkills,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autonType<sp/>=<sp/>BLUE_RIGHT;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LV_EVENT_PRESSED,<sp/>NULL);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>lv_obj_align(buttonBlueRight,<sp/>LV_ALIGN_CENTER,<sp/>xPos<sp/>+<sp/>130,<sp/>yPos<sp/>+<sp/>80);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>lv_obj_set_size(buttonBlueRight,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>lv_obj_set_style_radius(buttonBlueRight,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(buttonBlueRight);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Blue<sp/>Right&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>lv_obj_center(label);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/><sp/>Skills</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>lv_obj_add_event_cb(</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buttonSkills,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](lv_event_t<sp/>*e)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_add_state(buttonSkills,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonRedRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonRedLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonBlueLeft,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_clear_state(buttonBlueRight,<sp/>LV_STATE_DISABLED);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autonType<sp/>=<sp/>SKILLS;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LV_EVENT_PRESSED,<sp/>NULL);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>lv_obj_align(buttonSkills,<sp/>LV_ALIGN_CENTER,<sp/>xPos<sp/>+<sp/>65,<sp/>yPos<sp/>+<sp/>155);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>lv_obj_set_size(buttonSkills,<sp/>(width<sp/>*<sp/>2)<sp/>+<sp/>10,<sp/>60);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>lv_obj_set_style_radius(buttonSkills,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(buttonSkills,<sp/>lv_palette_main(LV_PALETTE_AMBER),</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LV_STATE_DEFAULT);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(buttonSkills);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Skill<sp/>Run&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>lv_obj_center(label);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/><sp/>Skills</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>lv_obj_add_event_cb(</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buttonConfirm,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](lv_event_t<sp/>*e)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(autonType<sp/>!=<sp/>NONE)<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_obj_set_style_bg_color(buttonConfirm,<sp/>lv_palette_darken(LV_PALETTE_LIGHT_GREEN,<sp/>4),</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chassis.calibrate();</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autonConfirmed<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>lv_scr_load_anim(screenLogo,<sp/>LV_SCR_LOAD_ANIM_FADE_ON,<sp/>250,<sp/>1000,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>false);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LV_EVENT_PRESSED,<sp/>NULL);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>lv_obj_align(buttonConfirm,<sp/>LV_ALIGN_CENTER,<sp/>xPos<sp/>+<sp/>290,<sp/>yPos<sp/>+<sp/>155);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>lv_obj_set_size(buttonConfirm,<sp/>width<sp/>+<sp/>60,<sp/>60);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>lv_obj_set_style_radius(buttonConfirm,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buttonConfirm,<sp/>lv_palette_main(LV_PALETTE_LIGHT_GREEN),<sp/>LV_STATE_DEFAULT);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(buttonConfirm);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Confirm&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>lv_obj_center(label);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>debugTabs();</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>debugTabs(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*Create<sp/>a<sp/>Tab<sp/>view<sp/>object*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*tabview;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/>tabview<sp/>=<sp/>lv_tabview_create(screenDebug,<sp/>LV_DIR_LEFT,<sp/>80);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(tabview,<sp/>lv_palette_lighten(LV_PALETTE_RED,<sp/>2),<sp/>0);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*tab_btns<sp/>=<sp/>lv_tabview_get_tab_btns(tabview);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(tab_btns,<sp/>lv_palette_darken(LV_PALETTE_GREY,<sp/>3),<sp/>0);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>lv_obj_set_style_text_color(tab_btns,<sp/>lv_palette_lighten(LV_PALETTE_GREY,<sp/>5),</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/>lv_obj_set_style_border_side(tab_btns,<sp/>LV_BORDER_SIDE_RIGHT,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LV_STATE_CHECKED);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*Add<sp/>3<sp/>tabs<sp/>(the<sp/>tabs<sp/>are<sp/>page<sp/>(lv_page)<sp/>and<sp/>can<sp/>be<sp/>scrolled*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*tab1<sp/>=<sp/>lv_tabview_add_tab(tabview,<sp/></highlight><highlight class="stringliteral">&quot;Tab<sp/>1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*tab2<sp/>=<sp/>lv_tabview_add_tab(tabview,<sp/></highlight><highlight class="stringliteral">&quot;Tab<sp/>2&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*tab3<sp/>=<sp/>lv_tabview_add_tab(tabview,<sp/></highlight><highlight class="stringliteral">&quot;Tab<sp/>3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*tab4<sp/>=<sp/>lv_tabview_add_tab(tabview,<sp/></highlight><highlight class="stringliteral">&quot;Tab<sp/>4&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*tab5<sp/>=<sp/>lv_tabview_add_tab(tabview,<sp/></highlight><highlight class="stringliteral">&quot;Tab<sp/>5&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_color(tab2,<sp/>lv_palette_lighten(LV_PALETTE_AMBER,<sp/>3),<sp/>0);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>lv_obj_set_style_bg_opa(tab2,<sp/>LV_OPA_COVER,<sp/>0);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*Add<sp/>content<sp/>to<sp/>the<sp/>tabs*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*label<sp/>=<sp/>lv_label_create(tab1);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;First<sp/>tab&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(tab2);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Second<sp/>tab&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(tab3);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Third<sp/>tab&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(tab4);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Forth<sp/>tab&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/>label<sp/>=<sp/>lv_label_create(tab5);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/>lv_label_set_text(label,<sp/></highlight><highlight class="stringliteral">&quot;Fifth<sp/>tab&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/>lv_obj_clear_flag(lv_tabview_get_content(tabview),<sp/>LV_OBJ_FLAG_SCROLLABLE);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Kyle/Vanguard/src/graphics.cpp"/>
+  </compounddef>
+</doxygen>
